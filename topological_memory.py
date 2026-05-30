@@ -2,13 +2,14 @@ import heapq
 import math
 
 class Hippocampus:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+    def __init__(self, fabric):
+        self.fabric = fabric
+        self.width = fabric.width
+        self.height = fabric.height
         
         # 0.0 = safe, 1.0 = known permanent fault
         # We use a float to allow "danger gradients" around faults
-        self.fault_map = [[0.0 for _ in range(width)] for _ in range(height)]
+        self.fault_map = [[0.0 for _ in range(self.width)] for _ in range(self.height)]
         
     def register_fault(self, x, y):
         """Called by Sentinel Agents when a node is plastically down-regulated."""
@@ -27,13 +28,15 @@ class Hippocampus:
     def route_path(self, start, end):
         """
         Uses A* to find the safest path across the quantum fabric.
-        Avoids nodes with high fault probabilities.
+        Avoids nodes with high fault probabilities and nodes currently asleep.
         """
         sx, sy = start
         ex, ey = end
         
-        # If start or end is actually a fault, routing fails immediately
-        if self.fault_map[sy][sx] == 1.0 or self.fault_map[ey][ex] == 1.0:
+        # If start or end is actually a fault or asleep, routing fails immediately
+        if self.fault_map[sy][sx] == 1.0 or (sx, sy) in self.fabric.sleep_zones:
+            return None
+        if self.fault_map[ey][ex] == 1.0 or (ex, ey) in self.fabric.sleep_zones:
             return None
 
         # Priority queue for A*
@@ -60,8 +63,9 @@ class Hippocampus:
                     next_node = (nx, ny)
                     fault_risk = self.fault_map[ny][nx]
                     
-                    if fault_risk == 1.0:
-                        continue # Physically impossible to route through a dead node
+                    # Temporarily treat sleeping zones as absolute physical walls
+                    if fault_risk == 1.0 or next_node in self.fabric.sleep_zones:
+                        continue # Physically impossible to route through a dead or sleeping node
                         
                     # Base cost is distance (sqrt(2) for diagonals, 1 for straight)
                     base_cost = math.sqrt(dx*dx + dy*dy)

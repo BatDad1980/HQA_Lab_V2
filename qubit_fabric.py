@@ -18,6 +18,19 @@ class QubitFabric:
         # Structure: [[Top-Left, Top-Right], [Bottom-Left, Bottom-Right]]
         self.thermal_zones = [[1.0, 1.0], [1.0, 1.0]]
         
+        # Track sleeping nodes (intentionally decohered for calibration)
+        self.sleep_zones = set()
+        
+    def enter_sleep(self, x, y):
+        """Intentionally decoheres a node and pauses its physics."""
+        if 0 <= x < self.width and 0 <= y < self.height:
+            self.sleep_zones.add((x, y))
+            self.grid[y][x] = 0 # Flush the noise
+            
+    def awaken(self, x, y):
+        """Brings a node back online."""
+        if (x, y) in self.sleep_zones:
+            self.sleep_zones.remove((x, y))
     def inject_hardware_faults(self, num_faults=5, cluster_zones=0, cluster_radius=3):
         """Simulates physical degradation where certain qubits are always noisy.
         Can inject isolated faults or dense clusters representing thermal hot spots."""
@@ -55,6 +68,11 @@ class QubitFabric:
         
         for y in range(self.height):
             for x in range(self.width):
+                # Skip sleeping zones entirely
+                if (x, y) in self.sleep_zones:
+                    new_grid[y][x] = 0
+                    continue
+                    
                 if self.grid[y][x] == -1:
                     new_grid[y][x] = -1
                 # 1. Spontaneous Noise

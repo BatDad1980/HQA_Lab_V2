@@ -12,13 +12,47 @@ class SentinelAgent:
         self.down_regulated_nodes = set() # Nodes ignored via plastic remapping
         
         self.local_corrections = 0
+        self.last_tick_corrections = 0
+        
+        # Pillar 3: Sleep Cycles & Synaptic Pruning
+        self.sleep_threshold = 30 # Total accumulated noise before forcing a sleep
+        self.sleep_timer = 0
+        self.sleep_duration = 3
         
     def get_memory_footprint(self):
         # A sentinel only loads its local patch into memory
         return self.width * self.height
 
+    def initiate_sleep(self):
+        """Puts this entire patch to sleep to clear metabolic waste (noise)."""
+        print(f"[SENTINEL] Patch at ({self.x_start}, {self.y_start}) entering micro-sleep to prune noise.")
+        self.sleep_timer = self.sleep_duration
+        self.fault_counters.clear() # Synaptic pruning
+        for dy in range(self.height):
+            for dx in range(self.width):
+                self.fabric.enter_sleep(self.x_start + dx, self.y_start + dy)
+                
+    def awaken(self):
+        """Wakes the patch back up."""
+        print(f"[SENTINEL] Patch at ({self.x_start}, {self.y_start}) waking up refreshed.")
+        for dy in range(self.height):
+            for dx in range(self.width):
+                self.fabric.awaken(self.x_start + dx, self.y_start + dy)
+
     def step(self):
         """Zero-latency local processing tick."""
+        if self.sleep_timer > 0:
+            self.sleep_timer -= 1
+            if self.sleep_timer == 0:
+                self.awaken()
+            return # Skip physics and correction while sleeping
+            
+        # Check if we need to sleep due to high accumulated noise (not permanent faults yet)
+        total_noise_accumulated = sum(self.fault_counters.values())
+        if total_noise_accumulated >= self.sleep_threshold:
+            self.initiate_sleep()
+            return
+            
         for dy in range(self.height):
             for dx in range(self.width):
                 gx = self.x_start + dx

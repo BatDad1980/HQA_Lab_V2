@@ -30,7 +30,7 @@ def run_test():
     fabric.inject_hardware_faults(num_faults=0, cluster_zones=3, cluster_radius=3)
     
     # 2. Attach the Hippocampus and Network
-    hippocampus = Hippocampus(width=width, height=height)
+    hippocampus = Hippocampus(fabric)
     network = HQANetwork(fabric, patch_size=5, hippocampus=hippocampus)
     
     print("Running initial calibration sweeps to map the fabric...")
