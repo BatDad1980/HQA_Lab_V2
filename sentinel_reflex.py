@@ -78,6 +78,7 @@ class HQANetwork:
         for sentinel in self.sentinels:
             sentinel.step()
             self.total_corrections += sentinel.local_corrections
+            sentinel.last_tick_corrections = sentinel.local_corrections
             sentinel.local_corrections = 0
             
             mem = sentinel.get_memory_footprint()

@@ -14,6 +14,10 @@ class QubitFabric:
         # Track permanently degraded nodes (hardware faults)
         self.faults = set()
         
+        # Localized thermal profiles: quadrant-based noise multipliers (Default 1.0)
+        # Structure: [[Top-Left, Top-Right], [Bottom-Left, Bottom-Right]]
+        self.thermal_zones = [[1.0, 1.0], [1.0, 1.0]]
+        
     def inject_hardware_faults(self, num_faults=5, cluster_zones=0, cluster_radius=3):
         """Simulates physical degradation where certain qubits are always noisy.
         Can inject isolated faults or dense clusters representing thermal hot spots."""
@@ -37,6 +41,14 @@ class QubitFabric:
                                 self.faults.add((x, y))
                                 self.grid[y][x] = 1
 
+    def trigger_thermal_event(self, qx, qy, intensity=10.0):
+        """Simulates a sudden heat spike in a specific quadrant."""
+        self.thermal_zones[qy][qx] = intensity
+        
+    def apply_cooling(self, qx, qy):
+        """Physical hardware cools the quadrant back down to baseline."""
+        self.thermal_zones[qy][qx] = 1.0
+
     def tick(self):
         """Advances simulation by one time step."""
         new_grid = copy.deepcopy(self.grid)
@@ -47,7 +59,13 @@ class QubitFabric:
                     new_grid[y][x] = -1
                 # 1. Spontaneous Noise
                 elif self.grid[y][x] == 0:
-                    if random.random() < self.noise_rate or (x, y) in self.faults:
+                    # Calculate local thermal multiplier based on quadrant
+                    qx = 0 if x < self.width // 2 else 1
+                    qy = 0 if y < self.height // 2 else 1
+                    local_multiplier = self.thermal_zones[qy][qx]
+                    local_noise_rate = self.noise_rate * local_multiplier
+                    
+                    if random.random() < local_noise_rate or (x, y) in self.faults:
                         new_grid[y][x] = 1
                 else:
                     # 2. Age existing errors
