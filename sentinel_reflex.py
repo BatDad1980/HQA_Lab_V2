@@ -1,10 +1,11 @@
 class SentinelAgent:
-    def __init__(self, fabric, x_start, y_start, width, height, plasticity_threshold=5):
+    def __init__(self, fabric, x_start, y_start, width, height, plasticity_threshold=5, hippocampus=None):
         self.fabric = fabric
         self.x_start = x_start
         self.y_start = y_start
         self.width = width
         self.height = height
+        self.hippocampus = hippocampus
         
         self.plasticity_threshold = plasticity_threshold
         self.fault_counters = {} # Tracks how many times a node flipped
@@ -44,20 +45,24 @@ class SentinelAgent:
                     if self.fault_counters[node_coord] >= self.plasticity_threshold:
                         self.down_regulated_nodes.add(node_coord)
                         self.fabric.isolate_node(gx, gy)
+                        # NEW IN V2: Report to Hippocampus
+                        if self.hippocampus:
+                            self.hippocampus.register_fault(gx, gy)
                     else:
                         # Instant localized quench
                         self.fabric.apply_correction(gx, gy)
                         self.local_corrections += 1
 
 class HQANetwork:
-    def __init__(self, fabric, patch_size=5):
+    def __init__(self, fabric, patch_size=5, hippocampus=None):
         self.fabric = fabric
+        self.hippocampus = hippocampus
         self.sentinels = []
         
         # Deploy sentinels across the fabric
         for y in range(0, fabric.height, patch_size):
             for x in range(0, fabric.width, patch_size):
-                agent = SentinelAgent(fabric, x, y, patch_size, patch_size)
+                agent = SentinelAgent(fabric, x, y, patch_size, patch_size, hippocampus=self.hippocampus)
                 self.sentinels.append(agent)
                 
         self.total_corrections = 0

@@ -14,12 +14,28 @@ class QubitFabric:
         # Track permanently degraded nodes (hardware faults)
         self.faults = set()
         
-    def inject_hardware_faults(self, num_faults=5):
-        """Simulates physical degradation where certain qubits are always noisy."""
+    def inject_hardware_faults(self, num_faults=5, cluster_zones=0, cluster_radius=3):
+        """Simulates physical degradation where certain qubits are always noisy.
+        Can inject isolated faults or dense clusters representing thermal hot spots."""
+        # 1. Isolated faults
         for _ in range(num_faults):
             x, y = random.randint(0, self.width-1), random.randint(0, self.height-1)
             self.faults.add((x, y))
             self.grid[y][x] = 1
+            
+        # 2. Clustered faults (Hot zones)
+        for _ in range(cluster_zones):
+            cx, cy = random.randint(0, self.width-1), random.randint(0, self.height-1)
+            for dy in range(-cluster_radius, cluster_radius+1):
+                for dx in range(-cluster_radius, cluster_radius+1):
+                    # Create a rough circle
+                    if dx*dx + dy*dy <= cluster_radius*cluster_radius:
+                        x, y = cx + dx, cy + dy
+                        if 0 <= x < self.width and 0 <= y < self.height:
+                            # 80% chance of permanent fault in the hot zone
+                            if random.random() < 0.8:
+                                self.faults.add((x, y))
+                                self.grid[y][x] = 1
 
     def tick(self):
         """Advances simulation by one time step."""
