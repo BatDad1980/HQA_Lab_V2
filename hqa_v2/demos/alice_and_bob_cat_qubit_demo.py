@@ -1,4 +1,5 @@
 import json
+import _bootstrap
 from audit_logger import AuditLogger
 from fabric_simulator import FabricSimulator
 from local_sentinel_reflex import LocalSentinelReflex
@@ -6,7 +7,9 @@ from quarantine_manager import QuarantineManager
 from topology_router import TopologyRouter
 
 def run_alice_bob_demo():
-    logger = AuditLogger(filepath="alice_bob_audit.json")
+    audit_path = _bootstrap.log_path("alice_bob_audit.json")
+    report_path = _bootstrap.report_path("ALICE_AND_BOB_INTEGRATION_REPORT.md")
+    logger = AuditLogger(filepath=audit_path)
     logger.log("SYSTEM", "ALICE_BOB_INTEGRATION_START", {"hardware_target": "CAT_QUBIT"})
     
     # 1. Initialize 5x5 Sparse Lattice
@@ -36,16 +39,16 @@ def run_alice_bob_demo():
     print("Alice & Bob Integration complete. Output written to alice_bob_audit.json.")
 
     # Generate markdown report
-    with open("ALICE_AND_BOB_INTEGRATION_REPORT.md", "w") as f:
+    with open(report_path, "w") as f:
         f.write("# Alice & Bob: Cat-Qubit HQA Integration Report\n\n")
-        f.write("This document proves that Quantum_Jedi (HQA V2) dynamically adapts to the specific error vectors of Alice & Bob's Cat-Qubit architecture.\n\n")
+        f.write("This report demonstrates a proxy adaptation path for a cat-qubit-style error model, focusing routing behavior on phase-flip fault gradients while treating bit-flip suppression as a modeled hardware assumption.\n\n")
         f.write("## The Hardware Profile\n")
         f.write("Cat Qubits exponentially suppress bit-flip (X) errors autonomously at the physical level, leaving only phase-flip (Z) errors. ")
         f.write("A static control stack routes blindly. HQA, however, engages an **Asymmetric Error Emulation** mode.\n\n")
-        f.write("## The Routing Proof\n")
+        f.write("## The Routing Demonstration\n")
         f.write("The Hippocampus A* router recognizes the Z-error phase flips injected into the sparse-lattice and applies an extreme proximity penalty specifically to phase-flip gradients, steering the computational path completely clear of Z-error decoherence zones.\n\n")
         f.write("## JSON Audit Log\n```json\n")
-        with open("alice_bob_audit.json", "r") as audit:
+        with open(audit_path, "r") as audit:
             f.write(audit.read())
         f.write("\n```\n")
     print("Evidence written to ALICE_AND_BOB_INTEGRATION_REPORT.md")

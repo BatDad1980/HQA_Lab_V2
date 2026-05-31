@@ -1,12 +1,12 @@
 # HQA Phase 9: Cross-Resonance Gate Routing Report
 
-This document proves HQA goes beyond single-file pathfinding. It successfully acts as a multi-qubit scheduler, scanning the sparse-lattice for a pristine physical edge, and commanding the Hippocampus to simultaneously route two logical quantum states to that physical pair to execute an entangling CR pulse.
+This report demonstrates HQA operating beyond single-path routing in a proxy scenario. The scheduler scans the sparse-lattice for a usable physical edge and asks the Hippocampus router to place two logical states near that pair for a simulated CR-gate workflow.
 
 ## JSON Audit Log
 ```json
 [
   {
-    "timestamp": "2026-05-31T15:26:53.298506",
+    "timestamp": "2026-05-31T15:49:37.903625",
     "module": "SYSTEM",
     "event_type": "CR_ROUTING_DEMO_START",
     "data": {
@@ -14,7 +14,7 @@ This document proves HQA goes beyond single-file pathfinding. It successfully ac
     }
   },
   {
-    "timestamp": "2026-05-31T15:26:53.298506",
+    "timestamp": "2026-05-31T15:49:37.903625",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,7 +24,7 @@ This document proves HQA goes beyond single-file pathfinding. It successfully ac
     }
   },
   {
-    "timestamp": "2026-05-31T15:26:53.298506",
+    "timestamp": "2026-05-31T15:49:37.903625",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -34,7 +34,7 @@ This document proves HQA goes beyond single-file pathfinding. It successfully ac
     }
   },
   {
-    "timestamp": "2026-05-31T15:26:53.299504",
+    "timestamp": "2026-05-31T15:49:37.903625",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -44,7 +44,7 @@ This document proves HQA goes beyond single-file pathfinding. It successfully ac
     }
   },
   {
-    "timestamp": "2026-05-31T15:26:53.299504",
+    "timestamp": "2026-05-31T15:49:37.903625",
     "module": "CR_SCHEDULER",
     "event_type": "ENTANGLING_GATE_REQUESTED",
     "data": {
@@ -53,7 +53,7 @@ This document proves HQA goes beyond single-file pathfinding. It successfully ac
     }
   },
   {
-    "timestamp": "2026-05-31T15:26:53.299504",
+    "timestamp": "2026-05-31T15:49:37.903625",
     "module": "CR_SCHEDULER",
     "event_type": "TARGET_EDGE_SELECTED",
     "data": {
@@ -64,7 +64,7 @@ This document proves HQA goes beyond single-file pathfinding. It successfully ac
     }
   },
   {
-    "timestamp": "2026-05-31T15:26:53.299504",
+    "timestamp": "2026-05-31T15:49:37.903625",
     "module": "CR_SCHEDULER",
     "event_type": "MULTI_ROUTE_FAILED",
     "data": {
@@ -72,7 +72,7 @@ This document proves HQA goes beyond single-file pathfinding. It successfully ac
     }
   },
   {
-    "timestamp": "2026-05-31T15:26:53.299504",
+    "timestamp": "2026-05-31T15:49:37.903625",
     "module": "SYSTEM",
     "event_type": "CR_ROUTING_DEMO_COMPLETE",
     "data": {

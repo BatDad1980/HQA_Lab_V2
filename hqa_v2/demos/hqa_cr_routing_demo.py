@@ -1,10 +1,13 @@
 import json
+import _bootstrap
 from audit_logger import AuditLogger
 from fabric_simulator import FabricSimulator
 from cross_resonance_scheduler import CrossResonanceScheduler
 
 def run_cr_routing_demo():
-    logger = AuditLogger(filepath="cr_routing_audit.json")
+    audit_path = _bootstrap.log_path("cr_routing_audit.json")
+    report_path = _bootstrap.report_path("HQA_CR_GATE_ROUTING_REPORT.md")
+    logger = AuditLogger(filepath=audit_path)
     logger.log("SYSTEM", "CR_ROUTING_DEMO_START", {"mode": "TWO_QUBIT_ENTANGLEMENT"})
     
     fabric = FabricSimulator(logger, width=5, height=5)
@@ -25,11 +28,11 @@ def run_cr_routing_demo():
     
     logger.log("SYSTEM", "CR_ROUTING_DEMO_COMPLETE", {"success": bool(path_a and path_b)})
     
-    with open("HQA_CR_GATE_ROUTING_REPORT.md", "w") as f:
+    with open(report_path, "w") as f:
         f.write("# HQA Phase 9: Cross-Resonance Gate Routing Report\n\n")
-        f.write("This document proves HQA goes beyond single-file pathfinding. It successfully acts as a multi-qubit scheduler, scanning the sparse-lattice for a pristine physical edge, and commanding the Hippocampus to simultaneously route two logical quantum states to that physical pair to execute an entangling CR pulse.\n\n")
+        f.write("This report demonstrates HQA operating beyond single-path routing in a proxy scenario. The scheduler scans the sparse-lattice for a usable physical edge and asks the Hippocampus router to place two logical states near that pair for a simulated CR-gate workflow.\n\n")
         f.write("## JSON Audit Log\n```json\n")
-        with open("cr_routing_audit.json", "r") as audit:
+        with open(audit_path, "r") as audit:
             f.write(audit.read())
         f.write("\n```\n")
     print("Evidence written to HQA_CR_GATE_ROUTING_REPORT.md")

@@ -1,12 +1,12 @@
 # HQA Topology Routing Evidence (Phase 2)
 
-This document proves the Hippocampus A* router successfully navigated a physical sparse-lattice quantum topology, mathematically avoiding a central thermal fault.
+This report demonstrates that the Hippocampus A* router navigated a sparse-lattice proxy topology while avoiding a central thermal fault in the test scenario.
 
 ## Audit Trace
 ```json
 [
   {
-    "timestamp": "2026-05-31T14:50:00.807252",
+    "timestamp": "2026-05-31T15:49:36.603873",
     "module": "SYSTEM",
     "event_type": "TOPOLOGY_DEMO_START",
     "data": {
@@ -14,7 +14,7 @@ This document proves the Hippocampus A* router successfully navigated a physical
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:00.807894",
+    "timestamp": "2026-05-31T15:49:36.603873",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,16 +24,17 @@ This document proves the Hippocampus A* router successfully navigated a physical
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:00.807894",
+    "timestamp": "2026-05-31T15:49:36.603873",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
       "node": "Q_2_2",
-      "coherence": 0.1
+      "coherence": 0.1,
+      "error_type": "THERMAL_DEGRADATION"
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:00.807894",
+    "timestamp": "2026-05-31T15:49:36.603873",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -43,7 +44,7 @@ This document proves the Hippocampus A* router successfully navigated a physical
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:00.808403",
+    "timestamp": "2026-05-31T15:49:36.603873",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -51,7 +52,7 @@ This document proves the Hippocampus A* router successfully navigated a physical
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:00.808403",
+    "timestamp": "2026-05-31T15:49:36.603873",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -60,7 +61,7 @@ This document proves the Hippocampus A* router successfully navigated a physical
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:00.808864",
+    "timestamp": "2026-05-31T15:49:36.606775",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -76,7 +77,7 @@ This document proves the Hippocampus A* router successfully navigated a physical
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:00.808864",
+    "timestamp": "2026-05-31T15:49:36.606775",
     "module": "SYSTEM",
     "event_type": "TOPOLOGY_DEMO_COMPLETE",
     "data": {

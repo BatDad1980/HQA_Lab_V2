@@ -1,4 +1,5 @@
 import time
+import _bootstrap
 from audit_logger import AuditLogger
 from fabric_simulator import FabricSimulator
 from local_sentinel_reflex import LocalSentinelReflex
@@ -9,7 +10,7 @@ from cuda_edge_kernel import CUDAEdgeKernel
 from hal_cryostat_bridge import HALCryostatBridge
 
 def run_stress_harness():
-    logger = AuditLogger()
+    logger = AuditLogger(filepath=_bootstrap.log_path("audit_log.json"))
     logger.log("SYSTEM", "STRESS_HARNESS_START", {"version": "2.1-Maturity"})
     
     # 1. Initialize Fabric with Sparse Lattice
@@ -34,12 +35,12 @@ def run_stress_harness():
     
     if new_path:
         # 6. Pulse Translator
-        translator = PulseTranslator(logger)
-        qasm = translator.generate_qasm(new_path)
+        translator = PulseTranslator(logger, fabric)
+        manifest = translator.generate_hardware_instructions(new_path, dry_run=True)
         
         # 7. CUDA Edge Kernel (Force Unavailable occasionally)
         kernel = CUDAEdgeKernel(logger)
-        cuda_success = kernel.execute_kernel(qasm, force_unavailable=True) # Force edge case
+        cuda_success = kernel.execute_kernel(str(manifest), force_unavailable=True) # Force edge case
         
         # 8. HAL Cryostat Bridge (Trigger the Governor Safety Block instead of force_failure)
         hal = HALCryostatBridge(logger)

@@ -1,9 +1,12 @@
 import json
+import _bootstrap
 from audit_logger import AuditLogger
 from hal_cryostat_bridge import HALCryostatBridge
 
 def run_safety_demo():
-    logger = AuditLogger(filepath="safety_audit.json")
+    audit_path = _bootstrap.log_path("safety_audit.json")
+    report_path = _bootstrap.report_path("HQA_HAL_CONTROL_BOUNDARY_REPORT.md")
+    logger = AuditLogger(filepath=audit_path)
     logger.log("SYSTEM", "HAL_SAFETY_DEMO_START", {"version": "Phase-3"})
     
     hal = HALCryostatBridge(logger)
@@ -23,15 +26,15 @@ def run_safety_demo():
     logger.log("SYSTEM", "HAL_SAFETY_DEMO_COMPLETE", {"status": "boundaries_held"})
     
     # Write to Evidence Report
-    with open("HQA_HAL_CONTROL_BOUNDARY_REPORT.md", "w") as f:
+    with open(report_path, "w") as f:
         f.write("# HQA HAL Control Boundary Report (Phase 3)\n\n")
-        f.write("This document proves the HALSafetyGovernor correctly scans Control Manifests and enforces the boundary between software intelligence and physical execution.\n\n")
+        f.write("This report demonstrates that the HALSafetyGovernor scans Control Manifests and enforces the boundary between software intelligence and physical execution in this proxy test.\n\n")
         f.write("## Test Cases Executed:\n")
         f.write("1. **Dry-Run Enforcement**: Command packaged as a manifest, simulating physical SCPI acknowledgments without touching hardware.\n")
         f.write("2. **Thermal Violation**: Attempted to dispatch cooling intensity (20.0) higher than the policy limit (15.0). Blocked.\n")
         f.write("3. **Forbidden Action**: Attempted to dispatch banned command `EMERGENCY_VENT`. Blocked.\n\n")
         f.write("## JSON Audit Log\n```json\n")
-        with open("safety_audit.json", "r") as audit:
+        with open(audit_path, "r") as audit:
             f.write(audit.read())
         f.write("\n```\n")
     print("\nEvidence written to HQA_HAL_CONTROL_BOUNDARY_REPORT.md")

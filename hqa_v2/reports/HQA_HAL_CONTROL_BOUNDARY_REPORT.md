@@ -1,6 +1,6 @@
 # HQA HAL Control Boundary Report (Phase 3)
 
-This document proves the HALSafetyGovernor correctly scans Control Manifests and enforces the boundary between software intelligence and physical execution.
+This report demonstrates that the HALSafetyGovernor scans Control Manifests and enforces the boundary between software intelligence and physical execution in this proxy test.
 
 ## Test Cases Executed:
 1. **Dry-Run Enforcement**: Command packaged as a manifest, simulating physical SCPI acknowledgments without touching hardware.
@@ -11,7 +11,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
 ```json
 [
   {
-    "timestamp": "2026-05-31T14:50:01.091812",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "SYSTEM",
     "event_type": "HAL_SAFETY_DEMO_START",
     "data": {
@@ -19,7 +19,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:01.091812",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -28,7 +28,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:01.092478",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "SAFETY_GOVERNOR",
     "event_type": "DRY_RUN_ENFORCED",
     "data": {
@@ -36,7 +36,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:01.092478",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -45,7 +45,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:01.092478",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_REJECTED",
     "data": {
@@ -53,7 +53,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:01.093026",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "HAL_BRIDGE",
     "event_type": "EXECUTION_ABORTED",
     "data": {
@@ -61,7 +61,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:01.093026",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -70,7 +70,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:01.093026",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_REJECTED",
     "data": {
@@ -78,7 +78,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:01.093026",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "HAL_BRIDGE",
     "event_type": "EXECUTION_ABORTED",
     "data": {
@@ -86,7 +86,7 @@ This document proves the HALSafetyGovernor correctly scans Control Manifests and
     }
   },
   {
-    "timestamp": "2026-05-31T14:50:01.093714",
+    "timestamp": "2026-05-31T15:49:36.514237",
     "module": "SYSTEM",
     "event_type": "HAL_SAFETY_DEMO_COMPLETE",
     "data": {

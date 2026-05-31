@@ -1,12 +1,12 @@
 # HQA Phase 8: Analog Microwave Pulse Shaping Report
 
-This document proves HQA goes beyond logical QASM. It successfully translates routing paths directly into analog physical pulse envelopes (DRAG/Gaussian) tailored to mitigate local thermal crosstalk on the hardware.
+This report demonstrates HQA translating proxy routing paths into analog pulse-envelope intents (DRAG/Gaussian-style) intended to model mitigation of local thermal crosstalk.
 
 ## JSON Audit Log
 ```json
 [
   {
-    "timestamp": "2026-05-31T15:23:29.682019",
+    "timestamp": "2026-05-31T15:49:38.004950",
     "module": "SYSTEM",
     "event_type": "ANALOG_PULSE_DEMO_START",
     "data": {
@@ -14,7 +14,7 @@ This document proves HQA goes beyond logical QASM. It successfully translates ro
     }
   },
   {
-    "timestamp": "2026-05-31T15:23:29.682019",
+    "timestamp": "2026-05-31T15:49:38.004950",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,7 +24,7 @@ This document proves HQA goes beyond logical QASM. It successfully translates ro
     }
   },
   {
-    "timestamp": "2026-05-31T15:23:29.682019",
+    "timestamp": "2026-05-31T15:49:38.004950",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -34,7 +34,7 @@ This document proves HQA goes beyond logical QASM. It successfully translates ro
     }
   },
   {
-    "timestamp": "2026-05-31T15:23:29.682019",
+    "timestamp": "2026-05-31T15:49:38.004950",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -43,7 +43,7 @@ This document proves HQA goes beyond logical QASM. It successfully translates ro
     }
   },
   {
-    "timestamp": "2026-05-31T15:23:29.682019",
+    "timestamp": "2026-05-31T15:49:38.004950",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -55,7 +55,7 @@ This document proves HQA goes beyond logical QASM. It successfully translates ro
     }
   },
   {
-    "timestamp": "2026-05-31T15:23:29.683020",
+    "timestamp": "2026-05-31T15:49:38.004950",
     "module": "PULSE_SHAPER",
     "event_type": "ANALOG_SCHEDULE_GENERATED",
     "data": {
@@ -64,11 +64,11 @@ This document proves HQA goes beyond logical QASM. It successfully translates ro
     }
   },
   {
-    "timestamp": "2026-05-31T15:23:29.683367",
+    "timestamp": "2026-05-31T15:49:38.007741",
     "module": "SYSTEM",
     "event_type": "MANIFEST_GENERATED",
     "data": {
-      "timestamp": "2026-05-31T15:23:29.683020",
+      "timestamp": "2026-05-31T15:49:38.004950",
       "issuer": "PULSE_TRANSLATOR",
       "target": "AWG_CONTROLLER",
       "intent": {
@@ -104,7 +104,7 @@ This document proves HQA goes beyond logical QASM. It successfully translates ro
     }
   },
   {
-    "timestamp": "2026-05-31T15:23:29.683367",
+    "timestamp": "2026-05-31T15:49:38.007741",
     "module": "SYSTEM",
     "event_type": "ANALOG_PULSE_DEMO_COMPLETE",
     "data": {

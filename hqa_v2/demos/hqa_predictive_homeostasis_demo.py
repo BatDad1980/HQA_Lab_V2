@@ -1,5 +1,6 @@
 import json
 import time
+import _bootstrap
 from audit_logger import AuditLogger
 from fabric_simulator import FabricSimulator
 from live_telemetry_stream import LiveTelemetryStream
@@ -10,7 +11,9 @@ from topology_router import TopologyRouter
 from vagus_nerve_predictor import VagusNervePredictor
 
 def run_predictive_demo():
-    logger = AuditLogger(filepath="predictive_audit.json")
+    audit_path = _bootstrap.log_path("predictive_audit.json")
+    report_path = _bootstrap.report_path("HQA_PREDICTIVE_VAGUS_NERVE_REPORT.md")
+    logger = AuditLogger(filepath=audit_path)
     logger.log("SYSTEM", "PREDICTIVE_HOMEOSTASIS_START", {"mode": "VAGUS_NERVE_ENGAGED"})
     
     fabric = FabricSimulator(logger, width=5, height=5)
@@ -80,11 +83,11 @@ def run_predictive_demo():
 
     logger.log("SYSTEM", "PREDICTIVE_HOMEOSTASIS_COMPLETE", {"final_path_secured": bool(current_path)})
     
-    with open("HQA_PREDICTIVE_VAGUS_NERVE_REPORT.md", "w") as f:
+    with open(report_path, "w") as f:
         f.write("# HQA Phase 7: Predictive Vagus Nerve Report\n\n")
-        f.write("This document proves HQA has achieved true homeostasis. By tracking the mathematical velocity of thermal degradation, the Vagus Nerve module correctly predicted a phase-flip and preemptively quarantined the node *before* the QEC decoder registered a failure.\n\n")
+        f.write("This report demonstrates a proxy predictive-homeostasis scenario. By tracking the mathematical velocity of thermal degradation, the Vagus Nerve module flagged a likely phase-flip condition and preemptively quarantined the node before the mock QEC decoder registered a failure.\n\n")
         f.write("## JSON Audit Log\n```json\n")
-        with open("predictive_audit.json", "r") as audit:
+        with open(audit_path, "r") as audit:
             f.write(audit.read())
         f.write("\n```\n")
     print("Evidence written to HQA_PREDICTIVE_VAGUS_NERVE_REPORT.md")

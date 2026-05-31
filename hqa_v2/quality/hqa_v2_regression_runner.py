@@ -1,0 +1,142 @@
+"""Run the HQA V2 safe demo/regression set and summarize results."""
+
+from __future__ import annotations
+
+import subprocess
+import sys
+import time
+from dataclasses import dataclass
+from pathlib import Path
+
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+HQA_V2_ROOT = REPO_ROOT / "hqa_v2"
+REPORT_PATH = HQA_V2_ROOT / "reports" / "HQA_V2_REGRESSION_SUMMARY.md"
+
+
+@dataclass
+class RunResult:
+    name: str
+    command: list[str]
+    returncode: int
+    seconds: float
+    stdout_tail: str
+    stderr_tail: str
+
+
+SAFE_COMMANDS = [
+    ("HAL safety", ["python", "hqa_v2/demos/hqa_hal_safety_demo.py"]),
+    ("Topology routing", ["python", "hqa_v2/demos/hqa_topology_routing_demo.py"]),
+    ("Live telemetry", ["python", "hqa_v2/demos/hqa_live_control_loop_demo.py"]),
+    ("Predictive homeostasis", ["python", "hqa_v2/demos/hqa_predictive_homeostasis_demo.py"]),
+    ("CR routing", ["python", "hqa_v2/demos/hqa_cr_routing_demo.py"]),
+    ("Analog pulse shaping", ["python", "hqa_v2/demos/hqa_analog_pulse_demo.py"]),
+    ("Cat-qubit proxy", ["python", "hqa_v2/demos/alice_and_bob_cat_qubit_demo.py"]),
+    ("Stress harness", ["python", "hqa_v2/demos/hqa_stress_harness.py"]),
+    ("Integrated loop", ["python", "hqa_v2/demos/hqa_v2_integrated_control_loop.py"]),
+    ("Claim boundary smoke", ["python", "hqa_v2/quality/claim_boundary_smoke_test.py"]),
+]
+
+
+def tail(text: str, lines: int = 8) -> str:
+    split = text.strip().splitlines()
+    return "\n".join(split[-lines:])
+
+
+def run_command(name: str, command: list[str]) -> RunResult:
+    started = time.perf_counter()
+    completed = subprocess.run(
+        command,
+        cwd=REPO_ROOT,
+        text=True,
+        capture_output=True,
+    )
+    elapsed = time.perf_counter() - started
+    return RunResult(
+        name=name,
+        command=command,
+        returncode=completed.returncode,
+        seconds=elapsed,
+        stdout_tail=tail(completed.stdout),
+        stderr_tail=tail(completed.stderr),
+    )
+
+
+def write_report(results: list[RunResult]) -> None:
+    REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    passed = sum(1 for result in results if result.returncode == 0)
+    failed = len(results) - passed
+
+    lines = [
+        "# HQA V2 Regression Summary",
+        "",
+        "## Purpose",
+        "",
+        "This report summarizes the safe HQA V2 proxy demo/regression set.",
+        "",
+        "It verifies that the demos run from a clean repository root and that active text artifacts pass the claim-boundary smoke test.",
+        "",
+        "## Results",
+        "",
+        f"- Commands run: `{len(results)}`",
+        f"- Passed: `{passed}`",
+        f"- Failed: `{failed}`",
+        "",
+        "| Check | Status | Seconds | Command |",
+        "|---|---:|---:|---|",
+    ]
+
+    for result in results:
+        status = "PASS" if result.returncode == 0 else "FAIL"
+        command = " ".join(result.command)
+        lines.append(f"| {result.name} | {status} | {result.seconds:.3f} | `{command}` |")
+
+    lines.extend(["", "## Failure Details", ""])
+    failures = [result for result in results if result.returncode != 0]
+    if not failures:
+        lines.append("No failures.")
+    else:
+        for result in failures:
+            lines.extend(
+                [
+                    f"### {result.name}",
+                    "",
+                    "STDOUT:",
+                    "",
+                    "```text",
+                    result.stdout_tail or "(empty)",
+                    "```",
+                    "",
+                    "STDERR:",
+                    "",
+                    "```text",
+                    result.stderr_tail or "(empty)",
+                    "```",
+                    "",
+                ]
+            )
+
+    lines.extend(
+        [
+            "",
+            "## Boundary",
+            "",
+            "This regression suite validates proxy control-flow behavior only. It does not claim physical quantum validation, production QEC performance, or uncontrolled hardware execution.",
+            "",
+        ]
+    )
+
+    REPORT_PATH.write_text("\n".join(lines), encoding="utf-8")
+
+
+def main() -> int:
+    results = [run_command(name, command) for name, command in SAFE_COMMANDS]
+    write_report(results)
+    failed = [result for result in results if result.returncode != 0]
+    print(f"HQA V2 regression summary written: {REPORT_PATH}")
+    print(f"Passed {len(results) - len(failed)}/{len(results)} checks.")
+    return 1 if failed else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

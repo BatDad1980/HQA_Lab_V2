@@ -1,5 +1,6 @@
 import json
 import time
+import _bootstrap
 from audit_logger import AuditLogger
 from fabric_simulator import FabricSimulator
 from live_telemetry_stream import LiveTelemetryStream
@@ -9,7 +10,9 @@ from quarantine_manager import QuarantineManager
 from topology_router import TopologyRouter
 
 def run_live_control_loop():
-    logger = AuditLogger(filepath="live_control_audit.json")
+    audit_path = _bootstrap.log_path("live_control_audit.json")
+    report_path = _bootstrap.report_path("HQA_LIVE_TELEMETRY_REPORT.md")
+    logger = AuditLogger(filepath=audit_path)
     logger.log("SYSTEM", "LIVE_CONTROL_LOOP_START", {"mode": "CONTINUOUS_TELEMETRY"})
     
     fabric = FabricSimulator(logger, width=5, height=5)
@@ -60,12 +63,12 @@ def run_live_control_loop():
     logger.log("SYSTEM", "LIVE_CONTROL_LOOP_COMPLETE", {"final_path_secured": bool(current_path)})
     
     # Generate Report
-    with open("HQA_LIVE_TELEMETRY_REPORT.md", "w") as f:
+    with open(report_path, "w") as f:
         f.write("# HQA Phase 6: Live Telemetry & Dynamic QEC Report\n\n")
-        f.write("This document proves HQA operates as a continuous, live control loop rather than a static router. ")
-        f.write("It successfully ingested continuous SCPI thermal drift telemetry, dynamically caught phase-flip syndromes via a mock QEC decoder, and executed mid-route A* pathfinding adjustments on the fly.\n\n")
+        f.write("This report demonstrates HQA operating as a continuous proxy control loop rather than a static router. ")
+        f.write("It ingested continuous SCPI-style thermal drift telemetry, caught phase-flip syndromes via a mock QEC decoder, and executed mid-route A* pathfinding adjustments in the proxy scenario.\n\n")
         f.write("## JSON Audit Log\n```json\n")
-        with open("live_control_audit.json", "r") as audit:
+        with open(audit_path, "r") as audit:
             f.write(audit.read())
         f.write("\n```\n")
     print("Evidence written to HQA_LIVE_TELEMETRY_REPORT.md")

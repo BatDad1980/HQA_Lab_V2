@@ -1,0 +1,115 @@
+[
+  {
+    "timestamp": "2026-05-31T15:49:38.260691",
+    "module": "SYSTEM",
+    "event_type": "INTEGRATED_CONTROL_LOOP_START",
+    "data": {
+      "version": "HQA_V2"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.260691",
+    "module": "FABRIC_SIMULATOR",
+    "event_type": "INITIALIZE",
+    "data": {
+      "nodes": 13,
+      "topology": "SPARSE_LATTICE",
+      "grid_size": "5x5"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.366806",
+    "module": "FABRIC_SIMULATOR",
+    "event_type": "FAULT_INJECTED",
+    "data": {
+      "node": "Q_2_2",
+      "coherence": 0.1,
+      "error_type": "THERMAL_DEGRADATION"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.467973",
+    "module": "SENTINEL",
+    "event_type": "QUENCH_DECISION",
+    "data": {
+      "node": "Q_2_2",
+      "reason": "coherence_critical",
+      "coherence": 0.1
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.568856",
+    "module": "QUARANTINE_MANAGER",
+    "event_type": "NODE_ISOLATED",
+    "data": {
+      "node": "Q_2_2"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.670014",
+    "module": "HIPPOCAMPUS",
+    "event_type": "ROUTING_REQUESTED",
+    "data": {
+      "start": "Q_0_0",
+      "end": "Q_4_4"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.670586",
+    "module": "HIPPOCAMPUS",
+    "event_type": "REROUTE_SUCCESS",
+    "data": {
+      "new_path": [
+        "Q_0_0",
+        "Q_1_1",
+        "Q_0_2",
+        "Q_1_3",
+        "Q_2_4",
+        "Q_3_3",
+        "Q_4_4"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.771736",
+    "module": "PULSE_SHAPER",
+    "event_type": "ANALOG_SCHEDULE_GENERATED",
+    "data": {
+      "operations": 7,
+      "total_duration_ns": 140.0
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.771736",
+    "module": "CUDA_KERNEL",
+    "event_type": "COMPILATION_SUCCESS",
+    "data": {
+      "status": "ready_for_hal"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.873534",
+    "module": "SAFETY_GOVERNOR",
+    "event_type": "MANIFEST_RECEIVED",
+    "data": {
+      "issuer": "HAL_BRIDGE",
+      "dry_run": true
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.874097",
+    "module": "SAFETY_GOVERNOR",
+    "event_type": "DRY_RUN_ENFORCED",
+    "data": {
+      "action": "Simulating SCPI Acknowledgement. No hardware touched."
+    }
+  },
+  {
+    "timestamp": "2026-05-31T15:49:38.874097",
+    "module": "SYSTEM",
+    "event_type": "INTEGRATED_CONTROL_LOOP_COMPLETE",
+    "data": {
+      "status": "bounded_dry_run"
+    }
+  }
+]

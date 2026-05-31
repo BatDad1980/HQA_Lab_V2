@@ -53,6 +53,9 @@ class FabricSimulator:
             self.nodes[t]["coherence"] = coherence
             self.nodes[t]["status"] = "DEGRADED" if coherence >= 0.4 else "UNSTABLE"
             faults.append({"node": t, "coherence": coherence, "status": self.nodes[t]["status"]})
+
+        self.logger.log("FABRIC_SIMULATOR", "STRESS_INJECTED", {"faults": faults})
+        return faults
             
     def apply_telemetry_drift(self, telemetry):
         """

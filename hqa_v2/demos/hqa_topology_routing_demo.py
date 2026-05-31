@@ -1,4 +1,5 @@
 import json
+import _bootstrap
 from audit_logger import AuditLogger
 from fabric_simulator import FabricSimulator
 from local_sentinel_reflex import LocalSentinelReflex
@@ -6,7 +7,9 @@ from quarantine_manager import QuarantineManager
 from topology_router import TopologyRouter
 
 def run_topology_demo():
-    logger = AuditLogger(filepath="topology_audit.json")
+    audit_path = _bootstrap.log_path("topology_audit.json")
+    report_path = _bootstrap.report_path("HQA_TOPOLOGY_ROUTING_EVIDENCE.md")
+    logger = AuditLogger(filepath=audit_path)
     logger.log("SYSTEM", "TOPOLOGY_DEMO_START", {"version": "Phase-2"})
     
     # 1. Initialize 5x5 Sparse Lattice
@@ -36,11 +39,11 @@ def run_topology_demo():
     print("Topology Routing complete. Output written to topology_audit.json.")
 
     # Generate markdown report
-    with open("HQA_TOPOLOGY_ROUTING_EVIDENCE.md", "w") as f:
+    with open(report_path, "w") as f:
         f.write("# HQA Topology Routing Evidence (Phase 2)\n\n")
-        f.write("This document proves the Hippocampus A* router successfully navigated a physical sparse-lattice quantum topology, mathematically avoiding a central thermal fault.\n\n")
+        f.write("This report demonstrates that the Hippocampus A* router navigated a sparse-lattice proxy topology while avoiding a central thermal fault in the test scenario.\n\n")
         f.write("## Audit Trace\n```json\n")
-        with open("topology_audit.json", "r") as audit:
+        with open(audit_path, "r") as audit:
             f.write(audit.read())
         f.write("\n```\n")
     print("Evidence written to HQA_TOPOLOGY_ROUTING_EVIDENCE.md")
