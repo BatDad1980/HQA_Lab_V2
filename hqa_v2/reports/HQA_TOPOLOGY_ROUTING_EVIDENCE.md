@@ -6,7 +6,7 @@ This report demonstrates that the Hippocampus A* router navigated a sparse-latti
 ```json
 [
   {
-    "timestamp": "2026-05-31T15:49:36.603873",
+    "timestamp": "2026-05-31T17:38:28.904461",
     "module": "SYSTEM",
     "event_type": "TOPOLOGY_DEMO_START",
     "data": {
@@ -14,7 +14,7 @@ This report demonstrates that the Hippocampus A* router navigated a sparse-latti
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.603873",
+    "timestamp": "2026-05-31T17:38:28.905463",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,7 +24,7 @@ This report demonstrates that the Hippocampus A* router navigated a sparse-latti
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.603873",
+    "timestamp": "2026-05-31T17:38:28.905463",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -34,7 +34,7 @@ This report demonstrates that the Hippocampus A* router navigated a sparse-latti
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.603873",
+    "timestamp": "2026-05-31T17:38:28.905969",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -44,7 +44,7 @@ This report demonstrates that the Hippocampus A* router navigated a sparse-latti
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.603873",
+    "timestamp": "2026-05-31T17:38:28.905969",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -52,7 +52,7 @@ This report demonstrates that the Hippocampus A* router navigated a sparse-latti
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.603873",
+    "timestamp": "2026-05-31T17:38:28.905969",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -61,7 +61,7 @@ This report demonstrates that the Hippocampus A* router navigated a sparse-latti
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.606775",
+    "timestamp": "2026-05-31T17:38:28.905969",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -77,7 +77,7 @@ This report demonstrates that the Hippocampus A* router navigated a sparse-latti
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.606775",
+    "timestamp": "2026-05-31T17:38:28.906977",
     "module": "SYSTEM",
     "event_type": "TOPOLOGY_DEMO_COMPLETE",
     "data": {

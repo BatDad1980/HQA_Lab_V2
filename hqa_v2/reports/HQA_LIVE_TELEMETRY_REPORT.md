@@ -6,7 +6,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
 ```json
 [
   {
-    "timestamp": "2026-05-31T15:49:36.708453",
+    "timestamp": "2026-05-31T17:38:29.000115",
     "module": "SYSTEM",
     "event_type": "LIVE_CONTROL_LOOP_START",
     "data": {
@@ -14,7 +14,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.708453",
+    "timestamp": "2026-05-31T17:38:29.001114",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,7 +24,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.708453",
+    "timestamp": "2026-05-31T17:38:29.001114",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -33,7 +33,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.711401",
+    "timestamp": "2026-05-31T17:38:29.001621",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -47,57 +47,57 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.711401",
+    "timestamp": "2026-05-31T17:38:29.002633",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 1,
-      "global_temp_mk": 15.23,
+      "global_temp_mk": 14.87,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.812622",
+    "timestamp": "2026-05-31T17:38:29.103983",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 2,
-      "global_temp_mk": 15.42,
-      "local_spike": null
+      "global_temp_mk": 19.11,
+      "local_spike": "Q_3_2"
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:36.913785",
+    "timestamp": "2026-05-31T17:38:29.204894",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 3,
-      "global_temp_mk": 14.98,
+      "global_temp_mk": 19.43,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:37.015229",
+    "timestamp": "2026-05-31T17:38:29.306019",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 4,
-      "global_temp_mk": 15.4,
+      "global_temp_mk": 19.08,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:37.115920",
+    "timestamp": "2026-05-31T17:38:29.407369",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 5,
-      "global_temp_mk": 14.6,
+      "global_temp_mk": 19.38,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T15:49:37.217335",
+    "timestamp": "2026-05-31T17:38:29.508188",
     "module": "SYSTEM",
     "event_type": "LIVE_CONTROL_LOOP_COMPLETE",
     "data": {

@@ -33,6 +33,7 @@ SAFE_COMMANDS = [
     ("Analog pulse shaping", ["python", "hqa_v2/demos/hqa_analog_pulse_demo.py"]),
     ("Cat-qubit proxy", ["python", "hqa_v2/demos/alice_and_bob_cat_qubit_demo.py"]),
     ("Stress harness", ["python", "hqa_v2/demos/hqa_stress_harness.py"]),
+    ("Deterministic stress scenarios", ["python", "hqa_v2/quality/hqa_v2_stress_scenarios.py"]),
     ("Integrated loop", ["python", "hqa_v2/demos/hqa_v2_integrated_control_loop.py"]),
     ("Claim boundary smoke", ["python", "hqa_v2/quality/claim_boundary_smoke_test.py"]),
 ]
