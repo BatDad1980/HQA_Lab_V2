@@ -63,9 +63,9 @@ class Hippocampus:
                     next_node = (nx, ny)
                     fault_risk = self.fault_map[ny][nx]
                     
-                    # Temporarily treat sleeping zones as absolute physical walls
-                    if fault_risk == 1.0 or next_node in self.fabric.sleep_zones:
-                        continue # Physically impossible to route through a dead or sleeping node
+                    # Temporarily treat sleeping zones, structural voids (-2), and quarantined nodes (-1) as absolute physical walls
+                    if fault_risk == 1.0 or next_node in self.fabric.sleep_zones or self.fabric.grid[ny][nx] < 0:
+                        continue # Physically impossible to route through a dead, missing, or sleeping node
                         
                     # Base cost is distance (sqrt(2) for diagonals, 1 for straight)
                     base_cost = math.sqrt(dx*dx + dy*dy)

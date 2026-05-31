@@ -1,0 +1,124 @@
+[
+  {
+    "timestamp": "2026-05-31T14:50:00.746495",
+    "module": "SYSTEM",
+    "event_type": "STRESS_HARNESS_START",
+    "data": {
+      "version": "2.1-Maturity"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.747064",
+    "module": "FABRIC_SIMULATOR",
+    "event_type": "INITIALIZE",
+    "data": {
+      "nodes": 13,
+      "topology": "SPARSE_LATTICE",
+      "grid_size": "5x5"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.747064",
+    "module": "FABRIC_SIMULATOR",
+    "event_type": "STRESS_INJECTED",
+    "data": {
+      "faults": [
+        {
+          "node": "Q_1_1",
+          "coherence": 0.29,
+          "status": "UNSTABLE"
+        },
+        {
+          "node": "Q_2_2",
+          "coherence": 0.46,
+          "status": "DEGRADED"
+        },
+        {
+          "node": "Q_2_0",
+          "coherence": 0.16,
+          "status": "UNSTABLE"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.747612",
+    "module": "SENTINEL",
+    "event_type": "CONFLICT_DETECTED",
+    "data": {
+      "signal": "external_override",
+      "action": "ignored_in_favor_of_local_reflex"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.747612",
+    "module": "SENTINEL",
+    "event_type": "QUENCH_DECISION",
+    "data": {
+      "node": "Q_1_1",
+      "reason": "coherence_critical",
+      "coherence": 0.29
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.747612",
+    "module": "SENTINEL",
+    "event_type": "THROTTLE_DECISION",
+    "data": {
+      "node": "Q_2_2",
+      "reason": "coherence_degraded",
+      "coherence": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.748179",
+    "module": "SENTINEL",
+    "event_type": "QUENCH_DECISION",
+    "data": {
+      "node": "Q_2_0",
+      "reason": "coherence_critical",
+      "coherence": 0.16
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.748179",
+    "module": "QUARANTINE_MANAGER",
+    "event_type": "NODE_ISOLATED",
+    "data": {
+      "node": "Q_1_1"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.748762",
+    "module": "QUARANTINE_MANAGER",
+    "event_type": "NODE_ISOLATED",
+    "data": {
+      "node": "Q_2_0"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.748762",
+    "module": "HIPPOCAMPUS",
+    "event_type": "ROUTING_REQUESTED",
+    "data": {
+      "start": "Q_0_0",
+      "end": "Q_4_4"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.748762",
+    "module": "HIPPOCAMPUS",
+    "event_type": "SYSTEMIC_QUENCH",
+    "data": {
+      "reason": "no_safe_path_found"
+    }
+  },
+  {
+    "timestamp": "2026-05-31T14:50:00.749327",
+    "module": "SYSTEM",
+    "event_type": "STRESS_HARNESS_COMPLETE",
+    "data": {
+      "status": "survived"
+    }
+  }
+]

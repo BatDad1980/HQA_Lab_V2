@@ -2,17 +2,32 @@ import random
 import copy
 
 class QubitFabric:
-    def __init__(self, width=20, height=20, noise_rate=0.02, cascade_threshold=3):
+    def __init__(self, width=20, height=20, noise_rate=0.02, cascade_threshold=3, topology_mask=None):
         self.width = width
         self.height = height
         self.noise_rate = noise_rate
         self.cascade_threshold = cascade_threshold
         
         # 0 = Healthy, >0 = Age of the error (ticks since it appeared)
+        # -1 = Quarantined (Dead qubit)
+        # -2 = Physical Void (No silicon exists here due to topology)
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
         
+        # Apply physical topology mask if provided
+        if topology_mask:
+            for y in range(height):
+                for x in range(width):
+                    if not topology_mask[y][x]:
+                        self.grid[y][x] = -2 # Physical void
+                        
         # Track permanently degraded nodes (hardware faults)
         self.faults = set()
+        
+        # Track permanently severed/quarantined nodes
+        self.quarantined_nodes = set()
+        
+        # Track the "logical weight" or computational load of each node. Default is 1.0.
+        self.logical_weights = [[1.0 if self.grid[y][x] != -2 else 0.0 for x in range(width)] for y in range(height)]
         
         # Localized thermal profiles: quadrant-based noise multipliers (Default 1.0)
         # Structure: [[Top-Left, Top-Right], [Bottom-Left, Bottom-Right]]
@@ -21,6 +36,34 @@ class QubitFabric:
         # Track sleeping nodes (intentionally decohered for calibration)
         self.sleep_zones = set()
         
+    def quarantine_node(self, x, y):
+        """
+        Phase 4: Sentinel Quarantine Protocol.
+        Permanently severs a dead node from the grid and redistributes its logical weight
+        to the surrounding healthy lattice.
+        """
+        if 0 <= x < self.width and 0 <= y < self.height and (x, y) not in self.quarantined_nodes:
+            self.quarantined_nodes.add((x, y))
+            self.grid[y][x] = -1 # Physically isolated
+            
+            # Redistribute its logical weight to healthy neighbors
+            weight_to_distribute = self.logical_weights[y][x]
+            self.logical_weights[y][x] = 0.0 # Node is dead
+            
+            neighbors = []
+            for dy in [-1, 0, 1]:
+                for dx in [-1, 0, 1]:
+                    if dx == 0 and dy == 0: continue
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < self.width and 0 <= ny < self.height:
+                        if (nx, ny) not in self.quarantined_nodes:
+                            neighbors.append((nx, ny))
+            
+            if neighbors:
+                share = weight_to_distribute / len(neighbors)
+                for nx, ny in neighbors:
+                    self.logical_weights[ny][nx] += share
+
     def enter_sleep(self, x, y):
         """Intentionally decoheres a node and pauses its physics."""
         if 0 <= x < self.width and 0 <= y < self.height:
@@ -70,13 +113,20 @@ class QubitFabric:
             for x in range(self.width):
                 # Skip sleeping zones entirely
                 if (x, y) in self.sleep_zones:
-                    new_grid[y][x] = 0
+                    if new_grid[y][x] != -2:
+                        new_grid[y][x] = 0
                     continue
                     
+                # Skip Physical Voids (-2) and Quarantined nodes (-1)
                 if self.grid[y][x] == -1:
                     new_grid[y][x] = -1
+                    continue
+                elif self.grid[y][x] == -2:
+                    new_grid[y][x] = -2
+                    continue
+                    
                 # 1. Spontaneous Noise
-                elif self.grid[y][x] == 0:
+                if self.grid[y][x] == 0:
                     # Calculate local thermal multiplier based on quadrant
                     qx = 0 if x < self.width // 2 else 1
                     qy = 0 if y < self.height // 2 else 1
@@ -90,11 +140,11 @@ class QubitFabric:
                     new_grid[y][x] += 1
                     
                     # 3. Cascade Logic (Infect neighbors if error is too old)
-                    if new_grid[y][x] >= self.cascade_threshold and self.grid[y][x] != -1:
+                    if new_grid[y][x] >= self.cascade_threshold:
                         for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                             nx, ny = x + dx, y + dy
                             if 0 <= nx < self.width and 0 <= ny < self.height:
-                                # Neighbor becomes infected (age 1) if it was healthy
+                                # Neighbor becomes infected (age 1) if it was healthy (0)
                                 if self.grid[ny][nx] == 0:
                                     new_grid[ny][nx] = 1
 
