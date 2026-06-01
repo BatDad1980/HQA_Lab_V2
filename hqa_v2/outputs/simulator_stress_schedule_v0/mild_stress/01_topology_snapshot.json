@@ -1,0 +1,48 @@
+{
+  "schema_version": "hqa.topology_snapshot.v1",
+  "snapshot_id": "TOPO-SCHEDULE-MILD_STRESS",
+  "timestamp_utc": "2026-06-01T00:00:00Z",
+  "nodes": [
+    {
+      "node_id": "Q_0",
+      "role": "data",
+      "status": "healthy",
+      "coherence_score": 0.95
+    },
+    {
+      "node_id": "Q_1",
+      "role": "data",
+      "status": "degraded",
+      "coherence_score": 0.72
+    },
+    {
+      "node_id": "Q_2",
+      "role": "ancilla",
+      "status": "healthy",
+      "coherence_score": 0.95
+    },
+    {
+      "node_id": "Q_3",
+      "role": "readout",
+      "status": "healthy",
+      "coherence_score": 0.93
+    }
+  ],
+  "edges": [
+    {
+      "source": "Q_0",
+      "target": "Q_1",
+      "coupling_score": 0.84
+    },
+    {
+      "source": "Q_0",
+      "target": "Q_2",
+      "coupling_score": 0.92
+    },
+    {
+      "source": "Q_2",
+      "target": "Q_3",
+      "coupling_score": 0.87
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "hqa.stress_schedule_proposal.v0",
+  "proposal_id": "PROPOSAL-SCHEDULE-MILD_STRESS",
+  "scenario": "mild_stress",
+  "target": "Q_1",
+  "recommended_advisory_action": "MONITOR_WITH_ROUTE_REVIEW",
+  "execution_mode": "shadow_advisory",
+  "requires_vendor_review": true,
+  "requires_human_approval": true,
+  "hardware_authority": false,
+  "review_packet": {
+    "quarantine_review": false,
+    "reroute_review": true,
+    "hal_dry_run_review": true
+  },
+  "boundary": "Proposal only. It does not modify topology, issue HAL commands, or authorize live hardware action."
+}

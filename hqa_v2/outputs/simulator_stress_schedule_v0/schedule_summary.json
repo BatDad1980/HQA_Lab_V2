@@ -1,0 +1,53 @@
+{
+  "schema_version": "hqa.simulator_stress_schedule.v0",
+  "results": [
+    {
+      "scenario": "nominal",
+      "suspected_patch": "Q_1",
+      "cascade_contrast": 0.015625,
+      "top_risk_score": 0.224212,
+      "top_risk_band": "low",
+      "advisory_action": "MONITOR_ONLY",
+      "hardware_authority": false,
+      "route_available": true,
+      "proposal_mode": "shadow_advisory",
+      "output_dir": "outputs\\simulator_stress_schedule_v0\\nominal"
+    },
+    {
+      "scenario": "mild_stress",
+      "suspected_patch": "Q_1",
+      "cascade_contrast": 0.253906,
+      "top_risk_score": 0.550903,
+      "top_risk_band": "elevated",
+      "advisory_action": "MONITOR_WITH_ROUTE_REVIEW",
+      "hardware_authority": false,
+      "route_available": true,
+      "proposal_mode": "shadow_advisory",
+      "output_dir": "outputs\\simulator_stress_schedule_v0\\mild_stress"
+    },
+    {
+      "scenario": "correlated_stress",
+      "suspected_patch": "Q_1",
+      "cascade_contrast": 0.886718,
+      "top_risk_score": 0.954809,
+      "top_risk_band": "critical",
+      "advisory_action": "ROUTE_REVIEW_AND_QUARANTINE_PROPOSAL",
+      "hardware_authority": false,
+      "route_available": true,
+      "proposal_mode": "shadow_advisory",
+      "output_dir": "outputs\\simulator_stress_schedule_v0\\correlated_stress"
+    },
+    {
+      "scenario": "no_route_hold",
+      "suspected_patch": "Q_1",
+      "cascade_contrast": 0.941406,
+      "top_risk_score": 1.0,
+      "top_risk_band": "critical",
+      "advisory_action": "NO_ROUTE_HOLD_REVIEW",
+      "hardware_authority": false,
+      "route_available": false,
+      "proposal_mode": "blocked",
+      "output_dir": "outputs\\simulator_stress_schedule_v0\\no_route_hold"
+    }
+  ]
+}

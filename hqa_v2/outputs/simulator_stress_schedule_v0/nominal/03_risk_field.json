@@ -1,0 +1,58 @@
+{
+  "schema_version": "hqa.stress_schedule_risk_field.v0",
+  "field_id": "RISK-SCHEDULE-NOMINAL",
+  "scenario": "nominal",
+  "execution_mode": "shadow_advisory",
+  "hardware_authority": false,
+  "route_available": true,
+  "cascade_contrast": 0.015625,
+  "suspected_patch": "Q_1",
+  "recommended_advisory_action": "MONITOR_ONLY",
+  "nodes": [
+    {
+      "node_id": "Q_1",
+      "role": "data",
+      "status": "degraded",
+      "coherence_score": 0.93,
+      "coupling_fragility": 0.09,
+      "syndrome_pressure": 0.0432,
+      "cascade_pressure": 0.002812,
+      "risk_score": 0.224212,
+      "risk_band": "low"
+    },
+    {
+      "node_id": "Q_3",
+      "role": "readout",
+      "status": "healthy",
+      "coherence_score": 0.94,
+      "coupling_fragility": 0.12,
+      "syndrome_pressure": 0.0,
+      "cascade_pressure": 0.000984,
+      "risk_score": 0.040584,
+      "risk_band": "low"
+    },
+    {
+      "node_id": "Q_2",
+      "role": "ancilla",
+      "status": "healthy",
+      "coherence_score": 0.96,
+      "coupling_fragility": 0.12,
+      "syndrome_pressure": 0.0,
+      "cascade_pressure": 0.000984,
+      "risk_score": 0.033784,
+      "risk_band": "low"
+    },
+    {
+      "node_id": "Q_0",
+      "role": "data",
+      "status": "healthy",
+      "coherence_score": 0.97,
+      "coupling_fragility": 0.09,
+      "syndrome_pressure": 0.0,
+      "cascade_pressure": 0.000984,
+      "risk_score": 0.025584,
+      "risk_band": "low"
+    }
+  ],
+  "boundary": "Stress schedule advisory only; no backend job, pulse change, quarantine command, or HAL execution is authorized."
+}

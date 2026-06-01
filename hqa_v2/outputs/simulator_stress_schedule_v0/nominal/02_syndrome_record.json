@@ -1,0 +1,11 @@
+{
+  "schema_version": "hqa.syndrome_record.v1",
+  "record_id": "SYN-SCHEDULE-NOMINAL",
+  "cycle": 3,
+  "source_lane": "simulator_stress_schedule_v0",
+  "syndrome_bits": "0100",
+  "seed_error": "Q_1",
+  "correlated_error": null,
+  "decoder_signal": "LOW_ACTIVITY_HISTORY",
+  "confidence": 0.12
+}

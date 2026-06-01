@@ -222,6 +222,12 @@ Output:
 - cascade gate report
 - risk-field report
 
+Status:
+
+- Implemented as `hqa_v2/integrations/simulator_stress_schedule_v0.py`.
+- Gated by `hqa_v2/quality/simulator_stress_schedule_gate.py`.
+- Profiles currently cover nominal, mild stress, correlated stress, and no-route hold.
+
 ### Phase D: Cat-Qubit Solver Lane
 
 When QuTiP or Dynamiqs/JAX is installed:

@@ -1,0 +1,11 @@
+{
+  "schema_version": "hqa.syndrome_record.v1",
+  "record_id": "SYN-SCHEDULE-MILD_STRESS",
+  "cycle": 3,
+  "source_lane": "simulator_stress_schedule_v0",
+  "syndrome_bits": "0100",
+  "seed_error": "Q_1",
+  "correlated_error": "Q_0",
+  "decoder_signal": "WATCHLIST_HISTORY",
+  "confidence": 0.54
+}

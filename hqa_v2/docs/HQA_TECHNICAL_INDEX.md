@@ -37,6 +37,10 @@ It does not claim physical quantum hardware validation, production QEC performan
 | `hqa_v2/reports/HQA_SHADOW_ADAPTIVE_PROPOSAL_V0.md` | Shadow adaptive proposal report. |
 | `hqa_v2/quality/shadow_adaptive_proposal_gate.py` | Verifies adaptive proposal boundaries and manifest integrity. |
 | `hqa_v2/reports/HQA_SHADOW_ADAPTIVE_PROPOSAL_GATE.md` | Shadow adaptive proposal gate report. |
+| `hqa_v2/integrations/simulator_stress_schedule_v0.py` | Runs nominal, mild, correlated, and no-route-hold profiles through the risk/proposal chain. |
+| `hqa_v2/reports/HQA_SIMULATOR_STRESS_SCHEDULE_V0.md` | Simulator stress schedule report. |
+| `hqa_v2/quality/simulator_stress_schedule_gate.py` | Verifies stress-profile behavior, monotonic risk, and advisory boundaries. |
+| `hqa_v2/reports/HQA_SIMULATOR_STRESS_SCHEDULE_GATE.md` | Simulator stress schedule gate report. |
 
 ## Cat-Qubit Lane
 

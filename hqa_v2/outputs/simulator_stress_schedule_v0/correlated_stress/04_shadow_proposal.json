@@ -1,0 +1,17 @@
+{
+  "schema_version": "hqa.stress_schedule_proposal.v0",
+  "proposal_id": "PROPOSAL-SCHEDULE-CORRELATED_STRESS",
+  "scenario": "correlated_stress",
+  "target": "Q_1",
+  "recommended_advisory_action": "ROUTE_REVIEW_AND_QUARANTINE_PROPOSAL",
+  "execution_mode": "shadow_advisory",
+  "requires_vendor_review": true,
+  "requires_human_approval": true,
+  "hardware_authority": false,
+  "review_packet": {
+    "quarantine_review": true,
+    "reroute_review": true,
+    "hal_dry_run_review": true
+  },
+  "boundary": "Proposal only. It does not modify topology, issue HAL commands, or authorize live hardware action."
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "hqa.syndrome_record.v1",
+  "record_id": "SYN-SCHEDULE-NO_ROUTE_HOLD",
+  "cycle": 3,
+  "source_lane": "simulator_stress_schedule_v0",
+  "syndrome_bits": "1110",
+  "seed_error": "Q_1",
+  "correlated_error": "Q_0",
+  "decoder_signal": "CASCADE_LIKE_HISTORY",
+  "confidence": 0.96
+}
