@@ -52,6 +52,10 @@ It does not claim physical quantum hardware validation, production QEC performan
 |---|---|
 | `hqa_v2/integrations/cat_cascade_proxy.py` | Defines solver-ready cat-qubit cascade evidence contract. |
 | `hqa_v2/reports/HQA_CAT_CASCADE_PROXY.md` | Cat-qubit proxy report. |
+| `hqa_v2/integrations/cat_solver_contract_v0.py` | Defines the required solver evidence fields for QuTiP/Dynamiqs adapters. |
+| `hqa_v2/reports/HQA_CAT_SOLVER_CONTRACT_V0.md` | Cat solver contract report. |
+| `hqa_v2/quality/cat_solver_contract_gate.py` | Verifies solver contract completeness and no live authority. |
+| `hqa_v2/reports/HQA_CAT_SOLVER_CONTRACT_GATE.md` | Cat solver contract gate report. |
 
 Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 

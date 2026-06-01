@@ -1,0 +1,88 @@
+{
+  "schema_version": "hqa.cat_solver_contract.v0",
+  "execution_mode": "contract_only",
+  "hardware_authority": false,
+  "accepted_solvers": [
+    "qutip",
+    "dynamiqs_jax"
+  ],
+  "required_fields": [
+    {
+      "name": "solver_name",
+      "field_type": "string",
+      "required": true,
+      "purpose": "Identifies the bosonic/open-system solver used."
+    },
+    {
+      "name": "solver_version",
+      "field_type": "string",
+      "required": true,
+      "purpose": "Records solver version for replay and dependency review."
+    },
+    {
+      "name": "trajectory_id",
+      "field_type": "string",
+      "required": true,
+      "purpose": "Binds all observables to one simulated trajectory or ensemble."
+    },
+    {
+      "name": "cycles",
+      "field_type": "integer",
+      "required": true,
+      "purpose": "Correction-cycle count represented in the evidence."
+    },
+    {
+      "name": "parity_history",
+      "field_type": "array[number]",
+      "required": true,
+      "purpose": "Cycle-indexed parity expectation or parity measurement proxy."
+    },
+    {
+      "name": "photon_loss_events",
+      "field_type": "array[object]",
+      "required": true,
+      "purpose": "Trajectory-indexed photon-loss or jump records."
+    },
+    {
+      "name": "logical_error_proxy",
+      "field_type": "object",
+      "required": true,
+      "purpose": "Bit-flip and phase-flip proxy scores with confidence."
+    },
+    {
+      "name": "wigner_metadata",
+      "field_type": "object",
+      "required": true,
+      "purpose": "Compact phase-space metadata without storing heavy image arrays."
+    },
+    {
+      "name": "cascade_indicator",
+      "field_type": "string",
+      "required": true,
+      "purpose": "LOW_ACTIVITY, WATCHLIST, or CASCADE_LIKE classification."
+    },
+    {
+      "name": "confidence",
+      "field_type": "number[0,1]",
+      "required": true,
+      "purpose": "Confidence that the solver evidence supports the cascade classification."
+    }
+  ],
+  "hqa_mapping_rules": {
+    "parity_history": "maps to syndrome persistence and cycle pressure",
+    "photon_loss_events": "maps to seed error and jump-density pressure",
+    "logical_error_proxy": "maps to risk-field syndrome pressure",
+    "wigner_metadata": "maps to phase-space stability notes only",
+    "cascade_indicator": "maps to LOW_ACTIVITY, WATCHLIST, or CASCADE_LIKE risk labels",
+    "confidence": "bounds the contribution of solver-derived evidence"
+  },
+  "rejection_rules": [
+    "Reject evidence with unknown solver_name.",
+    "Reject evidence without solver_version.",
+    "Reject evidence when parity_history length differs from cycles.",
+    "Reject confidence outside [0, 1].",
+    "Reject attempts to request live hardware, pulse changes, or HAL execution.",
+    "Reject heavy binary/image arrays in the evidence packet; store metadata only."
+  ],
+  "boundary": "Contract-only lane. It defines required solver evidence but does not run bosonic simulation, validate physical cat-qubit hardware, or grant live control authority."
+}

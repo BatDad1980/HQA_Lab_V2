@@ -253,6 +253,12 @@ When QuTiP or Dynamiqs/JAX is installed:
 - record trajectory jump metadata
 - map results into the same HQA risk-field schema
 
+Status:
+
+- Contract implemented as `hqa_v2/integrations/cat_solver_contract_v0.py`.
+- Gated by `hqa_v2/quality/cat_solver_contract_gate.py`.
+- Runtime solver execution remains parked until QuTiP or Dynamiqs/JAX is installed.
+
 ## Boundary Rule
 
 Chaos-Worldmodel concepts can inform HQA control design.

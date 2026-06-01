@@ -48,6 +48,8 @@ SAFE_COMMANDS = [
     ("Environment profile library", ["python", "hqa_v2/integrations/environment_profile_library_v0.py"]),
     ("Environment profile library gate", ["python", "hqa_v2/quality/environment_profile_library_gate.py"]),
     ("Cat cascade proxy", ["python", "hqa_v2/integrations/cat_cascade_proxy.py"]),
+    ("Cat solver contract", ["python", "hqa_v2/integrations/cat_solver_contract_v0.py"]),
+    ("Cat solver contract gate", ["python", "hqa_v2/quality/cat_solver_contract_gate.py"]),
     ("Schema contract smoke", ["python", "hqa_v2/quality/schema_contract_smoke_test.py"]),
     ("Vendor shadow packet", ["python", "hqa_v2/package/build_vendor_shadow_packet.py"]),
     ("Vendor shadow packet validation", ["python", "hqa_v2/quality/vendor_shadow_packet_validation.py"]),
