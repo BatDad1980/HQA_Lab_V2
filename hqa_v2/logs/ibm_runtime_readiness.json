@@ -1,0 +1,10 @@
+{
+  "package_available": false,
+  "token_env_present": false,
+  "instance_env_present": false,
+  "live_check_requested": false,
+  "live_check_performed": false,
+  "backend_count": 0,
+  "backend_names": [],
+  "error": null
+}

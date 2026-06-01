@@ -6,7 +6,7 @@ This report demonstrates HQA translating proxy routing paths into analog pulse-e
 ```json
 [
   {
-    "timestamp": "2026-05-31T22:09:32.833519",
+    "timestamp": "2026-05-31T22:16:49.977449",
     "module": "SYSTEM",
     "event_type": "ANALOG_PULSE_DEMO_START",
     "data": {
@@ -14,7 +14,7 @@ This report demonstrates HQA translating proxy routing paths into analog pulse-e
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:32.834519",
+    "timestamp": "2026-05-31T22:16:49.977449",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,7 +24,7 @@ This report demonstrates HQA translating proxy routing paths into analog pulse-e
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:32.834519",
+    "timestamp": "2026-05-31T22:16:49.977449",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -34,7 +34,7 @@ This report demonstrates HQA translating proxy routing paths into analog pulse-e
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:32.834519",
+    "timestamp": "2026-05-31T22:16:49.978456",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -43,7 +43,7 @@ This report demonstrates HQA translating proxy routing paths into analog pulse-e
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:32.834519",
+    "timestamp": "2026-05-31T22:16:49.978456",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -55,7 +55,7 @@ This report demonstrates HQA translating proxy routing paths into analog pulse-e
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:32.835520",
+    "timestamp": "2026-05-31T22:16:49.978456",
     "module": "PULSE_SHAPER",
     "event_type": "ANALOG_SCHEDULE_GENERATED",
     "data": {
@@ -64,11 +64,11 @@ This report demonstrates HQA translating proxy routing paths into analog pulse-e
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:32.835520",
+    "timestamp": "2026-05-31T22:16:49.979458",
     "module": "SYSTEM",
     "event_type": "MANIFEST_GENERATED",
     "data": {
-      "timestamp": "2026-05-31T22:09:32.835520",
+      "timestamp": "2026-05-31T22:16:49.979458",
       "issuer": "PULSE_TRANSLATOR",
       "target": "AWG_CONTROLLER",
       "intent": {
@@ -104,7 +104,7 @@ This report demonstrates HQA translating proxy routing paths into analog pulse-e
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:32.835520",
+    "timestamp": "2026-05-31T22:16:49.979458",
     "module": "SYSTEM",
     "event_type": "ANALOG_PULSE_DEMO_COMPLETE",
     "data": {

@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-05-31T22:09:33.344509",
+    "timestamp": "2026-05-31T22:16:50.498357",
     "module": "SYSTEM",
     "event_type": "INTEGRATED_CONTROL_LOOP_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.344509",
+    "timestamp": "2026-05-31T22:16:50.499369",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.445735",
+    "timestamp": "2026-05-31T22:16:50.599888",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -28,7 +28,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.546564",
+    "timestamp": "2026-05-31T22:16:50.701363",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -38,7 +38,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.647153",
+    "timestamp": "2026-05-31T22:16:50.802442",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -46,7 +46,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.748030",
+    "timestamp": "2026-05-31T22:16:50.903471",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -55,7 +55,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.748030",
+    "timestamp": "2026-05-31T22:16:50.903471",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -71,7 +71,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.849369",
+    "timestamp": "2026-05-31T22:16:51.004551",
     "module": "PULSE_SHAPER",
     "event_type": "ANALOG_SCHEDULE_GENERATED",
     "data": {
@@ -80,15 +80,15 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.849894",
+    "timestamp": "2026-05-31T22:16:51.005203",
     "module": "CUDA_KERNEL",
-    "event_type": "INTERFACE_OFFLINE",
+    "event_type": "COMPILATION_SUCCESS",
     "data": {
-      "fallback": "local_classical_emulation"
+      "status": "ready_for_hal"
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.950582",
+    "timestamp": "2026-05-31T22:16:51.106098",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -97,7 +97,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.951128",
+    "timestamp": "2026-05-31T22:16:51.106603",
     "module": "SAFETY_GOVERNOR",
     "event_type": "DRY_RUN_ENFORCED",
     "data": {
@@ -105,7 +105,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:09:33.951128",
+    "timestamp": "2026-05-31T22:16:51.106603",
     "module": "SYSTEM",
     "event_type": "INTEGRATED_CONTROL_LOOP_COMPLETE",
     "data": {

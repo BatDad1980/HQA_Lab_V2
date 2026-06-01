@@ -29,6 +29,7 @@ class PackageCheck:
 CHECKS = [
     PackageCheck("IBM Quantum", "qiskit", False, "Qiskit circuit and backend integration"),
     PackageCheck("IBM Aer", "qiskit_aer", False, "Qiskit Aer simulator integration"),
+    PackageCheck("IBM Runtime", "qiskit_ibm_runtime", False, "Optional live IBM Quantum backend access"),
     PackageCheck("Google Quantum AI", "cirq", False, "Cirq circuit integration"),
     PackageCheck("Google qsim", "qsimcirq", False, "qsim-backed Cirq simulation"),
     PackageCheck("Open systems", "qutip", False, "QuTiP open-system experiments"),
@@ -88,6 +89,7 @@ def write_outputs(results: list[PackageCheck]) -> None:
             "- Core simulator lane: `pip install -r hqa_v2/integrations/requirements-core.txt`",
             "- Bosonic/cat-qubit lane: `pip install -r hqa_v2/integrations/requirements-bosonic.txt`",
             "- IBM Aer GPU lane: `pip install -r hqa_v2/integrations/requirements-ibm-gpu.txt`",
+            "- IBM runtime lane: set `IBM_QUANTUM_TOKEN` and `IBM_QUANTUM_INSTANCE_CRN` in the shell, then run `python hqa_v2/integrations/ibm_runtime_readiness.py --live`",
             "",
             "Use a dedicated virtual environment. Do not make these packages mandatory for the base HQA regression suite.",
             "",
@@ -112,4 +114,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-

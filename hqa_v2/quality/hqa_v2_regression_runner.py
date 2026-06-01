@@ -33,6 +33,7 @@ SAFE_COMMANDS = [
     ("Analog pulse shaping", ["python", "hqa_v2/demos/hqa_analog_pulse_demo.py"]),
     ("Cat-qubit proxy", ["python", "hqa_v2/demos/alice_and_bob_cat_qubit_demo.py"]),
     ("Simulator readiness", ["python", "hqa_v2/integrations/simulator_readiness.py"]),
+    ("IBM runtime dry readiness", ["python", "hqa_v2/integrations/ibm_runtime_readiness.py"]),
     ("Simulator adapter smoke", ["python", "hqa_v2/quality/simulator_adapter_smoke_test.py"]),
     ("Stress harness", ["python", "hqa_v2/demos/hqa_stress_harness.py"]),
     ("Deterministic stress scenarios", ["python", "hqa_v2/quality/hqa_v2_stress_scenarios.py"]),

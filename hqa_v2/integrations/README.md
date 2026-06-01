@@ -19,7 +19,7 @@ Use for:
 Optional packages:
 
 ```bash
-pip install qiskit qiskit-aer
+pip install qiskit qiskit-aer qiskit-ibm-runtime
 ```
 
 GPU lane, only when compatible with the local environment:
@@ -27,6 +27,17 @@ GPU lane, only when compatible with the local environment:
 ```bash
 pip install qiskit-aer-gpu
 ```
+
+Live IBM backend access is intentionally separated from simulator readiness.
+Set credentials through environment variables only:
+
+```powershell
+$env:IBM_QUANTUM_TOKEN = "<token>"
+$env:IBM_QUANTUM_INSTANCE_CRN = "<instance-crn>"
+python hqa_v2/integrations/ibm_runtime_readiness.py --live
+```
+
+Do not commit API keys, `.env` files, or local credential JSON files.
 
 ### Cirq / qsim
 
@@ -76,4 +87,3 @@ For GPU execution, install the JAX build that matches the active CUDA toolkit.
 These adapters are for simulator and trace integration.
 
 They do not validate physical quantum hardware, production QEC performance, or live hardware control.
-

@@ -10,5 +10,10 @@ __pycache__/
 
 # Environment
 .env
+.env.*
+apikey.json
+*apikey*.json
+*secret*.json
+*token*.json
 venv/
 env/

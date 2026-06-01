@@ -12,6 +12,12 @@
     "purpose": "Qiskit Aer simulator integration"
   },
   {
+    "lane": "IBM Runtime",
+    "import_name": "qiskit_ibm_runtime",
+    "installed": false,
+    "purpose": "Optional live IBM Quantum backend access"
+  },
+  {
     "lane": "Google Quantum AI",
     "import_name": "cirq",
     "installed": true,

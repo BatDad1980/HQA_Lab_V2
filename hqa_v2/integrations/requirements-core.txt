@@ -2,7 +2,7 @@
 # Install only inside a dedicated HQA virtual environment.
 qiskit
 qiskit-aer
+qiskit-ibm-runtime
 cirq
 qsimcirq
 qutip
-
