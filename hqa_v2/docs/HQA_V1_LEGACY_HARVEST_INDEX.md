@@ -28,11 +28,10 @@ Do not copy secrets, API keys, live credential paths, generated zip packets, or 
 
 ## Harvest Later
 
-1. Patch-local stress aggregation: turn micro-sleep and stress thresholds into a deterministic calibration-hold lane.
-2. Multi-route scheduler: prove two logical routes can be proposed without crossing quarantined/scarred zones.
-3. Surface-code adapter: convert toy syndromes into the existing `syndrome_record` schema.
-4. Pulse review manifest: generate DRAG/Gaussian-style metadata for review without hardware execution.
-5. Drift-momentum gate: use short history windows to identify fast coherence collapse before a threshold breach.
+1. Multi-route scheduler: prove two logical routes can be proposed without crossing quarantined/scarred zones.
+2. Surface-code adapter: convert toy syndromes into the existing `syndrome_record` schema.
+3. Pulse review manifest: generate DRAG/Gaussian-style metadata for review without hardware execution.
+4. Drift-momentum gate: use short history windows to identify fast coherence collapse before a threshold breach.
 
 ## Quarantine
 
@@ -59,6 +58,18 @@ It demonstrates:
 - no live hardware authority
 
 The paired gate is `hqa_v2/quality/legacy_scar_router_gate.py`.
+
+`hqa_v2/integrations/legacy_autonomic_stress_regulator_v0.py` captures the V1 vagus/autonomic mechanism as advisory patch-state classification.
+
+It demonstrates:
+
+- monitor-only behavior for low local pressure
+- calibration-hold proposal for elevated patch stress
+- reroute-review proposal when stress is high and a scar route exists
+- `SAFE_HOLD` when stress is high and no scar route exists
+- zero live cooling commands, pulse changes, backend jobs, or HAL dispatches
+
+The paired gate is `hqa_v2/quality/legacy_autonomic_stress_regulator_gate.py`.
 
 ## Reviewer Boundary
 

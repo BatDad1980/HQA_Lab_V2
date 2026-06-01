@@ -79,6 +79,10 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_LEGACY_SCAR_ROUTER_V0.md` | Legacy scar-router harvest report. |
 | `hqa_v2/quality/legacy_scar_router_gate.py` | Verifies scar routing, phase-bias risk, safe holds, and no hardware authority. |
 | `hqa_v2/reports/HQA_LEGACY_SCAR_ROUTER_GATE.md` | Legacy scar-router gate report. |
+| `hqa_v2/integrations/legacy_autonomic_stress_regulator_v0.py` | Rewrites the useful HQA V1 vagus/autonomic stress primitive as advisory patch-state classification. |
+| `hqa_v2/reports/HQA_LEGACY_AUTONOMIC_STRESS_REGULATOR_V0.md` | Legacy autonomic stress harvest report. |
+| `hqa_v2/quality/legacy_autonomic_stress_regulator_gate.py` | Verifies stress bands, advisory actions, safe holds, and no live dispatch. |
+| `hqa_v2/reports/HQA_LEGACY_AUTONOMIC_STRESS_REGULATOR_GATE.md` | Legacy autonomic stress gate report. |
 | `hqa_v2/docs/HQA_V1_LEGACY_HARVEST_INDEX.md` | Read-only harvest index for mechanisms pulled from the separate HQA V1 line. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |
