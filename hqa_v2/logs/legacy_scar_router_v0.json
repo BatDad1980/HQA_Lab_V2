@@ -1,0 +1,38 @@
+{
+  "schema_version": "hqa.legacy_scar_router.v0",
+  "source_lineage": "HQA_V1 topological_memory.py, topology_mapper.py, sentinel_reflex.py",
+  "execution_mode": "shadow_replay",
+  "hardware_authority": false,
+  "scenarios": {
+    "scarred_sparse_grid": {
+      "start": "Q_0_1",
+      "end": "Q_4_3",
+      "path": [
+        "Q_0_1",
+        "Q_1_1",
+        "Q_2_1",
+        "Q_3_1",
+        "Q_3_2",
+        "Q_3_3",
+        "Q_4_3"
+      ],
+      "path_cost": 17.2,
+      "blocked_nodes": [
+        "Q_2_2",
+        "Q_1_2"
+      ],
+      "action": "PROPOSE_REROUTE"
+    },
+    "cat_phase_bias": {
+      "generic_cost": 13.2,
+      "phase_flip_cost": 18.8,
+      "risk_bias_applied": true,
+      "action": "ADVISORY_RISK_REWEIGHT"
+    },
+    "no_route_barrier": {
+      "path": null,
+      "action": "SAFE_HOLD"
+    }
+  },
+  "boundary": "This artifact ports a legacy routing pattern into deterministic shadow replay. It does not validate physical quantum hardware, alter pulses, or dispatch HAL commands."
+}

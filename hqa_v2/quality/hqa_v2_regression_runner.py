@@ -56,6 +56,8 @@ SAFE_COMMANDS = [
     ("Topology compensation profiles gate", ["python", "hqa_v2/quality/topology_compensation_profiles_gate.py"]),
     ("Dual vendor test matrix", ["python", "hqa_v2/integrations/dual_vendor_test_matrix_v0.py"]),
     ("Dual vendor test matrix gate", ["python", "hqa_v2/quality/dual_vendor_test_matrix_gate.py"]),
+    ("Legacy scar router", ["python", "hqa_v2/integrations/legacy_scar_router_v0.py"]),
+    ("Legacy scar router gate", ["python", "hqa_v2/quality/legacy_scar_router_gate.py"]),
     ("Schema contract smoke", ["python", "hqa_v2/quality/schema_contract_smoke_test.py"]),
     ("Vendor shadow packet", ["python", "hqa_v2/package/build_vendor_shadow_packet.py"]),
     ("Vendor shadow packet validation", ["python", "hqa_v2/quality/vendor_shadow_packet_validation.py"]),

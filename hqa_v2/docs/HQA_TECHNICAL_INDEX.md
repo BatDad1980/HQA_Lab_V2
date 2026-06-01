@@ -75,6 +75,11 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_DUAL_VENDOR_TEST_MATRIX_V0.md` | Dual vendor test matrix report. |
 | `hqa_v2/quality/dual_vendor_test_matrix_gate.py` | Verifies test-lane coverage and claim boundaries. |
 | `hqa_v2/reports/HQA_DUAL_VENDOR_TEST_MATRIX_GATE.md` | Dual vendor test matrix gate report. |
+| `hqa_v2/integrations/legacy_scar_router_v0.py` | Rewrites the useful HQA V1 scar-router mechanism as deterministic shadow replay. |
+| `hqa_v2/reports/HQA_LEGACY_SCAR_ROUTER_V0.md` | Legacy scar-router harvest report. |
+| `hqa_v2/quality/legacy_scar_router_gate.py` | Verifies scar routing, phase-bias risk, safe holds, and no hardware authority. |
+| `hqa_v2/reports/HQA_LEGACY_SCAR_ROUTER_GATE.md` | Legacy scar-router gate report. |
+| `hqa_v2/docs/HQA_V1_LEGACY_HARVEST_INDEX.md` | Read-only harvest index for mechanisms pulled from the separate HQA V1 line. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |
 | `hqa_v2/docs/HQA_REAL_QUANTUM_DATA_READINESS.md` | Path from local proxy evidence to authorized external quantum telemetry. |
