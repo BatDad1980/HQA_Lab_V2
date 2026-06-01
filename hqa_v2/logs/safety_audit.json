@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-06-01T00:07:50.533229",
+    "timestamp": "2026-06-01T00:09:55.127861",
     "module": "SYSTEM",
     "event_type": "HAL_SAFETY_DEMO_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.533760",
+    "timestamp": "2026-06-01T00:09:55.127861",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -17,7 +17,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.533760",
+    "timestamp": "2026-06-01T00:09:55.128860",
     "module": "SAFETY_GOVERNOR",
     "event_type": "DRY_RUN_ENFORCED",
     "data": {
@@ -25,7 +25,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.534275",
+    "timestamp": "2026-06-01T00:09:55.128860",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -34,7 +34,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.534275",
+    "timestamp": "2026-06-01T00:09:55.128860",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_REJECTED",
     "data": {
@@ -42,7 +42,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.534275",
+    "timestamp": "2026-06-01T00:09:55.128860",
     "module": "HAL_BRIDGE",
     "event_type": "EXECUTION_ABORTED",
     "data": {
@@ -50,7 +50,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.535280",
+    "timestamp": "2026-06-01T00:09:55.129858",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -59,7 +59,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.535280",
+    "timestamp": "2026-06-01T00:09:55.129858",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_REJECTED",
     "data": {
@@ -67,7 +67,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.535280",
+    "timestamp": "2026-06-01T00:09:55.129858",
     "module": "HAL_BRIDGE",
     "event_type": "EXECUTION_ABORTED",
     "data": {
@@ -75,7 +75,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.535280",
+    "timestamp": "2026-06-01T00:09:55.129858",
     "module": "SYSTEM",
     "event_type": "HAL_SAFETY_DEMO_COMPLETE",
     "data": {

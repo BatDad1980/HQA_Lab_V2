@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-06-01T00:07:50.608329",
+    "timestamp": "2026-06-01T00:09:55.193904",
     "module": "SYSTEM",
     "event_type": "TOPOLOGY_DEMO_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.609376",
+    "timestamp": "2026-06-01T00:09:55.193904",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.609376",
+    "timestamp": "2026-06-01T00:09:55.193904",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -28,7 +28,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.609376",
+    "timestamp": "2026-06-01T00:09:55.194424",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -38,7 +38,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.609376",
+    "timestamp": "2026-06-01T00:09:55.194424",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -46,7 +46,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.610376",
+    "timestamp": "2026-06-01T00:09:55.194424",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -55,7 +55,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.610376",
+    "timestamp": "2026-06-01T00:09:55.194424",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -71,7 +71,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:50.610376",
+    "timestamp": "2026-06-01T00:09:55.195439",
     "module": "SYSTEM",
     "event_type": "TOPOLOGY_DEMO_COMPLETE",
     "data": {

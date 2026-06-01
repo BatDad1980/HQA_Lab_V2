@@ -6,7 +6,7 @@ This report demonstrates HQA operating beyond single-path routing in a proxy sce
 ```json
 [
   {
-    "timestamp": "2026-06-01T00:07:51.862834",
+    "timestamp": "2026-06-01T00:09:56.477578",
     "module": "SYSTEM",
     "event_type": "CR_ROUTING_DEMO_START",
     "data": {
@@ -14,7 +14,7 @@ This report demonstrates HQA operating beyond single-path routing in a proxy sce
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:51.862834",
+    "timestamp": "2026-06-01T00:09:56.477578",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,7 +24,7 @@ This report demonstrates HQA operating beyond single-path routing in a proxy sce
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:51.863818",
+    "timestamp": "2026-06-01T00:09:56.477578",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -34,7 +34,7 @@ This report demonstrates HQA operating beyond single-path routing in a proxy sce
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:51.863818",
+    "timestamp": "2026-06-01T00:09:56.477578",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -44,7 +44,7 @@ This report demonstrates HQA operating beyond single-path routing in a proxy sce
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:51.863818",
+    "timestamp": "2026-06-01T00:09:56.477578",
     "module": "CR_SCHEDULER",
     "event_type": "ENTANGLING_GATE_REQUESTED",
     "data": {
@@ -53,7 +53,7 @@ This report demonstrates HQA operating beyond single-path routing in a proxy sce
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:51.863818",
+    "timestamp": "2026-06-01T00:09:56.478553",
     "module": "CR_SCHEDULER",
     "event_type": "TARGET_EDGE_SELECTED",
     "data": {
@@ -64,7 +64,7 @@ This report demonstrates HQA operating beyond single-path routing in a proxy sce
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:51.863818",
+    "timestamp": "2026-06-01T00:09:56.478553",
     "module": "CR_SCHEDULER",
     "event_type": "MULTI_ROUTE_FAILED",
     "data": {
@@ -72,7 +72,7 @@ This report demonstrates HQA operating beyond single-path routing in a proxy sce
     }
   },
   {
-    "timestamp": "2026-06-01T00:07:51.864817",
+    "timestamp": "2026-06-01T00:09:56.478553",
     "module": "SYSTEM",
     "event_type": "CR_ROUTING_DEMO_COMPLETE",
     "data": {

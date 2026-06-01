@@ -1,0 +1,16 @@
+{
+  "schema_version": "hqa.reroute_proposal.v1",
+  "proposal_id": "ROUTE-DEMO-001",
+  "source": "Q_0",
+  "destination": "Q_3",
+  "proposed_path": [
+    "Q_0",
+    "Q_2",
+    "Q_3"
+  ],
+  "avoided_targets": [
+    "Q_1"
+  ],
+  "execution_mode": "shadow_advisory",
+  "score": 0.89
+}

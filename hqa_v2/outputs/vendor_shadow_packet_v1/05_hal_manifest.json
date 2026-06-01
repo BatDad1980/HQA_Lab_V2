@@ -1,0 +1,9 @@
+{
+  "schema_version": "hqa.hal_manifest.v1",
+  "manifest_id": "HAL-DEMO-001",
+  "requested_action": "advisory_quarantine_and_route_review",
+  "target": "Q_1",
+  "execution_mode": "dry_run",
+  "safety_boundary": "No physical command emitted. Vendor controller retains authority.",
+  "requires_human_approval": true
+}

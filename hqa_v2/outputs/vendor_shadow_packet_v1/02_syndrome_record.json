@@ -1,0 +1,11 @@
+{
+  "schema_version": "hqa.syndrome_record.v1",
+  "record_id": "SYN-DEMO-001",
+  "cycle": 3,
+  "source_lane": "qiskit_aer",
+  "syndrome_bits": "1110",
+  "seed_error": "Q_1",
+  "correlated_error": "Q_0",
+  "decoder_signal": "CASCADE_LIKE_HISTORY",
+  "confidence": 0.91
+}

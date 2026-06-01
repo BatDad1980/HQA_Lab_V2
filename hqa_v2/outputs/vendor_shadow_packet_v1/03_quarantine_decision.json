@@ -1,0 +1,11 @@
+{
+  "schema_version": "hqa.quarantine_decision.v1",
+  "decision_id": "QUAR-DEMO-001",
+  "target_id": "Q_1",
+  "reason": "Repeated syndrome activity with degraded coherence score.",
+  "decision": "quarantine",
+  "authority": "shadow_advisory",
+  "source_records": [
+    "SYN-DEMO-001"
+  ]
+}
