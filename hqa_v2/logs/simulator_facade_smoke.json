@@ -1,0 +1,34 @@
+{
+  "availability": {
+    "qiskit_aer": true,
+    "cirq": true
+  },
+  "results": [
+    {
+      "name": "qiskit_aer",
+      "available": true,
+      "ran": true,
+      "runtime_s": 0.111158,
+      "backend": "qiskit_aer",
+      "counts": {
+        "11": 127,
+        "00": 129
+      },
+      "boundary": "Local Aer simulation only; no live backend job submitted.",
+      "error": null
+    },
+    {
+      "name": "cirq",
+      "available": true,
+      "ran": true,
+      "runtime_s": 0.000916,
+      "backend": "qsimcirq",
+      "counts": {
+        "00": 120,
+        "11": 136
+      },
+      "boundary": "Local Cirq/qsim simulation only; no live backend job submitted.",
+      "error": null
+    }
+  ]
+}

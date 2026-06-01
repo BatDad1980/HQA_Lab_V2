@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-06-01T00:42:26.713634",
+    "timestamp": "2026-06-01T00:45:09.947832",
     "module": "SYSTEM",
     "event_type": "ALICE_BOB_INTEGRATION_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.714631",
+    "timestamp": "2026-06-01T00:45:09.947832",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.714631",
+    "timestamp": "2026-06-01T00:45:09.947832",
     "module": "FABRIC_SIMULATOR",
     "event_type": "CAT_QUBIT_MODE_ENGAGED",
     "data": {
@@ -27,7 +27,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.714631",
+    "timestamp": "2026-06-01T00:45:09.948830",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -37,7 +37,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.714631",
+    "timestamp": "2026-06-01T00:45:09.948830",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -47,7 +47,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.714631",
+    "timestamp": "2026-06-01T00:45:09.948830",
     "module": "FABRIC_SIMULATOR",
     "event_type": "ASYMMETRIC_STRESS_INJECTED",
     "data": {
@@ -68,7 +68,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.715630",
+    "timestamp": "2026-06-01T00:45:09.948830",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -78,7 +78,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.715630",
+    "timestamp": "2026-06-01T00:45:09.949884",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -88,7 +88,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.715630",
+    "timestamp": "2026-06-01T00:45:09.949884",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -96,7 +96,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.715630",
+    "timestamp": "2026-06-01T00:45:09.949884",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -104,7 +104,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.716630",
+    "timestamp": "2026-06-01T00:45:09.950897",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -113,7 +113,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.716630",
+    "timestamp": "2026-06-01T00:45:09.951898",
     "module": "HIPPOCAMPUS",
     "event_type": "SYSTEMIC_QUENCH",
     "data": {
@@ -121,7 +121,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:42:26.716630",
+    "timestamp": "2026-06-01T00:45:09.951898",
     "module": "SYSTEM",
     "event_type": "ALICE_BOB_INTEGRATION_COMPLETE",
     "data": {

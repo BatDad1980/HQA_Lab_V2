@@ -35,6 +35,7 @@ SAFE_COMMANDS = [
     ("Simulator readiness", ["python", "hqa_v2/integrations/simulator_readiness.py"]),
     ("IBM runtime dry readiness", ["python", "hqa_v2/integrations/ibm_runtime_readiness.py"]),
     ("Simulator adapter smoke", ["python", "hqa_v2/quality/simulator_adapter_smoke_test.py"]),
+    ("Simulator facade smoke", ["python", "hqa_v2/quality/simulator_facade_smoke_test.py"]),
     ("Qiskit cascade observer", ["python", "hqa_v2/integrations/qiskit_cascade_observer.py"]),
     ("Qiskit Aer cascade noise probe", ["python", "hqa_v2/integrations/qiskit_aer_cascade_noise_probe.py"]),
     ("Qiskit Aer cascade gate", ["python", "hqa_v2/quality/qiskit_aer_cascade_gate.py"]),
