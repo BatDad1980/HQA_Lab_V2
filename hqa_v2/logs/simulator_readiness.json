@@ -14,7 +14,7 @@
   {
     "lane": "IBM Runtime",
     "import_name": "qiskit_ibm_runtime",
-    "installed": false,
+    "installed": true,
     "purpose": "Optional live IBM Quantum backend access"
   },
   {

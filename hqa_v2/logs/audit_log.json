@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-06-01T01:53:28.035554",
+    "timestamp": "2026-06-01T02:37:45.068991",
     "module": "SYSTEM",
     "event_type": "STRESS_HARNESS_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:28.035554",
+    "timestamp": "2026-06-01T02:37:45.069713",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,26 +18,26 @@
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:28.035554",
+    "timestamp": "2026-06-01T02:37:45.069713",
     "module": "FABRIC_SIMULATOR",
     "event_type": "STRESS_INJECTED",
     "data": {
       "faults": [
         {
-          "node": "Q_4_4",
-          "coherence": 0.43,
-          "status": "DEGRADED"
+          "node": "Q_1_1",
+          "coherence": 0.16,
+          "status": "UNSTABLE"
         },
         {
-          "node": "Q_1_1",
-          "coherence": 0.12,
-          "status": "UNSTABLE"
+          "node": "Q_4_4",
+          "coherence": 0.51,
+          "status": "DEGRADED"
         }
       ]
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:28.036561",
+    "timestamp": "2026-06-01T02:37:45.069713",
     "module": "SENTINEL",
     "event_type": "CONFLICT_DETECTED",
     "data": {
@@ -46,27 +46,27 @@
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:28.037145",
-    "module": "SENTINEL",
-    "event_type": "THROTTLE_DECISION",
-    "data": {
-      "node": "Q_4_4",
-      "reason": "coherence_degraded",
-      "coherence": 0.43
-    }
-  },
-  {
-    "timestamp": "2026-06-01T01:53:28.037145",
+    "timestamp": "2026-06-01T02:37:45.070231",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
       "node": "Q_1_1",
       "reason": "coherence_critical",
-      "coherence": 0.12
+      "coherence": 0.16
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:28.038158",
+    "timestamp": "2026-06-01T02:37:45.070792",
+    "module": "SENTINEL",
+    "event_type": "THROTTLE_DECISION",
+    "data": {
+      "node": "Q_4_4",
+      "reason": "coherence_degraded",
+      "coherence": 0.51
+    }
+  },
+  {
+    "timestamp": "2026-06-01T02:37:45.071465",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -74,7 +74,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:28.039152",
+    "timestamp": "2026-06-01T02:37:45.071985",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -83,7 +83,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:28.039152",
+    "timestamp": "2026-06-01T02:37:45.071985",
     "module": "HIPPOCAMPUS",
     "event_type": "SYSTEMIC_QUENCH",
     "data": {
@@ -91,7 +91,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:28.040150",
+    "timestamp": "2026-06-01T02:37:45.072637",
     "module": "SYSTEM",
     "event_type": "STRESS_HARNESS_COMPLETE",
     "data": {

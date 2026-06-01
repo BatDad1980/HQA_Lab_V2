@@ -12,6 +12,7 @@ It does not claim physical quantum hardware validation, production QEC performan
 
 | Artifact | Purpose |
 |---|---|
+| `hqa_v2/docs/HQA_REVIEWER_BRIEF.md` | High-level reviewer orientation and architecture diagram. |
 | `hqa_v2/quality/hqa_v2_regression_runner.py` | Runs the safe HQA V2 regression suite. |
 | `hqa_v2/reports/HQA_V2_REGRESSION_SUMMARY.md` | Latest regression summary. |
 | `hqa_v2/quality/claim_boundary_smoke_test.py` | Scans text artifacts for forbidden overclaim language. |

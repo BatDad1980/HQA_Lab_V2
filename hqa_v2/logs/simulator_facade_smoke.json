@@ -8,7 +8,7 @@
       "name": "qiskit_aer",
       "available": true,
       "ran": true,
-      "runtime_s": 0.134451,
+      "runtime_s": 1.144716,
       "backend": "qiskit_aer",
       "counts": {
         "11": 127,
@@ -21,11 +21,11 @@
       "name": "cirq",
       "available": true,
       "ran": true,
-      "runtime_s": 0.002786,
+      "runtime_s": 0.001958,
       "backend": "qsimcirq",
       "counts": {
-        "00": 135,
-        "11": 121
+        "00": 127,
+        "11": 129
       },
       "boundary": "Local Cirq/qsim simulation only; no live backend job submitted.",
       "error": null

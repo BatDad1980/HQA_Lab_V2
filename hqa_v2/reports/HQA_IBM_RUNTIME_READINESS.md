@@ -8,7 +8,7 @@ Credentials are never read from files, printed, committed, or packaged. This che
 
 ## Status
 
-- `qiskit_ibm_runtime` installed: `False`
+- `qiskit_ibm_runtime` installed: `True`
 - `IBM_QUANTUM_TOKEN` present: `False`
 - `IBM_QUANTUM_INSTANCE_CRN` present: `False`
 - Live check requested: `False`

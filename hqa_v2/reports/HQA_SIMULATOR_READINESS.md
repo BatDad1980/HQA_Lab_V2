@@ -9,14 +9,14 @@ HQA remains runnable without these packages. Missing packages mean the correspon
 ## Summary
 
 - Optional packages checked: `8`
-- Installed: `4`
-- Missing: `4`
+- Installed: `5`
+- Missing: `3`
 
 | Lane | Import | Status | Purpose |
 |---|---|---:|---|
 | IBM Quantum | `qiskit` | AVAILABLE | Qiskit circuit and backend integration |
 | IBM Aer | `qiskit_aer` | AVAILABLE | Qiskit Aer simulator integration |
-| IBM Runtime | `qiskit_ibm_runtime` | MISSING | Optional live IBM Quantum backend access |
+| IBM Runtime | `qiskit_ibm_runtime` | AVAILABLE | Optional live IBM Quantum backend access |
 | Google Quantum AI | `cirq` | AVAILABLE | Cirq circuit integration |
 | Google qsim | `qsimcirq` | AVAILABLE | qsim-backed Cirq simulation |
 | Open systems | `qutip` | MISSING | QuTiP open-system experiments |

@@ -1,5 +1,5 @@
 {
-  "package_available": false,
+  "package_available": true,
   "token_env_present": false,
   "instance_env_present": false,
   "live_check_requested": false,

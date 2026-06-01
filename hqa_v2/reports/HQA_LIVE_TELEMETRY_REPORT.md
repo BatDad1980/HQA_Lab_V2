@@ -6,7 +6,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
 ```json
 [
   {
-    "timestamp": "2026-06-01T01:53:05.221006",
+    "timestamp": "2026-06-01T02:37:33.297407",
     "module": "SYSTEM",
     "event_type": "LIVE_CONTROL_LOOP_START",
     "data": {
@@ -14,7 +14,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.222008",
+    "timestamp": "2026-06-01T02:37:33.298407",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,7 +24,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.222008",
+    "timestamp": "2026-06-01T02:37:33.298407",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -33,7 +33,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.223005",
+    "timestamp": "2026-06-01T02:37:33.298407",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -47,114 +47,57 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.223005",
+    "timestamp": "2026-06-01T02:37:33.298407",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 1,
-      "global_temp_mk": 15.28,
-      "local_spike": null
-    }
-  },
-  {
-    "timestamp": "2026-06-01T01:53:05.324733",
-    "module": "TELEMETRY_STREAM",
-    "event_type": "SENSOR_READING",
-    "data": {
-      "tick": 2,
       "global_temp_mk": 15.46,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.425499",
+    "timestamp": "2026-06-01T02:37:33.399689",
+    "module": "TELEMETRY_STREAM",
+    "event_type": "SENSOR_READING",
+    "data": {
+      "tick": 2,
+      "global_temp_mk": 16.38,
+      "local_spike": null
+    }
+  },
+  {
+    "timestamp": "2026-06-01T02:37:33.501146",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 3,
-      "global_temp_mk": 15.27,
-      "local_spike": null
+      "global_temp_mk": 22.36,
+      "local_spike": "Q_3_0"
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.526878",
+    "timestamp": "2026-06-01T02:37:33.602176",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 4,
-      "global_temp_mk": 17.02,
-      "local_spike": "Q_2_4"
-    }
-  },
-  {
-    "timestamp": "2026-06-01T01:53:05.526878",
-    "module": "FABRIC_SIMULATOR",
-    "event_type": "THERMAL_SPIKE_IMPACT",
-    "data": {
-      "node": "Q_2_4",
-      "new_coherence": 0.37
-    }
-  },
-  {
-    "timestamp": "2026-06-01T01:53:05.527888",
-    "module": "QEC_DECODER",
-    "event_type": "SYNDROMES_DETECTED",
-    "data": {
-      "count": 1,
-      "syndromes": [
-        {
-          "node": "Q_2_4",
-          "error_type": "PHASE_FLIP",
-          "coherence": 0.36
-        }
-      ]
-    }
-  },
-  {
-    "timestamp": "2026-06-01T01:53:05.527888",
-    "module": "SENTINEL",
-    "event_type": "EMERGENCY_QUENCH_TRIGGERED",
-    "data": {
-      "node": "Q_2_4",
-      "reason": "live_syndrome_detection"
-    }
-  },
-  {
-    "timestamp": "2026-06-01T01:53:05.628639",
-    "module": "TELEMETRY_STREAM",
-    "event_type": "SENSOR_READING",
-    "data": {
-      "tick": 5,
-      "global_temp_mk": 17.14,
+      "global_temp_mk": 22.88,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.629145",
-    "module": "QEC_DECODER",
-    "event_type": "SYNDROMES_DETECTED",
+    "timestamp": "2026-06-01T02:37:33.703120",
+    "module": "TELEMETRY_STREAM",
+    "event_type": "SENSOR_READING",
     "data": {
-      "count": 1,
-      "syndromes": [
-        {
-          "node": "Q_2_4",
-          "error_type": "PHASE_FLIP",
-          "coherence": 0.35
-        }
-      ]
+      "tick": 5,
+      "global_temp_mk": 26.88,
+      "local_spike": "Q_4_3"
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.629145",
-    "module": "SENTINEL",
-    "event_type": "EMERGENCY_QUENCH_TRIGGERED",
-    "data": {
-      "node": "Q_2_4",
-      "reason": "live_syndrome_detection"
-    }
-  },
-  {
-    "timestamp": "2026-06-01T01:53:05.731184",
+    "timestamp": "2026-06-01T02:37:33.803981",
     "module": "SYSTEM",
     "event_type": "LIVE_CONTROL_LOOP_COMPLETE",
     "data": {

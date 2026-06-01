@@ -15,7 +15,7 @@ HQA V2 currently demonstrates a dry-run control plane:
 - Quarantine of degraded nodes
 - Topology-aware rerouting
 - OpenQASM emission proxy
-- CUDA-Q edge kernel proxy
+- CUDA-style edge-kernel proxy with bounded fallback behavior
 - HAL dry-run hardware boundary
 - Deterministic stress scenarios
 - Claim-boundary smoke testing
@@ -54,6 +54,11 @@ First cascade target:
 - Qiskit/Aer lane for dynamic-circuit and syndrome-record plumbing.
 - Dynamiqs/QuTiP lane for cat-qubit physics once installed.
 - Photon-loss cascade first, gate-induced cascade second.
+
+Compatibility note:
+
+- CUDA-Q is parked until the local CUDA/toolchain versions line up.
+- HQA keeps GPU/CUDA language limited to implemented local proxy and fallback behavior.
 
 ## Phase 2: Digital Twin Replay
 

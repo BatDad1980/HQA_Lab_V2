@@ -11,7 +11,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
 ```json
 [
   {
-    "timestamp": "2026-06-01T01:53:05.012656",
+    "timestamp": "2026-06-01T02:37:33.052399",
     "module": "SYSTEM",
     "event_type": "HAL_SAFETY_DEMO_START",
     "data": {
@@ -19,7 +19,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.013652",
+    "timestamp": "2026-06-01T02:37:33.053407",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -28,7 +28,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.013652",
+    "timestamp": "2026-06-01T02:37:33.053407",
     "module": "SAFETY_GOVERNOR",
     "event_type": "DRY_RUN_ENFORCED",
     "data": {
@@ -36,7 +36,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.013652",
+    "timestamp": "2026-06-01T02:37:33.053407",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -45,7 +45,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.014655",
+    "timestamp": "2026-06-01T02:37:33.054917",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_REJECTED",
     "data": {
@@ -53,7 +53,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.014655",
+    "timestamp": "2026-06-01T02:37:33.054917",
     "module": "HAL_BRIDGE",
     "event_type": "EXECUTION_ABORTED",
     "data": {
@@ -61,7 +61,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.014655",
+    "timestamp": "2026-06-01T02:37:33.054917",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -70,7 +70,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.015658",
+    "timestamp": "2026-06-01T02:37:33.055930",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_REJECTED",
     "data": {
@@ -78,7 +78,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.015658",
+    "timestamp": "2026-06-01T02:37:33.055930",
     "module": "HAL_BRIDGE",
     "event_type": "EXECUTION_ABORTED",
     "data": {
@@ -86,7 +86,7 @@ This report demonstrates that the HALSafetyGovernor scans Control Manifests and 
     }
   },
   {
-    "timestamp": "2026-06-01T01:53:05.015658",
+    "timestamp": "2026-06-01T02:37:33.055930",
     "module": "SYSTEM",
     "event_type": "HAL_SAFETY_DEMO_COMPLETE",
     "data": {
