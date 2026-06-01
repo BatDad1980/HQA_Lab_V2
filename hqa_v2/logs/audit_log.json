@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-06-01T00:45:16.988718",
+    "timestamp": "2026-06-01T01:53:28.035554",
     "module": "SYSTEM",
     "event_type": "STRESS_HARNESS_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:16.988718",
+    "timestamp": "2026-06-01T01:53:28.035554",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,26 +18,26 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:16.988718",
+    "timestamp": "2026-06-01T01:53:28.035554",
     "module": "FABRIC_SIMULATOR",
     "event_type": "STRESS_INJECTED",
     "data": {
       "faults": [
         {
-          "node": "Q_0_0",
-          "coherence": 0.17,
-          "status": "UNSTABLE"
+          "node": "Q_4_4",
+          "coherence": 0.43,
+          "status": "DEGRADED"
         },
         {
-          "node": "Q_4_2",
-          "coherence": 0.36,
+          "node": "Q_1_1",
+          "coherence": 0.12,
           "status": "UNSTABLE"
         }
       ]
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:16.988718",
+    "timestamp": "2026-06-01T01:53:28.036561",
     "module": "SENTINEL",
     "event_type": "CONFLICT_DETECTED",
     "data": {
@@ -46,43 +46,35 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:16.989896",
+    "timestamp": "2026-06-01T01:53:28.037145",
+    "module": "SENTINEL",
+    "event_type": "THROTTLE_DECISION",
+    "data": {
+      "node": "Q_4_4",
+      "reason": "coherence_degraded",
+      "coherence": 0.43
+    }
+  },
+  {
+    "timestamp": "2026-06-01T01:53:28.037145",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
-      "node": "Q_0_0",
+      "node": "Q_1_1",
       "reason": "coherence_critical",
-      "coherence": 0.17
+      "coherence": 0.12
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:16.989896",
-    "module": "SENTINEL",
-    "event_type": "QUENCH_DECISION",
-    "data": {
-      "node": "Q_4_2",
-      "reason": "coherence_critical",
-      "coherence": 0.36
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:16.989896",
+    "timestamp": "2026-06-01T01:53:28.038158",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
-      "node": "Q_0_0"
+      "node": "Q_1_1"
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:16.989896",
-    "module": "QUARANTINE_MANAGER",
-    "event_type": "NODE_ISOLATED",
-    "data": {
-      "node": "Q_4_2"
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:16.989896",
+    "timestamp": "2026-06-01T01:53:28.039152",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -91,63 +83,15 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:16.990894",
+    "timestamp": "2026-06-01T01:53:28.039152",
     "module": "HIPPOCAMPUS",
-    "event_type": "REROUTE_SUCCESS",
+    "event_type": "SYSTEMIC_QUENCH",
     "data": {
-      "new_path": [
-        "Q_0_0",
-        "Q_1_1",
-        "Q_2_2",
-        "Q_3_3",
-        "Q_4_4"
-      ]
+      "reason": "no_safe_path_found"
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:16.990894",
-    "module": "PULSE_SHAPER",
-    "event_type": "ANALOG_SCHEDULE_GENERATED",
-    "data": {
-      "operations": 5,
-      "total_duration_ns": 100.0
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:16.990894",
-    "module": "CUDA_KERNEL",
-    "event_type": "INTERFACE_OFFLINE",
-    "data": {
-      "fallback": "local_classical_emulation"
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:16.991887",
-    "module": "SAFETY_GOVERNOR",
-    "event_type": "MANIFEST_RECEIVED",
-    "data": {
-      "issuer": "HAL_BRIDGE",
-      "dry_run": false
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:16.992893",
-    "module": "SAFETY_GOVERNOR",
-    "event_type": "MANIFEST_REJECTED",
-    "data": {
-      "reason": "FORBIDDEN_ACTION: EMERGENCY_VENT"
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:16.993887",
-    "module": "HAL_BRIDGE",
-    "event_type": "EXECUTION_ABORTED",
-    "data": {
-      "reason": "governor_lockdown"
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:16.993887",
+    "timestamp": "2026-06-01T01:53:28.040150",
     "module": "SYSTEM",
     "event_type": "STRESS_HARNESS_COMPLETE",
     "data": {

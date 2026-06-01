@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-06-01T00:45:09.848212",
+    "timestamp": "2026-06-01T01:53:06.551384",
     "module": "SYSTEM",
     "event_type": "ANALOG_PULSE_DEMO_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:09.848212",
+    "timestamp": "2026-06-01T01:53:06.552810",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:09.849210",
+    "timestamp": "2026-06-01T01:53:06.552810",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -28,7 +28,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:09.849210",
+    "timestamp": "2026-06-01T01:53:06.552810",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -37,7 +37,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:09.849210",
+    "timestamp": "2026-06-01T01:53:06.552810",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -49,7 +49,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:09.849210",
+    "timestamp": "2026-06-01T01:53:06.552810",
     "module": "PULSE_SHAPER",
     "event_type": "ANALOG_SCHEDULE_GENERATED",
     "data": {
@@ -58,11 +58,11 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:09.849210",
+    "timestamp": "2026-06-01T01:53:06.554324",
     "module": "SYSTEM",
     "event_type": "MANIFEST_GENERATED",
     "data": {
-      "timestamp": "2026-06-01T00:45:09.849210",
+      "timestamp": "2026-06-01T01:53:06.554324",
       "issuer": "PULSE_TRANSLATOR",
       "target": "AWG_CONTROLLER",
       "intent": {
@@ -98,7 +98,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:09.850214",
+    "timestamp": "2026-06-01T01:53:06.554324",
     "module": "SYSTEM",
     "event_type": "ANALOG_PULSE_DEMO_COMPLETE",
     "data": {

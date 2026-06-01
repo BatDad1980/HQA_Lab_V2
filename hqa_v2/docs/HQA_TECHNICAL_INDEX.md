@@ -64,6 +64,7 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | Artifact | Purpose |
 |---|---|
 | `hqa_v2/docs/HQA_MONSTER_PATH_ROADMAP.md` | Roadmap from proxy stack to simulator bridge, digital twin replay, shadow hardware, and controlled integration candidate. |
+| `hqa_v2/docs/HQA_CHAOS_WORLD_MODEL_TRANSFER_MEMO.md` | Boundary-safe concept transfer from Chaos-Worldmodel principles into HQA risk-field design. |
 
 ## One-Command Check
 

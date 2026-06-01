@@ -6,7 +6,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
 ```json
 [
   {
-    "timestamp": "2026-06-01T00:45:08.557008",
+    "timestamp": "2026-06-01T01:53:05.221006",
     "module": "SYSTEM",
     "event_type": "LIVE_CONTROL_LOOP_START",
     "data": {
@@ -14,7 +14,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.557008",
+    "timestamp": "2026-06-01T01:53:05.222008",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,7 +24,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.557008",
+    "timestamp": "2026-06-01T01:53:05.222008",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -33,7 +33,7 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.558647",
+    "timestamp": "2026-06-01T01:53:05.223005",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -47,111 +47,63 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.558647",
+    "timestamp": "2026-06-01T01:53:05.223005",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 1,
-      "global_temp_mk": 14.9,
+      "global_temp_mk": 15.28,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.659950",
+    "timestamp": "2026-06-01T01:53:05.324733",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 2,
-      "global_temp_mk": 17.55,
-      "local_spike": "Q_4_4"
+      "global_temp_mk": 15.46,
+      "local_spike": null
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.659950",
-    "module": "FABRIC_SIMULATOR",
-    "event_type": "THERMAL_SPIKE_IMPACT",
-    "data": {
-      "node": "Q_4_4",
-      "new_coherence": 0.39
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:08.660963",
-    "module": "QEC_DECODER",
-    "event_type": "SYNDROMES_DETECTED",
-    "data": {
-      "count": 1,
-      "syndromes": [
-        {
-          "node": "Q_4_4",
-          "error_type": "PHASE_FLIP",
-          "coherence": 0.38
-        }
-      ]
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:08.660963",
-    "module": "SENTINEL",
-    "event_type": "EMERGENCY_QUENCH_TRIGGERED",
-    "data": {
-      "node": "Q_4_4",
-      "reason": "live_syndrome_detection"
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:08.762305",
+    "timestamp": "2026-06-01T01:53:05.425499",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 3,
-      "global_temp_mk": 17.78,
+      "global_temp_mk": 15.27,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.762823",
-    "module": "QEC_DECODER",
-    "event_type": "SYNDROMES_DETECTED",
-    "data": {
-      "count": 1,
-      "syndromes": [
-        {
-          "node": "Q_4_4",
-          "error_type": "PHASE_FLIP",
-          "coherence": 0.37
-        }
-      ]
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:08.764841",
-    "module": "SENTINEL",
-    "event_type": "EMERGENCY_QUENCH_TRIGGERED",
-    "data": {
-      "node": "Q_4_4",
-      "reason": "live_syndrome_detection"
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:45:08.865769",
+    "timestamp": "2026-06-01T01:53:05.526878",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 4,
-      "global_temp_mk": 18.51,
-      "local_spike": null
+      "global_temp_mk": 17.02,
+      "local_spike": "Q_2_4"
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.865769",
+    "timestamp": "2026-06-01T01:53:05.526878",
+    "module": "FABRIC_SIMULATOR",
+    "event_type": "THERMAL_SPIKE_IMPACT",
+    "data": {
+      "node": "Q_2_4",
+      "new_coherence": 0.37
+    }
+  },
+  {
+    "timestamp": "2026-06-01T01:53:05.527888",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
       "count": 1,
       "syndromes": [
         {
-          "node": "Q_4_4",
+          "node": "Q_2_4",
           "error_type": "PHASE_FLIP",
           "coherence": 0.36
         }
@@ -159,33 +111,33 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.866783",
+    "timestamp": "2026-06-01T01:53:05.527888",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
-      "node": "Q_4_4",
+      "node": "Q_2_4",
       "reason": "live_syndrome_detection"
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.968067",
+    "timestamp": "2026-06-01T01:53:05.628639",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 5,
-      "global_temp_mk": 21.28,
-      "local_spike": "Q_4_3"
+      "global_temp_mk": 17.14,
+      "local_spike": null
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.968067",
+    "timestamp": "2026-06-01T01:53:05.629145",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
       "count": 1,
       "syndromes": [
         {
-          "node": "Q_4_4",
+          "node": "Q_2_4",
           "error_type": "PHASE_FLIP",
           "coherence": 0.35
         }
@@ -193,16 +145,16 @@ This report demonstrates HQA operating as a continuous proxy control loop rather
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:08.969081",
+    "timestamp": "2026-06-01T01:53:05.629145",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
-      "node": "Q_4_4",
+      "node": "Q_2_4",
       "reason": "live_syndrome_detection"
     }
   },
   {
-    "timestamp": "2026-06-01T00:45:09.069718",
+    "timestamp": "2026-06-01T01:53:05.731184",
     "module": "SYSTEM",
     "event_type": "LIVE_CONTROL_LOOP_COMPLETE",
     "data": {
