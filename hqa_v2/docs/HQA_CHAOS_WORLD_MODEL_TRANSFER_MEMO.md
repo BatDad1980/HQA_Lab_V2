@@ -185,6 +185,12 @@ Output:
 - evidence records
 - recommended advisory action
 
+Status:
+
+- Implemented as `hqa_v2/integrations/hqa_risk_field_v0.py`.
+- Gated by `hqa_v2/quality/hqa_risk_field_gate.py`.
+- Output remains `shadow_advisory` with no hardware authority.
+
 ### Phase B: Shadow Adaptive Proposal V0
 
 Convert risk-field output into:
