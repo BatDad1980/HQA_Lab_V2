@@ -1,0 +1,53 @@
+{
+  "configs": [
+    {
+      "profile": "nominal",
+      "shots": 512,
+      "seed_simulator": 405,
+      "inject_seed": false,
+      "measurement_flip_rate": 0.003,
+      "correlated_cx_xx_rate": 0.002,
+      "single_x_rate": 0.0005,
+      "boundary": "Local Aer simulator only; no live backend job submitted."
+    },
+    {
+      "profile": "stress",
+      "shots": 512,
+      "seed_simulator": 406,
+      "inject_seed": true,
+      "measurement_flip_rate": 0.015,
+      "correlated_cx_xx_rate": 0.025,
+      "single_x_rate": 0.002,
+      "boundary": "Local Aer simulator only; no live backend job submitted."
+    }
+  ],
+  "summaries": [
+    {
+      "profile": "nominal",
+      "qiskit_available": true,
+      "aer_available": true,
+      "ran_local_aer": true,
+      "shots": 512,
+      "unique_histories": 16,
+      "cascade_like_histories": 14,
+      "cascade_like_rate": 0.027344,
+      "dominant_history": "00000000",
+      "hqa_action": "MONITOR_ONLY",
+      "error": null
+    },
+    {
+      "profile": "stress",
+      "qiskit_available": true,
+      "aer_available": true,
+      "ran_local_aer": true,
+      "shots": 512,
+      "unique_histories": 55,
+      "cascade_like_histories": 468,
+      "cascade_like_rate": 0.914062,
+      "dominant_history": "11111111",
+      "hqa_action": "SENTINEL_REVIEW_RECOMMENDED",
+      "error": null
+    }
+  ],
+  "histories_path": "X:\\HQA_LAB_V1\\hqa_v2\\logs\\qiskit_aer_syndrome_histories.jsonl"
+}

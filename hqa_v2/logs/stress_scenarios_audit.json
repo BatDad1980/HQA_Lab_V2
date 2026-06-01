@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-05-31T22:20:24.498555",
+    "timestamp": "2026-06-01T00:03:06.370274",
     "module": "SYSTEM",
     "event_type": "STRESS_SCENARIO_SUITE_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.499564",
+    "timestamp": "2026-06-01T00:03:06.370274",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.499564",
+    "timestamp": "2026-06-01T00:03:06.370274",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -28,7 +28,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.499564",
+    "timestamp": "2026-06-01T00:03:06.371254",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -38,7 +38,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.499564",
+    "timestamp": "2026-06-01T00:03:06.371254",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -46,7 +46,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.500553",
+    "timestamp": "2026-06-01T00:03:06.371254",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -55,7 +55,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.500553",
+    "timestamp": "2026-06-01T00:03:06.371254",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -71,7 +71,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.500553",
+    "timestamp": "2026-06-01T00:03:06.372256",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -81,7 +81,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.500553",
+    "timestamp": "2026-06-01T00:03:06.372256",
     "module": "SCENARIO",
     "event_type": "DEGRADED_NODE_INJECTED",
     "data": {
@@ -90,7 +90,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.501563",
+    "timestamp": "2026-06-01T00:03:06.372256",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -99,7 +99,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.501563",
+    "timestamp": "2026-06-01T00:03:06.373256",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -115,7 +115,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.501563",
+    "timestamp": "2026-06-01T00:03:06.373256",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -125,7 +125,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.501563",
+    "timestamp": "2026-06-01T00:03:06.373256",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -135,7 +135,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.502558",
+    "timestamp": "2026-06-01T00:03:06.373256",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -145,7 +145,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.502558",
+    "timestamp": "2026-06-01T00:03:06.374285",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -153,7 +153,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.502558",
+    "timestamp": "2026-06-01T00:03:06.374285",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -162,7 +162,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.503557",
+    "timestamp": "2026-06-01T00:03:06.374285",
     "module": "HIPPOCAMPUS",
     "event_type": "SYSTEMIC_QUENCH",
     "data": {
@@ -170,7 +170,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.503557",
+    "timestamp": "2026-06-01T00:03:06.375384",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -180,7 +180,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.505076",
+    "timestamp": "2026-06-01T00:03:06.375384",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -190,7 +190,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.506240",
+    "timestamp": "2026-06-01T00:03:06.375384",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -200,7 +200,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.506240",
+    "timestamp": "2026-06-01T00:03:06.376390",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -208,7 +208,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.507250",
+    "timestamp": "2026-06-01T00:03:06.376390",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -217,7 +217,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.507250",
+    "timestamp": "2026-06-01T00:03:06.377389",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -233,7 +233,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.508264",
+    "timestamp": "2026-06-01T00:03:06.377389",
     "module": "PULSE_SHAPER",
     "event_type": "ANALOG_SCHEDULE_GENERATED",
     "data": {
@@ -242,7 +242,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.508774",
+    "timestamp": "2026-06-01T00:03:06.378389",
     "module": "CUDA_KERNEL",
     "event_type": "INTERFACE_OFFLINE",
     "data": {
@@ -250,7 +250,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.508774",
+    "timestamp": "2026-06-01T00:03:06.378389",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -259,7 +259,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.509784",
+    "timestamp": "2026-06-01T00:03:06.379385",
     "module": "SAFETY_GOVERNOR",
     "event_type": "DRY_RUN_ENFORCED",
     "data": {
@@ -267,7 +267,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.509784",
+    "timestamp": "2026-06-01T00:03:06.379385",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -277,7 +277,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.510780",
+    "timestamp": "2026-06-01T00:03:06.380388",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -287,7 +287,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.510780",
+    "timestamp": "2026-06-01T00:03:06.380388",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -297,7 +297,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.511783",
+    "timestamp": "2026-06-01T00:03:06.380388",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -305,7 +305,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.512780",
+    "timestamp": "2026-06-01T00:03:06.381388",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -314,7 +314,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.512780",
+    "timestamp": "2026-06-01T00:03:06.381388",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -330,7 +330,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.513780",
+    "timestamp": "2026-06-01T00:03:06.382388",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -339,7 +339,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.513780",
+    "timestamp": "2026-06-01T00:03:06.382388",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_REJECTED",
     "data": {
@@ -347,7 +347,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.513780",
+    "timestamp": "2026-06-01T00:03:06.383386",
     "module": "HAL_BRIDGE",
     "event_type": "EXECUTION_ABORTED",
     "data": {
@@ -355,7 +355,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T22:20:24.515292",
+    "timestamp": "2026-06-01T00:03:06.383386",
     "module": "SYSTEM",
     "event_type": "STRESS_SCENARIO_SUITE_COMPLETE",
     "data": {
