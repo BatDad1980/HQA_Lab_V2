@@ -1,0 +1,5 @@
+# Optional IBM Aer GPU lane.
+# Install only when local CUDA / platform compatibility is known.
+qiskit
+qiskit-aer-gpu
+

@@ -1,0 +1,8 @@
+# Core optional quantum simulator lane.
+# Install only inside a dedicated HQA virtual environment.
+qiskit
+qiskit-aer
+cirq
+qsimcirq
+qutip
+

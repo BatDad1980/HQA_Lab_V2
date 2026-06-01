@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-05-31T17:38:29.587202",
+    "timestamp": "2026-05-31T22:09:32.106915",
     "module": "SYSTEM",
     "event_type": "PREDICTIVE_HOMEOSTASIS_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.588366",
+    "timestamp": "2026-05-31T22:09:32.108431",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.588366",
+    "timestamp": "2026-05-31T22:09:32.108748",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -27,7 +27,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.588366",
+    "timestamp": "2026-05-31T22:09:32.109254",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -41,27 +41,27 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.588366",
+    "timestamp": "2026-05-31T22:09:32.109786",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 1,
-      "global_temp_mk": 16.23,
-      "local_spike": null
+      "global_temp_mk": 19.42,
+      "local_spike": "Q_1_2"
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.689500",
+    "timestamp": "2026-05-31T22:09:32.210349",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 2,
-      "global_temp_mk": 16.27,
+      "global_temp_mk": 19.83,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.690606",
+    "timestamp": "2026-05-31T22:09:32.210349",
     "module": "VAGUS_NERVE",
     "event_type": "PREEMPTIVE_QUARANTINE_ISSUED",
     "data": {
@@ -72,7 +72,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.690606",
+    "timestamp": "2026-05-31T22:09:32.210349",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
@@ -87,17 +87,17 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.791868",
+    "timestamp": "2026-05-31T22:09:32.311802",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 3,
-      "global_temp_mk": 15.22,
+      "global_temp_mk": 20.07,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.792370",
+    "timestamp": "2026-05-31T22:09:32.312307",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
@@ -112,7 +112,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.792370",
+    "timestamp": "2026-05-31T22:09:32.312307",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
@@ -121,17 +121,17 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.893499",
+    "timestamp": "2026-05-31T22:09:32.413058",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 4,
-      "global_temp_mk": 14.71,
+      "global_temp_mk": 20.12,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.894015",
+    "timestamp": "2026-05-31T22:09:32.414377",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
@@ -146,7 +146,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.895021",
+    "timestamp": "2026-05-31T22:09:32.415377",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
@@ -155,17 +155,17 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.996181",
+    "timestamp": "2026-05-31T22:09:32.516154",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 5,
-      "global_temp_mk": 14.74,
+      "global_temp_mk": 19.31,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.996181",
+    "timestamp": "2026-05-31T22:09:32.516154",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
@@ -180,7 +180,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:29.996181",
+    "timestamp": "2026-05-31T22:09:32.517171",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
@@ -189,7 +189,7 @@
     }
   },
   {
-    "timestamp": "2026-05-31T17:38:30.097635",
+    "timestamp": "2026-05-31T22:09:32.618447",
     "module": "SYSTEM",
     "event_type": "PREDICTIVE_HOMEOSTASIS_COMPLETE",
     "data": {

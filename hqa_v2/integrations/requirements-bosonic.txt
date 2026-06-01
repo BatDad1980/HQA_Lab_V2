@@ -1,0 +1,5 @@
+# Bosonic / cat-qubit simulator lane.
+# Dynamiqs uses JAX; GPU users should install a CUDA-matched JAX build first.
+dynamiqs
+qutip
+
