@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-06-01T00:09:58.806446",
+    "timestamp": "2026-06-01T00:40:56.777617",
     "module": "SYSTEM",
     "event_type": "STRESS_HARNESS_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.806446",
+    "timestamp": "2026-06-01T00:40:56.777617",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,31 +18,26 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.807445",
+    "timestamp": "2026-06-01T00:40:56.778618",
     "module": "FABRIC_SIMULATOR",
     "event_type": "STRESS_INJECTED",
     "data": {
       "faults": [
         {
-          "node": "Q_4_2",
-          "coherence": 0.25,
+          "node": "Q_0_4",
+          "coherence": 0.13,
           "status": "UNSTABLE"
         },
         {
-          "node": "Q_0_4",
-          "coherence": 0.43,
-          "status": "DEGRADED"
-        },
-        {
-          "node": "Q_2_4",
-          "coherence": 0.62,
+          "node": "Q_1_1",
+          "coherence": 0.5,
           "status": "DEGRADED"
         }
       ]
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.807445",
+    "timestamp": "2026-06-01T00:40:56.778618",
     "module": "SENTINEL",
     "event_type": "CONFLICT_DETECTED",
     "data": {
@@ -51,45 +46,35 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.807445",
+    "timestamp": "2026-06-01T00:40:56.778618",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
-      "node": "Q_4_2",
-      "reason": "coherence_critical",
-      "coherence": 0.25
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:09:58.807445",
-    "module": "SENTINEL",
-    "event_type": "THROTTLE_DECISION",
-    "data": {
       "node": "Q_0_4",
-      "reason": "coherence_degraded",
-      "coherence": 0.43
+      "reason": "coherence_critical",
+      "coherence": 0.13
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.808443",
+    "timestamp": "2026-06-01T00:40:56.778618",
     "module": "SENTINEL",
     "event_type": "THROTTLE_DECISION",
     "data": {
-      "node": "Q_2_4",
+      "node": "Q_1_1",
       "reason": "coherence_degraded",
-      "coherence": 0.62
+      "coherence": 0.5
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.808443",
+    "timestamp": "2026-06-01T00:40:56.778618",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
-      "node": "Q_4_2"
+      "node": "Q_0_4"
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.808443",
+    "timestamp": "2026-06-01T00:40:56.779617",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -98,7 +83,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.808443",
+    "timestamp": "2026-06-01T00:40:56.779617",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -112,7 +97,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.809553",
+    "timestamp": "2026-06-01T00:40:56.780123",
     "module": "PULSE_SHAPER",
     "event_type": "ANALOG_SCHEDULE_GENERATED",
     "data": {
@@ -121,7 +106,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.809553",
+    "timestamp": "2026-06-01T00:40:56.780123",
     "module": "CUDA_KERNEL",
     "event_type": "INTERFACE_OFFLINE",
     "data": {
@@ -129,7 +114,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.809553",
+    "timestamp": "2026-06-01T00:40:56.780123",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_RECEIVED",
     "data": {
@@ -138,7 +123,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.810554",
+    "timestamp": "2026-06-01T00:40:56.781130",
     "module": "SAFETY_GOVERNOR",
     "event_type": "MANIFEST_REJECTED",
     "data": {
@@ -146,7 +131,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.810554",
+    "timestamp": "2026-06-01T00:40:56.781130",
     "module": "HAL_BRIDGE",
     "event_type": "EXECUTION_ABORTED",
     "data": {
@@ -154,7 +139,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:09:58.810554",
+    "timestamp": "2026-06-01T00:40:56.781130",
     "module": "SYSTEM",
     "event_type": "STRESS_HARNESS_COMPLETE",
     "data": {

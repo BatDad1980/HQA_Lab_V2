@@ -41,6 +41,7 @@ SAFE_COMMANDS = [
     ("Cat cascade proxy", ["python", "hqa_v2/integrations/cat_cascade_proxy.py"]),
     ("Schema contract smoke", ["python", "hqa_v2/quality/schema_contract_smoke_test.py"]),
     ("Vendor shadow packet", ["python", "hqa_v2/package/build_vendor_shadow_packet.py"]),
+    ("Vendor shadow packet validation", ["python", "hqa_v2/quality/vendor_shadow_packet_validation.py"]),
     ("Stress harness", ["python", "hqa_v2/demos/hqa_stress_harness.py"]),
     ("Deterministic stress scenarios", ["python", "hqa_v2/quality/hqa_v2_stress_scenarios.py"]),
     ("Integrated loop", ["python", "hqa_v2/demos/hqa_v2_integrated_control_loop.py"]),
