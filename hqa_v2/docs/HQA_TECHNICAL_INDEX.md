@@ -71,6 +71,10 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_TOPOLOGY_COMPENSATION_PROFILES_V0.md` | Topology compensation profile report. |
 | `hqa_v2/quality/topology_compensation_profiles_gate.py` | Verifies topology-family coverage and normalized trace compensation metadata. |
 | `hqa_v2/reports/HQA_TOPOLOGY_COMPENSATION_PROFILES_GATE.md` | Topology compensation profile gate report. |
+| `hqa_v2/integrations/dual_vendor_test_matrix_v0.py` | Defines parallel cat-qubit and non-cat vendor testing lanes. |
+| `hqa_v2/reports/HQA_DUAL_VENDOR_TEST_MATRIX_V0.md` | Dual vendor test matrix report. |
+| `hqa_v2/quality/dual_vendor_test_matrix_gate.py` | Verifies test-lane coverage and claim boundaries. |
+| `hqa_v2/reports/HQA_DUAL_VENDOR_TEST_MATRIX_GATE.md` | Dual vendor test matrix gate report. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |
 | `hqa_v2/docs/HQA_REAL_QUANTUM_DATA_READINESS.md` | Path from local proxy evidence to authorized external quantum telemetry. |

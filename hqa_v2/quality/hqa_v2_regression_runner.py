@@ -54,6 +54,8 @@ SAFE_COMMANDS = [
     ("External quantum trace intake gate", ["python", "hqa_v2/quality/external_quantum_trace_intake_gate.py"]),
     ("Topology compensation profiles", ["python", "hqa_v2/integrations/topology_compensation_profiles_v0.py"]),
     ("Topology compensation profiles gate", ["python", "hqa_v2/quality/topology_compensation_profiles_gate.py"]),
+    ("Dual vendor test matrix", ["python", "hqa_v2/integrations/dual_vendor_test_matrix_v0.py"]),
+    ("Dual vendor test matrix gate", ["python", "hqa_v2/quality/dual_vendor_test_matrix_gate.py"]),
     ("Schema contract smoke", ["python", "hqa_v2/quality/schema_contract_smoke_test.py"]),
     ("Vendor shadow packet", ["python", "hqa_v2/package/build_vendor_shadow_packet.py"]),
     ("Vendor shadow packet validation", ["python", "hqa_v2/quality/vendor_shadow_packet_validation.py"]),
