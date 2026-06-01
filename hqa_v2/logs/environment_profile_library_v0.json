@@ -1,0 +1,100 @@
+{
+  "schema_version": "hqa.environment_profile_library.v0",
+  "execution_mode": "interpretation_only",
+  "hardware_authority": false,
+  "profiles": [
+    {
+      "profile_id": "ENV-EARTH-BASELINE",
+      "display_name": "Earth Baseline",
+      "internal_codename": "earth",
+      "regime": "stable_homeostatic",
+      "simulator_mapping": "nominal",
+      "risk_threshold_monitor": 0.2,
+      "risk_threshold_route_review": 0.4,
+      "risk_threshold_quarantine_review": 0.8,
+      "tracer_buffer": "short",
+      "reflex_posture": "observe_small_slips",
+      "learning_permission": "safe_to_record_as_baseline_evidence",
+      "hqa_allowed_actions": [
+        "MONITOR_ONLY",
+        "MONITOR_WITH_ROUTE_REVIEW"
+      ],
+      "boundary": "Use as quiet baseline calibration only; no hardware authority."
+    },
+    {
+      "profile_id": "ENV-TITAN-DAMPED",
+      "display_name": "Titan Damped",
+      "internal_codename": "titan",
+      "regime": "high_latency_damped",
+      "simulator_mapping": "mild_stress",
+      "risk_threshold_monitor": 0.18,
+      "risk_threshold_route_review": 0.34,
+      "risk_threshold_quarantine_review": 0.76,
+      "tracer_buffer": "long",
+      "reflex_posture": "slow_feedback_expand_observation_window",
+      "learning_permission": "record_only_after_decay_check",
+      "hqa_allowed_actions": [
+        "MONITOR_ONLY",
+        "MONITOR_WITH_ROUTE_REVIEW",
+        "QUARANTINE_PROPOSAL"
+      ],
+      "boundary": "Treat slow signals as delayed evidence, not permission for live correction."
+    },
+    {
+      "profile_id": "ENV-ASTEROID-RUPTURE",
+      "display_name": "Asteroid Rupture",
+      "internal_codename": "asteroid",
+      "regime": "high_velocity_rupture",
+      "simulator_mapping": "correlated_stress",
+      "risk_threshold_monitor": 0.12,
+      "risk_threshold_route_review": 0.28,
+      "risk_threshold_quarantine_review": 0.65,
+      "tracer_buffer": "burst",
+      "reflex_posture": "fast_local_quench_review",
+      "learning_permission": "no_unsupervised_learning_during_rupture",
+      "hqa_allowed_actions": [
+        "MONITOR_WITH_ROUTE_REVIEW",
+        "QUARANTINE_PROPOSAL",
+        "ROUTE_REVIEW_AND_QUARANTINE_PROPOSAL"
+      ],
+      "boundary": "Rupture mode increases review sensitivity but still grants no live hardware authority."
+    },
+    {
+      "profile_id": "ENV-DEEP-VACUUM-BRITTLE",
+      "display_name": "Deep Vacuum Brittle",
+      "internal_codename": "deep_vacuum",
+      "regime": "low_interference_brittle",
+      "simulator_mapping": "no_route_hold",
+      "risk_threshold_monitor": 0.1,
+      "risk_threshold_route_review": 0.24,
+      "risk_threshold_quarantine_review": 0.55,
+      "tracer_buffer": "precision",
+      "reflex_posture": "hold_on_shatter_risk",
+      "learning_permission": "block_training_until_operator_review",
+      "hqa_allowed_actions": [
+        "NO_ROUTE_HOLD_REVIEW"
+      ],
+      "boundary": "If safe route evidence collapses, hold rather than force a correction."
+    },
+    {
+      "profile_id": "ENV-PULSE-BREATH",
+      "display_name": "Pulse/Breath Cycle",
+      "internal_codename": "pulse_breath",
+      "regime": "cyclical_expansion_contraction",
+      "simulator_mapping": "schedule_overlay",
+      "risk_threshold_monitor": 0.16,
+      "risk_threshold_route_review": 0.32,
+      "risk_threshold_quarantine_review": 0.7,
+      "tracer_buffer": "phase_aware",
+      "reflex_posture": "phase_gate_before_escalation",
+      "learning_permission": "record_phase_tagged_evidence_only",
+      "hqa_allowed_actions": [
+        "MONITOR_ONLY",
+        "MONITOR_WITH_ROUTE_REVIEW",
+        "QUARANTINE_PROPOSAL"
+      ],
+      "boundary": "Cycle profile is an interpretation overlay; it does not drive live pulse shaping."
+    }
+  ],
+  "boundary": "Profiles tune advisory interpretation only. They do not authorize backend jobs, pulse changes, quarantine commands, or HAL execution."
+}

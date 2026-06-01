@@ -41,6 +41,10 @@ It does not claim physical quantum hardware validation, production QEC performan
 | `hqa_v2/reports/HQA_SIMULATOR_STRESS_SCHEDULE_V0.md` | Simulator stress schedule report. |
 | `hqa_v2/quality/simulator_stress_schedule_gate.py` | Verifies stress-profile behavior, monotonic risk, and advisory boundaries. |
 | `hqa_v2/reports/HQA_SIMULATOR_STRESS_SCHEDULE_GATE.md` | Simulator stress schedule gate report. |
+| `hqa_v2/integrations/environment_profile_library_v0.py` | Translates Chaos-Worldmodel regime names into HQA advisory profile thresholds. |
+| `hqa_v2/reports/HQA_ENVIRONMENT_PROFILE_LIBRARY_V0.md` | Environment profile library report. |
+| `hqa_v2/quality/environment_profile_library_gate.py` | Verifies profile completeness, threshold ordering, and interpretation-only boundaries. |
+| `hqa_v2/reports/HQA_ENVIRONMENT_PROFILE_LIBRARY_GATE.md` | Environment profile library gate report. |
 
 ## Cat-Qubit Lane
 

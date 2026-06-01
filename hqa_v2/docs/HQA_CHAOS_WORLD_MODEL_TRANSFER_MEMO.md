@@ -169,6 +169,22 @@ camera risk
 
 ## Future Work
 
+### Phase 0: Environment Profile Library V0
+
+Translate the Chaos-Worldmodel piles into HQA-native advisory profiles:
+
+- Earth Baseline
+- Titan Damped
+- Asteroid Rupture
+- Deep Vacuum Brittle
+- Pulse/Breath Cycle
+
+Status:
+
+- Implemented as `hqa_v2/integrations/environment_profile_library_v0.py`.
+- Gated by `hqa_v2/quality/environment_profile_library_gate.py`.
+- Profiles tune interpretation thresholds only; they do not replace measured evidence or authorize hardware control.
+
 ### Phase A: HQA Risk Field V0
 
 Build a local risk-field generator from:
