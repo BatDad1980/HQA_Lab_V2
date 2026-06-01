@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HQA Reroute Proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "proposal_id", "source", "destination", "proposed_path", "avoided_targets", "execution_mode"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "hqa.reroute_proposal.v1" },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "destination": { "type": "string", "minLength": 1 },
+    "proposed_path": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "avoided_targets": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "execution_mode": { "type": "string", "enum": ["dry_run", "shadow_advisory", "operator_review_required"] },
+    "score": { "type": "number", "minimum": 0, "maximum": 1 }
+  }
+}

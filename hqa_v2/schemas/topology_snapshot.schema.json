@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HQA Topology Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "snapshot_id", "timestamp_utc", "nodes", "edges"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "hqa.topology_snapshot.v1" },
+    "snapshot_id": { "type": "string", "minLength": 1 },
+    "timestamp_utc": { "type": "string", "minLength": 1 },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["node_id", "status", "coherence_score", "role"],
+        "properties": {
+          "node_id": { "type": "string", "minLength": 1 },
+          "status": { "type": "string", "enum": ["healthy", "degraded", "quarantined", "unknown"] },
+          "coherence_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "role": { "type": "string", "enum": ["data", "ancilla", "readout", "coupler", "mode", "unknown"] }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source", "target", "coupling_score"],
+        "properties": {
+          "source": { "type": "string", "minLength": 1 },
+          "target": { "type": "string", "minLength": 1 },
+          "coupling_score": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    }
+  }
+}

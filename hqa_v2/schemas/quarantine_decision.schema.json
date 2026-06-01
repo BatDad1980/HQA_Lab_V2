@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HQA Quarantine Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "decision_id", "target_id", "reason", "decision", "authority"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "hqa.quarantine_decision.v1" },
+    "decision_id": { "type": "string", "minLength": 1 },
+    "target_id": { "type": "string", "minLength": 1 },
+    "reason": { "type": "string", "minLength": 1 },
+    "decision": { "type": "string", "enum": ["quarantine", "hold", "monitor", "release_proposal"] },
+    "authority": { "type": "string", "enum": ["simulator", "shadow_advisory", "human_operator"] },
+    "source_records": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

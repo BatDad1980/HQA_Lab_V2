@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HQA Syndrome Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_id", "cycle", "source_lane", "syndrome_bits", "decoder_signal"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "hqa.syndrome_record.v1" },
+    "record_id": { "type": "string", "minLength": 1 },
+    "cycle": { "type": "integer", "minimum": 0 },
+    "source_lane": { "type": "string", "enum": ["qiskit", "qiskit_aer", "cirq", "qutip", "dynamiqs", "hardware_shadow", "manual_fixture"] },
+    "syndrome_bits": { "type": "string", "pattern": "^[01]+$" },
+    "seed_error": { "type": ["string", "null"] },
+    "correlated_error": { "type": ["string", "null"] },
+    "decoder_signal": { "type": "string", "minLength": 1 },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+  }
+}

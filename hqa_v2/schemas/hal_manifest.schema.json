@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HQA HAL Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "manifest_id", "requested_action", "target", "execution_mode", "safety_boundary"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "hqa.hal_manifest.v1" },
+    "manifest_id": { "type": "string", "minLength": 1 },
+    "requested_action": { "type": "string", "minLength": 1 },
+    "target": { "type": "string", "minLength": 1 },
+    "execution_mode": { "type": "string", "enum": ["dry_run", "shadow_advisory", "blocked"] },
+    "safety_boundary": { "type": "string", "minLength": 1 },
+    "requires_human_approval": { "type": "boolean" }
+  }
+}
