@@ -63,8 +63,18 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 
 | Artifact | Purpose |
 |---|---|
+| `hqa_v2/integrations/external_quantum_trace_intake_v0.py` | Defines and exercises the external quantum trace intake front door. |
+| `hqa_v2/reports/HQA_EXTERNAL_QUANTUM_TRACE_INTAKE_V0.md` | External quantum trace intake report. |
+| `hqa_v2/quality/external_quantum_trace_intake_gate.py` | Verifies safe acceptance/rejection of external trace payloads. |
+| `hqa_v2/reports/HQA_EXTERNAL_QUANTUM_TRACE_INTAKE_GATE.md` | External quantum trace intake gate report. |
+| `hqa_v2/integrations/topology_compensation_profiles_v0.py` | Defines chip-family compensation profiles for heavy-hex, grid/lattice, bosonic/cat, and neutral graphs. |
+| `hqa_v2/reports/HQA_TOPOLOGY_COMPENSATION_PROFILES_V0.md` | Topology compensation profile report. |
+| `hqa_v2/quality/topology_compensation_profiles_gate.py` | Verifies topology-family coverage and normalized trace compensation metadata. |
+| `hqa_v2/reports/HQA_TOPOLOGY_COMPENSATION_PROFILES_GATE.md` | Topology compensation profile gate report. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |
+| `hqa_v2/docs/HQA_REAL_QUANTUM_DATA_READINESS.md` | Path from local proxy evidence to authorized external quantum telemetry. |
+| `hqa_v2/docs/HQA_EXTERNAL_RESULTS_TRIAGE_2026_06_01.md` | Internal triage of candidate IBM heavy-hex and cat-qubit result notes. |
 | `hqa_v2/quality/schema_contract_smoke_test.py` | Verifies schema presence and strictness. |
 | `hqa_v2/reports/HQA_SCHEMA_CONTRACT_SMOKE.md` | Schema smoke-test report. |
 | `hqa_v2/package/build_vendor_shadow_packet.py` | Generates a sample vendor shadow-mode handoff packet. |

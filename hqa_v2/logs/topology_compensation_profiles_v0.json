@@ -1,0 +1,44 @@
+{
+  "schema_version": "hqa.topology_compensation_profiles.v0",
+  "execution_mode": "interpretation_only",
+  "hardware_authority": false,
+  "profiles": {
+    "heavy_hex": {
+      "family": "heavy_hex",
+      "typical_vendor": "ibm",
+      "connectivity_model": "sparse_fixed_frequency_lattice",
+      "degree_baseline": 2.4,
+      "coupling_floor": 0.55,
+      "role_bias": "data_ancilla_readout",
+      "risk_bias": "watch correlated edge activity and readout-adjacent syndrome persistence"
+    },
+    "grid_lattice": {
+      "family": "grid_lattice",
+      "typical_vendor": "google",
+      "connectivity_model": "nearest_neighbor_planar_grid",
+      "degree_baseline": 3.2,
+      "coupling_floor": 0.5,
+      "role_bias": "data_coupler_readout",
+      "risk_bias": "watch neighborhood clusters and local patch rupture"
+    },
+    "bosonic_cat": {
+      "family": "bosonic_cat",
+      "typical_vendor": "alice_bob",
+      "connectivity_model": "oscillator_mode_with_ancilla_controls",
+      "degree_baseline": 1.8,
+      "coupling_floor": 0.45,
+      "role_bias": "mode_ancilla_readout",
+      "risk_bias": "watch parity persistence, photon-loss events, and masked ancilla faults"
+    },
+    "neutral_graph": {
+      "family": "neutral_graph",
+      "typical_vendor": "neutral_vendor",
+      "connectivity_model": "vendor_supplied_graph",
+      "degree_baseline": 2.0,
+      "coupling_floor": 0.4,
+      "role_bias": "unknown_until_declared",
+      "risk_bias": "use declared topology only; do not infer hardware physics"
+    }
+  },
+  "boundary": "Topology compensation profiles normalize interpretation across chip families only. They do not authorize live backend access, calibration, pulse changes, or HAL execution."
+}

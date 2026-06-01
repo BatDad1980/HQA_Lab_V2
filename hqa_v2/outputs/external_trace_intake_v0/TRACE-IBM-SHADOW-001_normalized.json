@@ -1,0 +1,77 @@
+{
+  "schema_version": "hqa.external_trace_normalized.v0",
+  "trace_id": "TRACE-IBM-SHADOW-001",
+  "source_vendor": "ibm",
+  "source_backend": "sample_heavy_hex_shadow",
+  "topology_family": "heavy_hex",
+  "collection_mode": "public_sample",
+  "hardware_authority": false,
+  "topology_compensation": {
+    "schema_version": "hqa.topology_compensation.v0",
+    "topology_family": "heavy_hex",
+    "connectivity_model": "sparse_fixed_frequency_lattice",
+    "degree_baseline": 2.4,
+    "observed_degree": 1.333333,
+    "coupling_floor": 0.55,
+    "role_bias": "data_ancilla_readout",
+    "risk_bias": "watch correlated edge activity and readout-adjacent syndrome persistence",
+    "normalization_rule": "Map vendor topology into HQA node/edge graph; adjust interpretation thresholds by family metadata without changing HQA risk/proposal APIs.",
+    "boundary": "Compensation metadata changes interpretation only. It does not authorize live calibration, pulse changes, or topology edits."
+  },
+  "topology_snapshot": {
+    "schema_version": "hqa.topology_snapshot.v1",
+    "snapshot_id": "EXT-TOPO-TRACE-IBM-SHADOW-001",
+    "timestamp_utc": "2026-06-01T00:00:00Z",
+    "nodes": [
+      {
+        "node_id": "Q_0",
+        "status": "healthy",
+        "coherence_score": 0.95,
+        "role": "data"
+      },
+      {
+        "node_id": "Q_1",
+        "status": "degraded",
+        "coherence_score": 0.48,
+        "role": "data"
+      },
+      {
+        "node_id": "Q_2",
+        "status": "healthy",
+        "coherence_score": 0.91,
+        "role": "ancilla"
+      }
+    ],
+    "edges": [
+      {
+        "source": "Q_0",
+        "target": "Q_1",
+        "coupling_score": 0.76
+      },
+      {
+        "source": "Q_1",
+        "target": "Q_2",
+        "coupling_score": 0.71
+      }
+    ]
+  },
+  "syndrome_records": [
+    {
+      "schema_version": "hqa.syndrome_record.v1",
+      "record_id": "EXT-SYN-001",
+      "cycle": 7,
+      "source_lane": "manual_fixture",
+      "syndrome_bits": "1110",
+      "seed_error": "Q_1",
+      "correlated_error": "Q_0",
+      "decoder_signal": "CASCADE_LIKE_HISTORY",
+      "confidence": 0.84
+    }
+  ],
+  "provenance": {
+    "permission_basis": "public_or_authorized_shadow_sample",
+    "redacted": true,
+    "notes": "Synthetic shape matching expected external trace format."
+  },
+  "boundary": "Normalized external trace only. No live backend job, pulse change, or HAL execution is authorized."
+}

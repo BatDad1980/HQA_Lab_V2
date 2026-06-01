@@ -1,0 +1,32 @@
+{
+  "schema_version": "hqa.external_quantum_trace_intake_run.v0",
+  "execution_mode": "intake_validation_only",
+  "hardware_authority": false,
+  "decisions": [
+    {
+      "trace_id": "TRACE-IBM-SHADOW-001",
+      "source_vendor": "ibm",
+      "accepted": true,
+      "normalized": true,
+      "rejection_reasons": [],
+      "output_file": "outputs\\external_trace_intake_v0\\TRACE-IBM-SHADOW-001_normalized.json"
+    },
+    {
+      "trace_id": "TRACE-REJECT-SECRET-001",
+      "source_vendor": "unknown_lab",
+      "accepted": false,
+      "normalized": false,
+      "rejection_reasons": [
+        "unknown source_vendor `unknown_lab`",
+        "unknown topology_family `unknown_shape`",
+        "missing provenance.permission_basis",
+        "secret-like content detected",
+        "invalid coherence_score for node `Q_0`",
+        "invalid syndrome_bits for record `BAD`",
+        "invalid confidence for record `BAD`",
+        "trace requested forbidden live authority"
+      ],
+      "output_file": null
+    }
+  ]
+}
