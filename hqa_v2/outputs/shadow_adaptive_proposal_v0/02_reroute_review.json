@@ -1,0 +1,18 @@
+{
+  "schema_version": "hqa.shadow_reroute_review.v0",
+  "review_id": "ROUTE-REVIEW-RISK-FIELD-V0-001",
+  "source_proposal": "ROUTE-DEMO-001",
+  "risk_field_id": "RISK-FIELD-V0-001",
+  "suspected_patch": "Q_1",
+  "proposed_path": [
+    "Q_0",
+    "Q_2",
+    "Q_3"
+  ],
+  "avoided_targets": [
+    "Q_1"
+  ],
+  "execution_mode": "shadow_advisory",
+  "requires_vendor_review": true,
+  "boundary": "Route review only; no live routing table, backend, or control plane is modified."
+}

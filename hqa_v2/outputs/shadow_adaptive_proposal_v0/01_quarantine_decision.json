@@ -1,0 +1,12 @@
+{
+  "schema_version": "hqa.quarantine_decision.v1",
+  "decision_id": "QUAR-RISK-FIELD-V0-001",
+  "target_id": "Q_1",
+  "reason": "Risk Field V0 ranked `Q_1` highest under `ROUTE_REVIEW_AND_QUARANTINE_PROPOSAL` with advisory-only authority.",
+  "decision": "quarantine",
+  "authority": "shadow_advisory",
+  "source_records": [
+    "outputs\\vendor_shadow_packet_v1\\02_syndrome_record.json",
+    "logs/hqa_risk_field_v0.json"
+  ]
+}

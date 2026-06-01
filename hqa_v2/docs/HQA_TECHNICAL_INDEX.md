@@ -33,6 +33,10 @@ It does not claim physical quantum hardware validation, production QEC performan
 | `hqa_v2/reports/HQA_RISK_FIELD_V0.md` | Risk-field ranking report. |
 | `hqa_v2/quality/hqa_risk_field_gate.py` | Verifies risk-field ranking and advisory-only boundary. |
 | `hqa_v2/reports/HQA_RISK_FIELD_GATE.md` | Risk-field gate report. |
+| `hqa_v2/integrations/shadow_adaptive_proposal_v0.py` | Converts the risk field into quarantine, reroute, and HAL dry-run review artifacts. |
+| `hqa_v2/reports/HQA_SHADOW_ADAPTIVE_PROPOSAL_V0.md` | Shadow adaptive proposal report. |
+| `hqa_v2/quality/shadow_adaptive_proposal_gate.py` | Verifies adaptive proposal boundaries and manifest integrity. |
+| `hqa_v2/reports/HQA_SHADOW_ADAPTIVE_PROPOSAL_GATE.md` | Shadow adaptive proposal gate report. |
 
 ## Cat-Qubit Lane
 

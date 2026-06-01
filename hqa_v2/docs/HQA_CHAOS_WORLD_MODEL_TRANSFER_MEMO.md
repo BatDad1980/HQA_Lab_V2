@@ -201,6 +201,12 @@ Convert risk-field output into:
 
 No live hardware action.
 
+Status:
+
+- Implemented as `hqa_v2/integrations/shadow_adaptive_proposal_v0.py`.
+- Gated by `hqa_v2/quality/shadow_adaptive_proposal_gate.py`.
+- Output is a review packet only; physical authority remains outside HQA.
+
 ### Phase C: Simulator Stress Schedule V0
 
 Run periodic local simulator stress profiles:

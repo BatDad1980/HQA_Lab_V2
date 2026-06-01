@@ -41,6 +41,8 @@ SAFE_COMMANDS = [
     ("Qiskit Aer cascade gate", ["python", "hqa_v2/quality/qiskit_aer_cascade_gate.py"]),
     ("HQA risk field", ["python", "hqa_v2/integrations/hqa_risk_field_v0.py"]),
     ("HQA risk field gate", ["python", "hqa_v2/quality/hqa_risk_field_gate.py"]),
+    ("Shadow adaptive proposal", ["python", "hqa_v2/integrations/shadow_adaptive_proposal_v0.py"]),
+    ("Shadow adaptive proposal gate", ["python", "hqa_v2/quality/shadow_adaptive_proposal_gate.py"]),
     ("Cat cascade proxy", ["python", "hqa_v2/integrations/cat_cascade_proxy.py"]),
     ("Schema contract smoke", ["python", "hqa_v2/quality/schema_contract_smoke_test.py"]),
     ("Vendor shadow packet", ["python", "hqa_v2/package/build_vendor_shadow_packet.py"]),
