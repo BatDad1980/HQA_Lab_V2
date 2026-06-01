@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-06-01T00:03:03.405725",
+    "timestamp": "2026-06-01T00:04:57.963520",
     "module": "SYSTEM",
     "event_type": "PREDICTIVE_HOMEOSTASIS_START",
     "data": {
@@ -8,7 +8,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.405725",
+    "timestamp": "2026-06-01T00:04:57.964045",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.405725",
+    "timestamp": "2026-06-01T00:04:57.964045",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -27,7 +27,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.406710",
+    "timestamp": "2026-06-01T00:04:57.964045",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -41,27 +41,60 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.406710",
+    "timestamp": "2026-06-01T00:04:57.964045",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 1,
-      "global_temp_mk": 17.12,
-      "local_spike": "Q_4_1"
+      "global_temp_mk": 17.93,
+      "local_spike": "Q_0_0"
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.507779",
+    "timestamp": "2026-06-01T00:04:57.965059",
+    "module": "FABRIC_SIMULATOR",
+    "event_type": "THERMAL_SPIKE_IMPACT",
+    "data": {
+      "node": "Q_0_0",
+      "new_coherence": 0.4
+    }
+  },
+  {
+    "timestamp": "2026-06-01T00:04:57.965059",
+    "module": "QEC_DECODER",
+    "event_type": "SYNDROMES_DETECTED",
+    "data": {
+      "count": 1,
+      "syndromes": [
+        {
+          "node": "Q_0_0",
+          "error_type": "PHASE_FLIP",
+          "coherence": 0.39
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-06-01T00:04:57.965059",
+    "module": "SENTINEL",
+    "event_type": "EMERGENCY_QUENCH_TRIGGERED",
+    "data": {
+      "node": "Q_0_0",
+      "reason": "live_syndrome_detection"
+    }
+  },
+  {
+    "timestamp": "2026-06-01T00:04:58.066227",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 2,
-      "global_temp_mk": 16.59,
-      "local_spike": null
+      "global_temp_mk": 22.05,
+      "local_spike": "Q_1_2"
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.508347",
+    "timestamp": "2026-06-01T00:04:58.066227",
     "module": "VAGUS_NERVE",
     "event_type": "PREEMPTIVE_QUARANTINE_ISSUED",
     "data": {
@@ -72,12 +105,17 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.509374",
+    "timestamp": "2026-06-01T00:04:58.066227",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
-      "count": 1,
+      "count": 2,
       "syndromes": [
+        {
+          "node": "Q_0_0",
+          "error_type": "PHASE_FLIP",
+          "coherence": 0.38
+        },
         {
           "node": "Q_2_2",
           "error_type": "PHASE_FLIP",
@@ -87,33 +125,33 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.610646",
+    "timestamp": "2026-06-01T00:04:58.067408",
+    "module": "SENTINEL",
+    "event_type": "EMERGENCY_QUENCH_TRIGGERED",
+    "data": {
+      "node": "Q_0_0",
+      "reason": "live_syndrome_detection"
+    }
+  },
+  {
+    "timestamp": "2026-06-01T00:04:58.168334",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 3,
-      "global_temp_mk": 19.99,
-      "local_spike": "Q_0_2"
+      "global_temp_mk": 22.58,
+      "local_spike": null
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.611156",
-    "module": "FABRIC_SIMULATOR",
-    "event_type": "THERMAL_SPIKE_IMPACT",
-    "data": {
-      "node": "Q_0_2",
-      "new_coherence": 0.38
-    }
-  },
-  {
-    "timestamp": "2026-06-01T00:03:03.612192",
+    "timestamp": "2026-06-01T00:04:58.169343",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
       "count": 2,
       "syndromes": [
         {
-          "node": "Q_0_2",
+          "node": "Q_0_0",
           "error_type": "PHASE_FLIP",
           "coherence": 0.37
         },
@@ -126,16 +164,16 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.613165",
+    "timestamp": "2026-06-01T00:04:58.169343",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
-      "node": "Q_0_2",
+      "node": "Q_0_0",
       "reason": "live_syndrome_detection"
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.613165",
+    "timestamp": "2026-06-01T00:04:58.170848",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
@@ -144,24 +182,24 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.714713",
+    "timestamp": "2026-06-01T00:04:58.271828",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 4,
-      "global_temp_mk": 20.83,
-      "local_spike": null
+      "global_temp_mk": 25.61,
+      "local_spike": "Q_3_0"
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.715736",
+    "timestamp": "2026-06-01T00:04:58.271828",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
       "count": 2,
       "syndromes": [
         {
-          "node": "Q_0_2",
+          "node": "Q_0_0",
           "error_type": "PHASE_FLIP",
           "coherence": 0.36
         },
@@ -174,16 +212,16 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.716751",
+    "timestamp": "2026-06-01T00:04:58.271828",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
-      "node": "Q_0_2",
+      "node": "Q_0_0",
       "reason": "live_syndrome_detection"
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.717746",
+    "timestamp": "2026-06-01T00:04:58.273258",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
@@ -192,24 +230,24 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.818760",
+    "timestamp": "2026-06-01T00:04:58.375872",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 5,
-      "global_temp_mk": 20.78,
+      "global_temp_mk": 26.13,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.819286",
+    "timestamp": "2026-06-01T00:04:58.375872",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
       "count": 2,
       "syndromes": [
         {
-          "node": "Q_0_2",
+          "node": "Q_0_0",
           "error_type": "PHASE_FLIP",
           "coherence": 0.35
         },
@@ -222,16 +260,16 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.820389",
+    "timestamp": "2026-06-01T00:04:58.376986",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
-      "node": "Q_0_2",
+      "node": "Q_0_0",
       "reason": "live_syndrome_detection"
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.820389",
+    "timestamp": "2026-06-01T00:04:58.378493",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
@@ -240,7 +278,7 @@
     }
   },
   {
-    "timestamp": "2026-06-01T00:03:03.922111",
+    "timestamp": "2026-06-01T00:04:58.479579",
     "module": "SYSTEM",
     "event_type": "PREDICTIVE_HOMEOSTASIS_COMPLETE",
     "data": {
