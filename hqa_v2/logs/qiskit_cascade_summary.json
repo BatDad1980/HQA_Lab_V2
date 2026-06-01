@@ -1,0 +1,22 @@
+{
+  "noise_manifest": {
+    "single_qubit_bit_flip_rate": 0.004,
+    "measurement_flip_rate": 0.01,
+    "correlated_neighbor_rate": 0.035,
+    "cascade_seed": "data[1] photon-loss-proxy / bit-flip-proxy at cycle 1",
+    "boundary": "Local simulator noise manifest only; no backend job submitted."
+  },
+  "summary": {
+    "qiskit_available": true,
+    "aer_available": true,
+    "dynamic_if_test_available": true,
+    "circuit_qubits": 5,
+    "circuit_clbits": 8,
+    "circuit_depth": 18,
+    "cycles_observed": 4,
+    "cascade_detected": true,
+    "quarantine_target": "data[1]",
+    "hqa_action": "SENTINEL_QUARANTINE_AND_REROUTE_PROPOSAL"
+  },
+  "trace_path": "X:\\HQA_LAB_V1\\hqa_v2\\logs\\qiskit_cascade_syndrome_trace.jsonl"
+}

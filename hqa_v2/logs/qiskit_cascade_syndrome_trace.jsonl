@@ -1,0 +1,4 @@
+{"cycle": 0, "seed_error": null, "correlated_error": null, "syndrome_bits": "00", "syndrome_weight": 0, "decoder_signal": "BASELINE_CLEAR"}
+{"cycle": 1, "seed_error": "data[1]", "correlated_error": null, "syndrome_bits": "11", "syndrome_weight": 2, "decoder_signal": "CASCADE_SEED_DETECTED"}
+{"cycle": 2, "seed_error": null, "correlated_error": "data[2]", "syndrome_bits": "10", "syndrome_weight": 1, "decoder_signal": "CORRELATED_SPREAD_OBSERVED"}
+{"cycle": 3, "seed_error": null, "correlated_error": "data[0]", "syndrome_bits": "01", "syndrome_weight": 1, "decoder_signal": "CORRELATED_SPREAD_OBSERVED"}

@@ -6,7 +6,7 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
 ```json
 [
   {
-    "timestamp": "2026-05-31T22:16:49.289809",
+    "timestamp": "2026-05-31T22:20:22.368789",
     "module": "SYSTEM",
     "event_type": "PREDICTIVE_HOMEOSTASIS_START",
     "data": {
@@ -14,7 +14,7 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.289809",
+    "timestamp": "2026-05-31T22:20:22.370306",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -24,7 +24,7 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.289809",
+    "timestamp": "2026-05-31T22:20:22.370306",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -33,7 +33,7 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.289809",
+    "timestamp": "2026-05-31T22:20:22.370306",
     "module": "HIPPOCAMPUS",
     "event_type": "REROUTE_SUCCESS",
     "data": {
@@ -47,27 +47,27 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.290809",
+    "timestamp": "2026-05-31T22:20:22.371313",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 1,
-      "global_temp_mk": 15.41,
-      "local_spike": null
+      "global_temp_mk": 19.39,
+      "local_spike": "Q_4_3"
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.391517",
+    "timestamp": "2026-05-31T22:20:22.471875",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 2,
-      "global_temp_mk": 15.6,
+      "global_temp_mk": 18.83,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.392028",
+    "timestamp": "2026-05-31T22:20:22.472381",
     "module": "VAGUS_NERVE",
     "event_type": "PREEMPTIVE_QUARANTINE_ISSUED",
     "data": {
@@ -78,7 +78,7 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.392028",
+    "timestamp": "2026-05-31T22:20:22.472381",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
@@ -93,17 +93,17 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.493079",
+    "timestamp": "2026-05-31T22:20:22.573306",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 3,
-      "global_temp_mk": 15.39,
+      "global_temp_mk": 18.37,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.493079",
+    "timestamp": "2026-05-31T22:20:22.573846",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
@@ -118,7 +118,7 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.494111",
+    "timestamp": "2026-05-31T22:20:22.573846",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
@@ -127,17 +127,17 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.595426",
+    "timestamp": "2026-05-31T22:20:22.675559",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 4,
-      "global_temp_mk": 19.5,
-      "local_spike": "Q_3_0"
+      "global_temp_mk": 17.77,
+      "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.596285",
+    "timestamp": "2026-05-31T22:20:22.676762",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
@@ -152,7 +152,7 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.596285",
+    "timestamp": "2026-05-31T22:20:22.676762",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
@@ -161,17 +161,17 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.698005",
+    "timestamp": "2026-05-31T22:20:22.778560",
     "module": "TELEMETRY_STREAM",
     "event_type": "SENSOR_READING",
     "data": {
       "tick": 5,
-      "global_temp_mk": 18.93,
+      "global_temp_mk": 17.73,
       "local_spike": null
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.698005",
+    "timestamp": "2026-05-31T22:20:22.780600",
     "module": "QEC_DECODER",
     "event_type": "SYNDROMES_DETECTED",
     "data": {
@@ -186,7 +186,7 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.698005",
+    "timestamp": "2026-05-31T22:20:22.782622",
     "module": "SENTINEL",
     "event_type": "EMERGENCY_QUENCH_TRIGGERED",
     "data": {
@@ -195,7 +195,7 @@ This report demonstrates a proxy predictive-homeostasis scenario. By tracking th
     }
   },
   {
-    "timestamp": "2026-05-31T22:16:49.799621",
+    "timestamp": "2026-05-31T22:20:22.885039",
     "module": "SYSTEM",
     "event_type": "PREDICTIVE_HOMEOSTASIS_COMPLETE",
     "data": {

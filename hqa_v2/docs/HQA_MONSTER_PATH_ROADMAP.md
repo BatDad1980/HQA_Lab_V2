@@ -41,10 +41,19 @@ Deliverables:
 - Adapter smoke tests proving import discipline.
 - Trace conversion from HQA route decisions into simulator inputs.
 - Simulator result ingestion back into HQA audit logs.
+- Syndrome-history capture for cascade observation instead of final-state-only summaries.
+- Custom correlated-noise manifests for local simulator probes.
+- Decoder hooks that allow HQA cascade policies to be compared against standard decoder families later.
 
 Acceptance target:
 
 HQA can take one synthetic fault scenario, emit a simulator-ready circuit or model, run it in an available simulator lane, and attach the result to the existing audit chain.
+
+First cascade target:
+
+- Qiskit/Aer lane for dynamic-circuit and syndrome-record plumbing.
+- Dynamiqs/QuTiP lane for cat-qubit physics once installed.
+- Photon-loss cascade first, gate-induced cascade second.
 
 ## Phase 2: Digital Twin Replay
 

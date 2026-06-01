@@ -35,6 +35,7 @@ SAFE_COMMANDS = [
     ("Simulator readiness", ["python", "hqa_v2/integrations/simulator_readiness.py"]),
     ("IBM runtime dry readiness", ["python", "hqa_v2/integrations/ibm_runtime_readiness.py"]),
     ("Simulator adapter smoke", ["python", "hqa_v2/quality/simulator_adapter_smoke_test.py"]),
+    ("Qiskit cascade observer", ["python", "hqa_v2/integrations/qiskit_cascade_observer.py"]),
     ("Stress harness", ["python", "hqa_v2/demos/hqa_stress_harness.py"]),
     ("Deterministic stress scenarios", ["python", "hqa_v2/quality/hqa_v2_stress_scenarios.py"]),
     ("Integrated loop", ["python", "hqa_v2/demos/hqa_v2_integrated_control_loop.py"]),
