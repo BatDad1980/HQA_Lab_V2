@@ -70,6 +70,8 @@ SAFE_COMMANDS = [
     ("Telemetry compression gate quality", ["python", "hqa_v2/quality/telemetry_compression_gate_quality.py"]),
     ("Patch routing prototype", ["python", "hqa_v2/integrations/patch_routing_prototype_v0.py"]),
     ("Patch routing prototype quality", ["python", "hqa_v2/quality/patch_routing_prototype_quality.py"]),
+    ("Provider normalization matrix", ["python", "hqa_v2/integrations/provider_normalization_matrix_v0.py"]),
+    ("Provider normalization matrix gate", ["python", "hqa_v2/quality/provider_normalization_matrix_gate.py"]),
     ("Schema contract smoke", ["python", "hqa_v2/quality/schema_contract_smoke_test.py"]),
     ("Vendor shadow packet", ["python", "hqa_v2/package/build_vendor_shadow_packet.py"]),
     ("Vendor shadow packet validation", ["python", "hqa_v2/quality/vendor_shadow_packet_validation.py"]),

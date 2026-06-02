@@ -1,0 +1,192 @@
+{
+  "schema_version": "hqa.provider_normalization_matrix.v0",
+  "execution_mode": "shadow_normalization_only",
+  "hardware_authority": false,
+  "credential_access": false,
+  "provider_count": 6,
+  "providers": [
+    "ibm_qiskit_runtime",
+    "aws_braket",
+    "azure_quantum",
+    "nvidia_cuda_q",
+    "cirq_qsim",
+    "qutip_dynamiqs"
+  ],
+  "topology_families": [
+    "bosonic_cat",
+    "grid_lattice",
+    "heavy_hex",
+    "neutral_graph"
+  ],
+  "packets": [
+    {
+      "schema_version": "hqa.provider_normalization_packet.v0",
+      "provider": "ibm_qiskit_runtime",
+      "source_backend": "ibm_marrakesh_shadow",
+      "provider_lane": "real_qpu_calibration",
+      "topology_family": "heavy_hex",
+      "hqa_interpretation": "IBM-style sparse heavy-hex calibration is interpreted as node health plus coupling risk.",
+      "normalized_features": {
+        "source_hash": "5432722e33230624a6d8b2a97953ec5133f26119113e4763b3dc2b5fba1ea0e3",
+        "collection_mode": "calibration_derived_shadow",
+        "risk_inputs": {
+          "defect_density": 0.352564,
+          "readout_error": 0.02681,
+          "coherence_floor_us": 105.89
+        },
+        "topology_inputs": {
+          "node_count": 156,
+          "degraded_nodes": 55,
+          "pruned_edges": 78,
+          "family": "heavy_hex"
+        },
+        "latency_inputs": {}
+      },
+      "adapter_boundary": "Provider adapter normalizes telemetry only. It does not access credentials, submit live jobs, alter pulse schedules, or authorize hardware control.",
+      "hardware_authority": false,
+      "credential_access": false
+    },
+    {
+      "schema_version": "hqa.provider_normalization_packet.v0",
+      "provider": "aws_braket",
+      "source_backend": "braket_multi_provider_shadow",
+      "provider_lane": "aggregated_device_metadata",
+      "topology_family": "neutral_graph",
+      "hqa_interpretation": "Aggregator or runtime metadata is interpreted only from declared graph and result fields.",
+      "normalized_features": {
+        "source_hash": "2b94d08d1d34cad48674190eab886a055e382b8bb8be9e90c5df76f2457126f9",
+        "collection_mode": "provider_metadata_shadow",
+        "risk_inputs": {
+          "declared_qubits": 84,
+          "metadata_complete": true,
+          "queue_depth_hint": 12
+        },
+        "topology_inputs": {
+          "node_count": 84,
+          "family": "neutral_graph",
+          "connectivity_supplied": true
+        },
+        "latency_inputs": {
+          "latency_budget_ms": null,
+          "shots_or_samples": 4096
+        }
+      },
+      "adapter_boundary": "Provider adapter normalizes telemetry only. It does not access credentials, submit live jobs, alter pulse schedules, or authorize hardware control.",
+      "hardware_authority": false,
+      "credential_access": false
+    },
+    {
+      "schema_version": "hqa.provider_normalization_packet.v0",
+      "provider": "azure_quantum",
+      "source_backend": "azure_provider_shadow",
+      "provider_lane": "aggregated_workspace_metadata",
+      "topology_family": "neutral_graph",
+      "hqa_interpretation": "Aggregator or runtime metadata is interpreted only from declared graph and result fields.",
+      "normalized_features": {
+        "source_hash": "9296c1edf6bbad974fa4f51d866fe5b60200b2feff4fbeadf501083548b62516",
+        "collection_mode": "provider_metadata_shadow",
+        "risk_inputs": {
+          "declared_qubits": 64,
+          "metadata_complete": true,
+          "queue_depth_hint": null
+        },
+        "topology_inputs": {
+          "node_count": 64,
+          "family": "neutral_graph",
+          "connectivity_supplied": null
+        },
+        "latency_inputs": {
+          "latency_budget_ms": null,
+          "shots_or_samples": 2048
+        }
+      },
+      "adapter_boundary": "Provider adapter normalizes telemetry only. It does not access credentials, submit live jobs, alter pulse schedules, or authorize hardware control.",
+      "hardware_authority": false,
+      "credential_access": false
+    },
+    {
+      "schema_version": "hqa.provider_normalization_packet.v0",
+      "provider": "nvidia_cuda_q",
+      "source_backend": "cuda_q_local_shadow",
+      "provider_lane": "hybrid_runtime_simulation",
+      "topology_family": "neutral_graph",
+      "hqa_interpretation": "Aggregator or runtime metadata is interpreted only from declared graph and result fields.",
+      "normalized_features": {
+        "source_hash": "19edb16cc30b7974f4a8bcf312d85451a81e486a14eb9c6aafe0bd1932d5d9c1",
+        "collection_mode": "simulator_export",
+        "risk_inputs": {
+          "declared_qubits": null,
+          "metadata_complete": true,
+          "queue_depth_hint": null
+        },
+        "topology_inputs": {
+          "node_count": null,
+          "family": "neutral_graph",
+          "connectivity_supplied": null
+        },
+        "latency_inputs": {
+          "latency_budget_ms": 250,
+          "shots_or_samples": 8192
+        }
+      },
+      "adapter_boundary": "Provider adapter normalizes telemetry only. It does not access credentials, submit live jobs, alter pulse schedules, or authorize hardware control.",
+      "hardware_authority": false,
+      "credential_access": false
+    },
+    {
+      "schema_version": "hqa.provider_normalization_packet.v0",
+      "provider": "cirq_qsim",
+      "source_backend": "qsim_grid_shadow",
+      "provider_lane": "grid_circuit_simulation",
+      "topology_family": "grid_lattice",
+      "hqa_interpretation": "Planar grid/lattice data is interpreted as local patch health plus neighborhood rupture risk.",
+      "normalized_features": {
+        "source_hash": "fbe00fa515bf649a2d0a9f444ce5a16a7dce3d896ddf055a080f32411159871a",
+        "collection_mode": "simulator_export",
+        "risk_inputs": {
+          "patch_alert_density": 0.074074,
+          "two_qubit_error_proxy": 0.011,
+          "depth": 42
+        },
+        "topology_inputs": {
+          "node_count": 54,
+          "grid_rows": 9,
+          "grid_cols": 6,
+          "family": "grid_lattice"
+        },
+        "latency_inputs": {}
+      },
+      "adapter_boundary": "Provider adapter normalizes telemetry only. It does not access credentials, submit live jobs, alter pulse schedules, or authorize hardware control.",
+      "hardware_authority": false,
+      "credential_access": false
+    },
+    {
+      "schema_version": "hqa.provider_normalization_packet.v0",
+      "provider": "qutip_dynamiqs",
+      "source_backend": "cat_solver_shadow",
+      "provider_lane": "bosonic_solver_simulation",
+      "topology_family": "bosonic_cat",
+      "hqa_interpretation": "Cat-qubit solver data is interpreted as oscillator/parity health plus photon-loss or phase-bias risk.",
+      "normalized_features": {
+        "source_hash": "02fbf61d614edf682737544f3c779bee2b08e5713bf29df87ebc2ccd55f8fc6b",
+        "collection_mode": "solver_export",
+        "risk_inputs": {
+          "photon_loss_rate": 0.004,
+          "phase_bias_ratio": 8.5,
+          "parity_persistence": 0.91,
+          "combined_fidelity": 0.9495
+        },
+        "topology_inputs": {
+          "node_count": 1,
+          "mode_family": "bosonic_cat",
+          "alpha": 1.35
+        },
+        "latency_inputs": {}
+      },
+      "adapter_boundary": "Provider adapter normalizes telemetry only. It does not access credentials, submit live jobs, alter pulse schedules, or authorize hardware control.",
+      "hardware_authority": false,
+      "credential_access": false
+    }
+  ],
+  "boundary": "This matrix validates provider-dialect normalization only. It does not prove provider performance, physical quantum control, live cloud access, or production QEC."
+}

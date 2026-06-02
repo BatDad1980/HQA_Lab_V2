@@ -103,6 +103,10 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_PATCH_ROUTING_PROTOTYPE_V0.md` | Patch routing prototype report. |
 | `hqa_v2/quality/patch_routing_prototype_quality.py` | Verifies patch routing reduces planning workload and preserves safe-hold behavior. |
 | `hqa_v2/reports/HQA_PATCH_ROUTING_PROTOTYPE_QUALITY.md` | Patch routing quality report. |
+| `hqa_v2/integrations/provider_normalization_matrix_v0.py` | Normalizes IBM, Braket, Azure, CUDA-Q, Cirq/qsim, and cat-solver telemetry dialects into one HQA shadow adapter grammar. |
+| `hqa_v2/reports/HQA_PROVIDER_NORMALIZATION_MATRIX_V0.md` | Provider normalization matrix report. |
+| `hqa_v2/quality/provider_normalization_matrix_gate.py` | Verifies provider coverage, topology-family coverage, source hashing, and no live authority. |
+| `hqa_v2/reports/HQA_PROVIDER_NORMALIZATION_MATRIX_GATE.md` | Provider normalization matrix gate report. |
 | `hqa_v2/docs/HQA_V1_LEGACY_HARVEST_INDEX.md` | Read-only harvest index for mechanisms pulled from the separate HQA V1 line. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |
