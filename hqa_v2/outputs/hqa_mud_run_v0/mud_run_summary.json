@@ -1,0 +1,123 @@
+{
+  "schema_version": "hqa.mud_run.v0",
+  "execution_mode": "adversarial_shadow_harness",
+  "hardware_authority": false,
+  "scenario_count": 8,
+  "results": [
+    {
+      "scenario_id": "MUD-001",
+      "title": "Malformed vendor trace",
+      "disposition": "REJECT",
+      "breakpoint": "schema_bounds",
+      "reviewer_required": false,
+      "hardware_authority": false,
+      "reason": "Payload contains numeric values outside allowed physical score bounds."
+    },
+    {
+      "scenario_id": "MUD-002",
+      "title": "Secret-bearing trace",
+      "disposition": "QUARANTINE",
+      "breakpoint": "secret_containment",
+      "reviewer_required": true,
+      "hardware_authority": false,
+      "reason": "Payload contains secret-like material and cannot enter active evaluation."
+    },
+    {
+      "scenario_id": "MUD-003",
+      "title": "Unsupported topology family",
+      "disposition": "REVIEW_LOCK",
+      "breakpoint": "topology_compensation_gap",
+      "reviewer_required": true,
+      "hardware_authority": false,
+      "reason": "Topology family has no compensation profile."
+    },
+    {
+      "scenario_id": "MUD-004",
+      "title": "Live authority request",
+      "disposition": "SAFE_HOLD",
+      "breakpoint": "hardware_authority_boundary",
+      "reviewer_required": true,
+      "hardware_authority": false,
+      "reason": "Payload requests live authority; HQA lab only permits shadow evidence."
+    },
+    {
+      "scenario_id": "MUD-005",
+      "title": "No-route fabric collapse",
+      "disposition": "SAFE_HOLD",
+      "breakpoint": "no_route_available",
+      "reviewer_required": true,
+      "hardware_authority": false,
+      "reason": "No valid stable path exists across the supplied topology."
+    },
+    {
+      "scenario_id": "MUD-006",
+      "title": "Conflicting calibration snapshot",
+      "disposition": "REVIEW_LOCK",
+      "breakpoint": "conflicting_calibration",
+      "reviewer_required": true,
+      "hardware_authority": false,
+      "reason": "Calibration snapshot contains conflicting records for the same node."
+    },
+    {
+      "scenario_id": "MUD-007",
+      "title": "Valid but extreme cat profile",
+      "disposition": "SAFE_HOLD",
+      "breakpoint": "extreme_cat_noise",
+      "reviewer_required": true,
+      "hardware_authority": false,
+      "reason": "Cat lane noise exceeds the current shadow proposal envelope."
+    },
+    {
+      "scenario_id": "MUD-008",
+      "title": "Clean harsh profile",
+      "disposition": "ACCEPT_SHADOW",
+      "breakpoint": "none",
+      "reviewer_required": false,
+      "hardware_authority": false,
+      "reason": "Payload is harsh but bounded, redacted, and shadow-only."
+    }
+  ],
+  "expected": [
+    {
+      "scenario_id": "MUD-001",
+      "expected_disposition": "REJECT",
+      "expected_breakpoint": "schema_bounds"
+    },
+    {
+      "scenario_id": "MUD-002",
+      "expected_disposition": "QUARANTINE",
+      "expected_breakpoint": "secret_containment"
+    },
+    {
+      "scenario_id": "MUD-003",
+      "expected_disposition": "REVIEW_LOCK",
+      "expected_breakpoint": "topology_compensation_gap"
+    },
+    {
+      "scenario_id": "MUD-004",
+      "expected_disposition": "SAFE_HOLD",
+      "expected_breakpoint": "hardware_authority_boundary"
+    },
+    {
+      "scenario_id": "MUD-005",
+      "expected_disposition": "SAFE_HOLD",
+      "expected_breakpoint": "no_route_available"
+    },
+    {
+      "scenario_id": "MUD-006",
+      "expected_disposition": "REVIEW_LOCK",
+      "expected_breakpoint": "conflicting_calibration"
+    },
+    {
+      "scenario_id": "MUD-007",
+      "expected_disposition": "SAFE_HOLD",
+      "expected_breakpoint": "extreme_cat_noise"
+    },
+    {
+      "scenario_id": "MUD-008",
+      "expected_disposition": "ACCEPT_SHADOW",
+      "expected_breakpoint": "none"
+    }
+  ],
+  "boundary": "Local adversarial harness only; no live hardware authority."
+}

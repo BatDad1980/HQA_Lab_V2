@@ -60,6 +60,8 @@ SAFE_COMMANDS = [
     ("Legacy scar router gate", ["python", "hqa_v2/quality/legacy_scar_router_gate.py"]),
     ("Legacy autonomic stress regulator", ["python", "hqa_v2/integrations/legacy_autonomic_stress_regulator_v0.py"]),
     ("Legacy autonomic stress regulator gate", ["python", "hqa_v2/quality/legacy_autonomic_stress_regulator_gate.py"]),
+    ("HQA mud run", ["python", "hqa_v2/integrations/hqa_mud_run_v0.py"]),
+    ("HQA mud run gate", ["python", "hqa_v2/quality/hqa_mud_run_gate.py"]),
     ("Schema contract smoke", ["python", "hqa_v2/quality/schema_contract_smoke_test.py"]),
     ("Vendor shadow packet", ["python", "hqa_v2/package/build_vendor_shadow_packet.py"]),
     ("Vendor shadow packet validation", ["python", "hqa_v2/quality/vendor_shadow_packet_validation.py"]),
