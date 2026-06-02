@@ -87,6 +87,10 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_MUD_RUN_V0.md` | Mud-run breakpoint report. |
 | `hqa_v2/quality/hqa_mud_run_gate.py` | Verifies expected rejection, quarantine, review-lock, safe-hold, and accept-shadow behavior. |
 | `hqa_v2/reports/HQA_MUD_RUN_GATE.md` | Mud-run gate report. |
+| `hqa_v2/integrations/cognitive_advisory_contract_v0.py` | Converts model-generated advisory outputs into bounded annotations under deterministic HQA gates. |
+| `hqa_v2/reports/HQA_COGNITIVE_ADVISORY_CONTRACT_V0.md` | Cognitive advisory containment report. |
+| `hqa_v2/quality/cognitive_advisory_contract_gate.py` | Verifies model advice cannot override gates, release secrets, or authorize hardware. |
+| `hqa_v2/reports/HQA_COGNITIVE_ADVISORY_CONTRACT_GATE.md` | Cognitive advisory contract gate report. |
 | `hqa_v2/docs/HQA_V1_LEGACY_HARVEST_INDEX.md` | Read-only harvest index for mechanisms pulled from the separate HQA V1 line. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |
