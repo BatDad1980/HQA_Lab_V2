@@ -111,6 +111,10 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_PROVIDER_REPLAY_HARNESS_V0.md` | Provider replay harness report. |
 | `hqa_v2/quality/provider_replay_harness_gate.py` | Verifies IBM, Braket, Azure, CUDA-Q, Cirq/qsim, and cat-solver lanes replay with bounded decisions and no live authority. |
 | `hqa_v2/reports/HQA_PROVIDER_REPLAY_HARNESS_GATE.md` | Provider replay harness gate report. |
+| `hqa_v2/demos/build_evidence_dashboard_v0.py` | Builds a static read-only dashboard from current HQA evidence logs and reports. |
+| `hqa_v2/outputs/evidence_dashboard_v0/HQA_EVIDENCE_DASHBOARD_V0.html` | Generated evidence dashboard. |
+| `hqa_v2/quality/evidence_dashboard_gate.py` | Verifies the dashboard is evidence-backed, non-interactive, and boundary-safe. |
+| `hqa_v2/reports/HQA_EVIDENCE_DASHBOARD_GATE.md` | Evidence dashboard gate report. |
 | `hqa_v2/docs/HQA_V1_LEGACY_HARVEST_INDEX.md` | Read-only harvest index for mechanisms pulled from the separate HQA V1 line. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |

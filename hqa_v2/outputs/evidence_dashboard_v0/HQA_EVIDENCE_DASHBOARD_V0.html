@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HQA V2 Evidence Dashboard</title>
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --panel: #151923;
+      --panel-2: #10141d;
+      --text: #eef2f7;
+      --muted: #9ca8b8;
+      --line: #2a3242;
+      --good: #55d987;
+      --blue: #61c5ff;
+      --warn: #f5c86a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      letter-spacing: 0;
+    }
+    header {
+      padding: 28px 34px 20px;
+      border-bottom: 1px solid var(--line);
+      background: #10131a;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .subhead {
+      max-width: 960px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+      font-size: 15px;
+    }
+    .boundary {
+      margin-top: 18px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 9px 12px;
+      border: 1px solid var(--warn);
+      color: var(--warn);
+      background: rgba(245, 200, 106, 0.08);
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    main {
+      padding: 28px 34px 42px;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 190px;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .status { color: var(--good); }
+    .metric {
+      color: var(--blue);
+      font-family: Consolas, Menlo, monospace;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+    p {
+      color: var(--muted);
+      line-height: 1.45;
+      margin: 0 0 14px;
+      font-size: 14px;
+    }
+    code {
+      display: block;
+      color: #c9d3df;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 9px;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-title {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
+    .section-title h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 11px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      color: var(--muted);
+      background: var(--panel-2);
+      font-weight: 700;
+    }
+    .pill {
+      display: inline-block;
+      border: 1px solid var(--blue);
+      color: var(--blue);
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-family: Consolas, Menlo, monospace;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 12px;
+      padding: 18px 2px 0;
+    }
+    @media (max-width: 1100px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 700px) {
+      header, main { padding-left: 18px; padding-right: 18px; }
+      .grid { grid-template-columns: 1fr; }
+      table { font-size: 12px; }
+      th, td { padding: 9px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HQA V2 Evidence Dashboard</h1>
+    <p class="subhead">Read-only clean-lab view of the current Homeostatic Quantum Architecture proxy evidence chain. This page is generated from local HQA reports and logs.</p>
+    <div class="boundary">Shadow-only evidence. No live hardware control. No provider access. No credentials.</div>
+  </header>
+  <main>
+    <div class="grid">
+      
+        <article class="card">
+          <div class="card-top">
+            <span class="status">PASS</span>
+            <span class="metric">58/58</span>
+          </div>
+          <h2>Regression Spine</h2>
+          <p>Full safe HQA V2 regression suite passes from repository root.</p>
+          <code>hqa_v2/reports/HQA_V2_REGRESSION_SUMMARY.md</code>
+        </article>
+        
+
+        <article class="card">
+          <div class="card-top">
+            <span class="status">PASS</span>
+            <span class="metric">12/12</span>
+          </div>
+          <h2>Provider Normalization</h2>
+          <p>IBM, Braket, Azure, CUDA-Q, Cirq/qsim, and cat-solver lanes normalize into one shadow grammar.</p>
+          <code>hqa_v2/reports/HQA_PROVIDER_NORMALIZATION_MATRIX_GATE.md</code>
+        </article>
+        
+
+        <article class="card">
+          <div class="card-top">
+            <span class="status">PASS</span>
+            <span class="metric">14/14</span>
+          </div>
+          <h2>Provider Replay</h2>
+          <p>Six provider lanes replay through deterministic responses: ACCEPT_SIMULATOR_REPLAY, METADATA_ONLY_REPLAY, MONITOR_WITH_SHADOW_OPTIMIZATION, NO_INTERVENTION, PATCH_ROUTING_REPLAY.</p>
+          <code>hqa_v2/reports/HQA_PROVIDER_REPLAY_HARNESS_GATE.md</code>
+        </article>
+        
+
+        <article class="card">
+          <div class="card-top">
+            <span class="status">PASS</span>
+            <span class="metric">11/11</span>
+          </div>
+          <h2>Patch Routing</h2>
+          <p>Coarse patch routing reduces available-route planning workload up to 405.862x and preserves SAFE_HOLD.</p>
+          <code>hqa_v2/reports/HQA_PATCH_ROUTING_PROTOTYPE_QUALITY.md</code>
+        </article>
+        
+
+        <article class="card">
+          <div class="card-top">
+            <span class="status">PASS</span>
+            <span class="metric">11/11</span>
+          </div>
+          <h2>Telemetry Compression</h2>
+          <p>Large advisory payload compressed by 19.917x while preserving the intervention decision.</p>
+          <code>hqa_v2/reports/HQA_TELEMETRY_COMPRESSION_GATE_QUALITY.md</code>
+        </article>
+        
+    </div>
+    <section>
+      <div class="section-title">
+        <h2>Provider Replay Decisions</h2>
+        <span>All rows come from hqa_v2/logs/provider_replay_harness_v0.json</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Provider</th>
+            <th>Lane</th>
+            <th>Family</th>
+            <th>Decision</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr>
+          <td>ibm_qiskit_runtime</td>
+          <td>real_qpu_calibration</td>
+          <td>heavy_hex</td>
+          <td><span class="pill">NO_INTERVENTION</span></td>
+          <td>Heavy-hex calibration is below readout instability threshold; HQA stands down.</td>
+        </tr>
+        
+
+        <tr>
+          <td>aws_braket</td>
+          <td>aggregated_device_metadata</td>
+          <td>neutral_graph</td>
+          <td><span class="pill">METADATA_ONLY_REPLAY</span></td>
+          <td>Aggregator packet is provider metadata only; no intervention decision can be promoted.</td>
+        </tr>
+        
+
+        <tr>
+          <td>azure_quantum</td>
+          <td>aggregated_workspace_metadata</td>
+          <td>neutral_graph</td>
+          <td><span class="pill">METADATA_ONLY_REPLAY</span></td>
+          <td>Aggregator packet is provider metadata only; no intervention decision can be promoted.</td>
+        </tr>
+        
+
+        <tr>
+          <td>nvidia_cuda_q</td>
+          <td>hybrid_runtime_simulation</td>
+          <td>neutral_graph</td>
+          <td><span class="pill">ACCEPT_SIMULATOR_REPLAY</span></td>
+          <td>CUDA-Q packet is local simulator metadata inside the latency budget.</td>
+        </tr>
+        
+
+        <tr>
+          <td>cirq_qsim</td>
+          <td>grid_circuit_simulation</td>
+          <td>grid_lattice</td>
+          <td><span class="pill">PATCH_ROUTING_REPLAY</span></td>
+          <td>Grid/lattice packet has enough local patch pressure to exercise patch-routing replay.</td>
+        </tr>
+        
+
+        <tr>
+          <td>qutip_dynamiqs</td>
+          <td>bosonic_solver_simulation</td>
+          <td>bosonic_cat</td>
+          <td><span class="pill">MONITOR_WITH_SHADOW_OPTIMIZATION</span></td>
+          <td>Cat solver packet is stable enough for bounded shadow optimization monitoring.</td>
+        </tr>
+        
+        </tbody>
+      </table>
+    </section>
+    <footer>
+      Boundary: validates proxy control-flow and evidence display only. It does not claim physical quantum validation, production QEC performance, or uncontrolled hardware execution.
+    </footer>
+  </main>
+</body>
+</html>

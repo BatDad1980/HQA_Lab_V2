@@ -1,0 +1,47 @@
+{
+  "schema_version": "hqa.evidence_dashboard_manifest.v0",
+  "execution_mode": "read_only_static_dashboard",
+  "hardware_authority": false,
+  "credential_access": false,
+  "provider_access": false,
+  "dashboard": "outputs\\evidence_dashboard_v0\\HQA_EVIDENCE_DASHBOARD_V0.html",
+  "cards": [
+    {
+      "title": "Regression Spine",
+      "status": "PASS",
+      "metric": "58/58",
+      "detail": "Full safe HQA V2 regression suite passes from repository root.",
+      "artifact": "hqa_v2/reports/HQA_V2_REGRESSION_SUMMARY.md"
+    },
+    {
+      "title": "Provider Normalization",
+      "status": "PASS",
+      "metric": "12/12",
+      "detail": "IBM, Braket, Azure, CUDA-Q, Cirq/qsim, and cat-solver lanes normalize into one shadow grammar.",
+      "artifact": "hqa_v2/reports/HQA_PROVIDER_NORMALIZATION_MATRIX_GATE.md"
+    },
+    {
+      "title": "Provider Replay",
+      "status": "PASS",
+      "metric": "14/14",
+      "detail": "Six provider lanes replay through deterministic responses: ACCEPT_SIMULATOR_REPLAY, METADATA_ONLY_REPLAY, MONITOR_WITH_SHADOW_OPTIMIZATION, NO_INTERVENTION, PATCH_ROUTING_REPLAY.",
+      "artifact": "hqa_v2/reports/HQA_PROVIDER_REPLAY_HARNESS_GATE.md"
+    },
+    {
+      "title": "Patch Routing",
+      "status": "PASS",
+      "metric": "11/11",
+      "detail": "Coarse patch routing reduces available-route planning workload up to 405.862x and preserves SAFE_HOLD.",
+      "artifact": "hqa_v2/reports/HQA_PATCH_ROUTING_PROTOTYPE_QUALITY.md"
+    },
+    {
+      "title": "Telemetry Compression",
+      "status": "PASS",
+      "metric": "11/11",
+      "detail": "Large advisory payload compressed by 19.917x while preserving the intervention decision.",
+      "artifact": "hqa_v2/reports/HQA_TELEMETRY_COMPRESSION_GATE_QUALITY.md"
+    }
+  ],
+  "provider_rows": 6,
+  "boundary": "Dashboard displays local evidence only. No live control, provider access, credentials, or HAL dispatch."
+}
