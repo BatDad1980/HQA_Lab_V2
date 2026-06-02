@@ -99,6 +99,10 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_TELEMETRY_COMPRESSION_GATE_V0.md` | Telemetry compression report. |
 | `hqa_v2/quality/telemetry_compression_gate_quality.py` | Verifies compressed summaries preserve intervention decisions and fit latency budget. |
 | `hqa_v2/reports/HQA_TELEMETRY_COMPRESSION_GATE_QUALITY.md` | Telemetry compression quality report. |
+| `hqa_v2/integrations/patch_routing_prototype_v0.py` | Tests coarse patch routing as a bounded alternative to global node-level A* at large fabric sizes. |
+| `hqa_v2/reports/HQA_PATCH_ROUTING_PROTOTYPE_V0.md` | Patch routing prototype report. |
+| `hqa_v2/quality/patch_routing_prototype_quality.py` | Verifies patch routing reduces planning workload and preserves safe-hold behavior. |
+| `hqa_v2/reports/HQA_PATCH_ROUTING_PROTOTYPE_QUALITY.md` | Patch routing quality report. |
 | `hqa_v2/docs/HQA_V1_LEGACY_HARVEST_INDEX.md` | Read-only harvest index for mechanisms pulled from the separate HQA V1 line. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |
