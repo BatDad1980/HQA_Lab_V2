@@ -64,6 +64,8 @@ SAFE_COMMANDS = [
     ("HQA mud run gate", ["python", "hqa_v2/quality/hqa_mud_run_gate.py"]),
     ("Cognitive advisory contract", ["python", "hqa_v2/integrations/cognitive_advisory_contract_v0.py"]),
     ("Cognitive advisory contract gate", ["python", "hqa_v2/quality/cognitive_advisory_contract_gate.py"]),
+    ("HQA intervention gate", ["python", "hqa_v2/integrations/hqa_intervention_gate_v0.py"]),
+    ("HQA intervention gate quality", ["python", "hqa_v2/quality/hqa_intervention_gate_quality.py"]),
     ("Schema contract smoke", ["python", "hqa_v2/quality/schema_contract_smoke_test.py"]),
     ("Vendor shadow packet", ["python", "hqa_v2/package/build_vendor_shadow_packet.py"]),
     ("Vendor shadow packet validation", ["python", "hqa_v2/quality/vendor_shadow_packet_validation.py"]),

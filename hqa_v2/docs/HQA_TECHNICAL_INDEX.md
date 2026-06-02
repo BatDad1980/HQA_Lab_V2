@@ -91,6 +91,10 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_COGNITIVE_ADVISORY_CONTRACT_V0.md` | Cognitive advisory containment report. |
 | `hqa_v2/quality/cognitive_advisory_contract_gate.py` | Verifies model advice cannot override gates, release secrets, or authorize hardware. |
 | `hqa_v2/reports/HQA_COGNITIVE_ADVISORY_CONTRACT_GATE.md` | Cognitive advisory contract gate report. |
+| `hqa_v2/integrations/hqa_intervention_gate_v0.py` | Converts stress-run breakpoints into stand-down, monitor, remap, key-rotation, compression, and safe-hold policy. |
+| `hqa_v2/reports/HQA_INTERVENTION_GATE_V0.md` | Intervention policy report. |
+| `hqa_v2/quality/hqa_intervention_gate_quality.py` | Verifies stress-run breakpoints map to bounded shadow-policy decisions. |
+| `hqa_v2/reports/HQA_INTERVENTION_GATE_QUALITY.md` | Intervention gate quality report. |
 | `hqa_v2/docs/HQA_V1_LEGACY_HARVEST_INDEX.md` | Read-only harvest index for mechanisms pulled from the separate HQA V1 line. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |
