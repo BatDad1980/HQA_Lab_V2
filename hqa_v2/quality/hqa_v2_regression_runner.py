@@ -66,6 +66,8 @@ SAFE_COMMANDS = [
     ("Cognitive advisory contract gate", ["python", "hqa_v2/quality/cognitive_advisory_contract_gate.py"]),
     ("HQA intervention gate", ["python", "hqa_v2/integrations/hqa_intervention_gate_v0.py"]),
     ("HQA intervention gate quality", ["python", "hqa_v2/quality/hqa_intervention_gate_quality.py"]),
+    ("Telemetry compression gate", ["python", "hqa_v2/integrations/telemetry_compression_gate_v0.py"]),
+    ("Telemetry compression gate quality", ["python", "hqa_v2/quality/telemetry_compression_gate_quality.py"]),
     ("Schema contract smoke", ["python", "hqa_v2/quality/schema_contract_smoke_test.py"]),
     ("Vendor shadow packet", ["python", "hqa_v2/package/build_vendor_shadow_packet.py"]),
     ("Vendor shadow packet validation", ["python", "hqa_v2/quality/vendor_shadow_packet_validation.py"]),

@@ -95,6 +95,10 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_INTERVENTION_GATE_V0.md` | Intervention policy report. |
 | `hqa_v2/quality/hqa_intervention_gate_quality.py` | Verifies stress-run breakpoints map to bounded shadow-policy decisions. |
 | `hqa_v2/reports/HQA_INTERVENTION_GATE_QUALITY.md` | Intervention gate quality report. |
+| `hqa_v2/integrations/telemetry_compression_gate_v0.py` | Compresses large telemetry payloads into bounded risk features before cognitive advisory review. |
+| `hqa_v2/reports/HQA_TELEMETRY_COMPRESSION_GATE_V0.md` | Telemetry compression report. |
+| `hqa_v2/quality/telemetry_compression_gate_quality.py` | Verifies compressed summaries preserve intervention decisions and fit latency budget. |
+| `hqa_v2/reports/HQA_TELEMETRY_COMPRESSION_GATE_QUALITY.md` | Telemetry compression quality report. |
 | `hqa_v2/docs/HQA_V1_LEGACY_HARVEST_INDEX.md` | Read-only harvest index for mechanisms pulled from the separate HQA V1 line. |
 | `hqa_v2/docs/HQA_VENDOR_INTERFACE_CONTRACT.md` | Human-readable vendor interface contract. |
 | `hqa_v2/schemas/*.schema.json` | Strict JSON schemas for topology, syndrome, quarantine, reroute, and HAL manifest payloads. |
