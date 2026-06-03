@@ -1,10 +1,14 @@
 {
   "package_available": true,
-  "token_env_present": false,
-  "instance_env_present": false,
-  "live_check_requested": false,
-  "live_check_performed": false,
-  "backend_count": 0,
-  "backend_names": [],
+  "token_env_present": true,
+  "instance_env_present": true,
+  "live_check_requested": true,
+  "live_check_performed": true,
+  "backend_count": 3,
+  "backend_names": [
+    "ibm_marrakesh",
+    "ibm_kingston",
+    "ibm_fez"
+  ],
   "error": null
 }

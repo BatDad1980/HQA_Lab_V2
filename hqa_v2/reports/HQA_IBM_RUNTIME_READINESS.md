@@ -9,11 +9,17 @@ Credentials are never read from files, printed, committed, or packaged. This che
 ## Status
 
 - `qiskit_ibm_runtime` installed: `True`
-- `IBM_QUANTUM_TOKEN` present: `False`
-- `IBM_QUANTUM_INSTANCE_CRN` present: `False`
-- Live check requested: `False`
-- Live check performed: `False`
-- Operational backends returned: `0`
+- `IBM_QUANTUM_TOKEN` present: `True`
+- `IBM_QUANTUM_INSTANCE_CRN` present: `True`
+- Live check requested: `True`
+- Live check performed: `True`
+- Operational backends returned: `3`
+
+## Backends
+
+- `ibm_marrakesh`
+- `ibm_kingston`
+- `ibm_fez`
 
 ## Usage
 
