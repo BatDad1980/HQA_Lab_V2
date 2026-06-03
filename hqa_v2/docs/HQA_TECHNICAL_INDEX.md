@@ -29,6 +29,10 @@ It does not claim physical quantum hardware validation, production QEC performan
 | `hqa_v2/reports/HQA_QISKIT_AER_CASCADE_NOISE_PROBE.md` | Local Aer cascade-noise report. |
 | `hqa_v2/quality/qiskit_aer_cascade_gate.py` | Verifies nominal/stress profile separation. |
 | `hqa_v2/reports/HQA_QISKIT_AER_CASCADE_GATE.md` | Local Aer cascade gate report. |
+| `hqa_v2/integrations/qec_decoder_boundary_policy_v0.py` | Formalizes the virtual-boundary policy for odd syndrome cardinality. |
+| `hqa_v2/reports/HQA_QEC_DECODER_BOUNDARY_POLICY_V0.md` | QEC decoder boundary policy report. |
+| `hqa_v2/quality/qec_decoder_boundary_policy_gate.py` | Verifies odd syndromes resolve to a virtual boundary partner without crash or silent loss. |
+| `hqa_v2/reports/HQA_QEC_DECODER_BOUNDARY_POLICY_GATE.md` | QEC decoder boundary policy gate report. |
 | `hqa_v2/integrations/hqa_risk_field_v0.py` | Converts topology, syndrome, and cascade evidence into an advisory risk field. |
 | `hqa_v2/reports/HQA_RISK_FIELD_V0.md` | Risk-field ranking report. |
 | `hqa_v2/quality/hqa_risk_field_gate.py` | Verifies risk-field ranking and advisory-only boundary. |

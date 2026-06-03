@@ -39,6 +39,8 @@ SAFE_COMMANDS = [
     ("Qiskit cascade observer", ["python", "hqa_v2/integrations/qiskit_cascade_observer.py"]),
     ("Qiskit Aer cascade noise probe", ["python", "hqa_v2/integrations/qiskit_aer_cascade_noise_probe.py"]),
     ("Qiskit Aer cascade gate", ["python", "hqa_v2/quality/qiskit_aer_cascade_gate.py"]),
+    ("QEC decoder boundary policy", ["python", "hqa_v2/integrations/qec_decoder_boundary_policy_v0.py"]),
+    ("QEC decoder boundary policy gate", ["python", "hqa_v2/quality/qec_decoder_boundary_policy_gate.py"]),
     ("HQA risk field", ["python", "hqa_v2/integrations/hqa_risk_field_v0.py"]),
     ("HQA risk field gate", ["python", "hqa_v2/quality/hqa_risk_field_gate.py"]),
     ("Shadow adaptive proposal", ["python", "hqa_v2/integrations/shadow_adaptive_proposal_v0.py"]),
