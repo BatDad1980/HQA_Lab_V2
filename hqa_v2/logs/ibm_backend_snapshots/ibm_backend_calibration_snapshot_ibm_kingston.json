@@ -2,11 +2,11 @@
   "package_available": true,
   "token_env_present": true,
   "instance_env_present": true,
-  "requested_backend": "ibm_fez",
+  "requested_backend": "ibm_kingston",
   "excluded_backends": [
     "ibm_marrakesh"
   ],
-  "backend_selected": "ibm_fez",
+  "backend_selected": "ibm_kingston",
   "operational_backends_seen": [
     "ibm_marrakesh",
     "ibm_kingston",
@@ -14,15 +14,15 @@
   ],
   "snapshot_performed": true,
   "snapshot": {
-    "backend_name": "ibm_fez",
-    "timestamp_utc": "2026-06-03T19:31:33.897756+00:00",
+    "backend_name": "ibm_kingston",
+    "timestamp_utc": "2026-06-03T19:25:20.552225+00:00",
     "qubits": 156,
     "coupling_edges": 352,
-    "mean_t1_us": 152.633249,
-    "mean_t2_us": 106.16227,
-    "mean_readout_error": 0.028097,
-    "degraded_qubits": 61,
-    "degraded_fraction": 0.391026,
+    "mean_t1_us": 168.925353,
+    "mean_t2_us": 119.210934,
+    "mean_readout_error": 0.021074,
+    "degraded_qubits": 33,
+    "degraded_fraction": 0.211538,
     "thresholds": {
       "t1_min_us": 100.0,
       "t2_min_us": 40.0,

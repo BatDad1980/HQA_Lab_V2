@@ -12,7 +12,7 @@ Credentials are read only from environment variables. No credentials are printed
 - `IBM_QUANTUM_TOKEN` present: `True`
 - `IBM_QUANTUM_INSTANCE_CRN` present: `True`
 - Snapshot performed: `True`
-- Backend selected: `ibm_fez`
+- Backend selected: `ibm_kingston`
 - Excluded backends: `ibm_marrakesh`
 - Jobs submitted: `0`
 - Hardware authority: `False`
@@ -25,15 +25,15 @@ Credentials are read only from environment variables. No credentials are printed
 
 ## Calibration Snapshot
 
-- Backend: `ibm_fez`
-- Timestamp UTC: `2026-06-03T19:31:33.897756+00:00`
+- Backend: `ibm_kingston`
+- Timestamp UTC: `2026-06-03T19:25:20.552225+00:00`
 - Qubits: `156`
 - Coupling edges: `352`
-- Mean T1: `152.633249` us
-- Mean T2: `106.16227` us
-- Mean readout error: `0.028097`
-- Degraded qubits: `61`
-- Degraded fraction: `0.391026`
+- Mean T1: `168.925353` us
+- Mean T2: `119.210934` us
+- Mean readout error: `0.021074`
+- Degraded qubits: `33`
+- Degraded fraction: `0.211538`
 
 Thresholds:
 
