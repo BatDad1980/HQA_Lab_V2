@@ -163,6 +163,10 @@ Current status: QuTiP and Dynamiqs/JAX are available in the local environment. T
 | `hqa_v2/reports/HQA_HAL_CONTROL_BOUNDARY_REPORT.md` | HAL dry-run and rejection boundary evidence. |
 | `hqa_v2/safety/hal_safety_governor.py` | Local HAL safety boundary logic. |
 | `hqa_v2/safety/control_manifest.py` | Hardware-facing manifest structure. |
+| `hqa_v2/integrations/hal_loopback_boundary_contract_v0.py` | Replays a reported mock cryostat TCP ACK as transport evidence only. |
+| `hqa_v2/reports/HQA_HAL_LOOPBACK_BOUNDARY_CONTRACT_V0.md` | HAL loopback boundary contract report. |
+| `hqa_v2/quality/hal_loopback_boundary_contract_gate.py` | Verifies loopback ACKs do not grant real actuator or HAL authority. |
+| `hqa_v2/reports/HQA_HAL_LOOPBACK_BOUNDARY_CONTRACT_GATE.md` | HAL loopback boundary contract gate report. |
 
 ## Roadmap
 

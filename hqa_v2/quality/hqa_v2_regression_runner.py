@@ -74,6 +74,8 @@ SAFE_COMMANDS = [
     ("Telemetry compression gate quality", ["python", "hqa_v2/quality/telemetry_compression_gate_quality.py"]),
     ("Benchmark telemetry contract", ["python", "hqa_v2/integrations/benchmark_telemetry_contract_v0.py"]),
     ("Benchmark telemetry contract gate", ["python", "hqa_v2/quality/benchmark_telemetry_contract_gate.py"]),
+    ("HAL loopback boundary contract", ["python", "hqa_v2/integrations/hal_loopback_boundary_contract_v0.py"]),
+    ("HAL loopback boundary contract gate", ["python", "hqa_v2/quality/hal_loopback_boundary_contract_gate.py"]),
     ("Patch routing prototype", ["python", "hqa_v2/integrations/patch_routing_prototype_v0.py"]),
     ("Patch routing prototype quality", ["python", "hqa_v2/quality/patch_routing_prototype_quality.py"]),
     ("Provider normalization matrix", ["python", "hqa_v2/integrations/provider_normalization_matrix_v0.py"]),
