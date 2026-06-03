@@ -107,6 +107,10 @@ Current status: QuTiP and Dynamiqs/JAX are available in the local environment. T
 | `hqa_v2/reports/HQA_TELEMETRY_COMPRESSION_GATE_V0.md` | Telemetry compression report. |
 | `hqa_v2/quality/telemetry_compression_gate_quality.py` | Verifies compressed summaries preserve intervention decisions and fit latency budget. |
 | `hqa_v2/reports/HQA_TELEMETRY_COMPRESSION_GATE_QUALITY.md` | Telemetry compression quality report. |
+| `hqa_v2/integrations/benchmark_telemetry_contract_v0.py` | Defines the boundary contract for CLI benchmark and telemetry-server expansion work. |
+| `hqa_v2/reports/HQA_BENCHMARK_TELEMETRY_CONTRACT_V0.md` | Benchmark telemetry contract report. |
+| `hqa_v2/quality/benchmark_telemetry_contract_gate.py` | Verifies telemetry may observe, record, hash, and report without becoming a command or authority surface. |
+| `hqa_v2/reports/HQA_BENCHMARK_TELEMETRY_CONTRACT_GATE.md` | Benchmark telemetry contract gate report. |
 | `hqa_v2/integrations/patch_routing_prototype_v0.py` | Tests coarse patch routing as a bounded alternative to global node-level A* at large fabric sizes. |
 | `hqa_v2/reports/HQA_PATCH_ROUTING_PROTOTYPE_V0.md` | Patch routing prototype report. |
 | `hqa_v2/quality/patch_routing_prototype_quality.py` | Verifies patch routing reduces planning workload and preserves safe-hold behavior. |
