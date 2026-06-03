@@ -1,0 +1,123 @@
+{
+  "schema_version": "hqa.ibm_backend_field_map.v0",
+  "provider": "ibm_qiskit_runtime",
+  "source_backend": "ibm_fixture_heavy_hex_patch",
+  "topology_family": "heavy_hex",
+  "collection_mode": "offline_fixture",
+  "timestamp_utc": "2026-06-03T19:57:02.816835+00:00",
+  "live_check_performed": false,
+  "token_env_present": false,
+  "instance_env_present": false,
+  "hardware_authority": false,
+  "jobs_submitted": 0,
+  "thresholds": {
+    "t1_min_us": 100.0,
+    "t2_min_us": 40.0,
+    "readout_max": 0.03
+  },
+  "qubits": [
+    {
+      "index": 0,
+      "t1_us": 170.0,
+      "t2_us": 115.0,
+      "readout_error": 0.018,
+      "status": "healthy",
+      "reasons": []
+    },
+    {
+      "index": 1,
+      "t1_us": 92.0,
+      "t2_us": 102.0,
+      "readout_error": 0.019,
+      "status": "degraded",
+      "reasons": [
+        "weak_t1"
+      ]
+    },
+    {
+      "index": 2,
+      "t1_us": 166.0,
+      "t2_us": 31.0,
+      "readout_error": 0.021,
+      "status": "degraded",
+      "reasons": [
+        "weak_t2"
+      ]
+    },
+    {
+      "index": 3,
+      "t1_us": 171.0,
+      "t2_us": 104.0,
+      "readout_error": 0.041,
+      "status": "degraded",
+      "reasons": [
+        "high_readout_error"
+      ]
+    },
+    {
+      "index": 4,
+      "t1_us": 162.0,
+      "t2_us": 100.0,
+      "readout_error": 0.024,
+      "status": "healthy",
+      "reasons": []
+    },
+    {
+      "index": 5,
+      "t1_us": 168.0,
+      "t2_us": 111.0,
+      "readout_error": 0.017,
+      "status": "healthy",
+      "reasons": []
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "status": "degraded_neighborhood",
+      "endpoint_degraded_count": 1,
+      "coupling_risk": 0.5
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "status": "degraded_neighborhood",
+      "endpoint_degraded_count": 2,
+      "coupling_risk": 1.0
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "status": "degraded_neighborhood",
+      "endpoint_degraded_count": 2,
+      "coupling_risk": 1.0
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "status": "degraded_neighborhood",
+      "endpoint_degraded_count": 1,
+      "coupling_risk": 0.5
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "status": "healthy",
+      "endpoint_degraded_count": 0,
+      "coupling_risk": 0.0
+    }
+  ],
+  "summary": {
+    "qubit_count": 6,
+    "edge_count": 5,
+    "degraded_qubits": 3,
+    "degraded_fraction": 0.5,
+    "degraded_neighborhood_edges": 4,
+    "degraded_neighborhood_edge_fraction": 0.8,
+    "degraded_clusters_visible": true,
+    "largest_degraded_component": 3,
+    "degraded_edge_count": 2
+  },
+  "boundary": "IBM field-map capture reads calibration metadata only. It submits zero jobs, runs zero circuits, changes no pulse schedules, and grants no HAL authority."
+}
