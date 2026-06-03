@@ -132,6 +132,10 @@ Current status: QuTiP and Dynamiqs/JAX are available in the local environment. T
 | `hqa_v2/reports/HQA_FIELD_MAP_REPLAY_V0.md` | Field-map replay report. |
 | `hqa_v2/quality/field_map_replay_gate.py` | Verifies replay artifacts, bounded intervention mode, manifest integrity, and no hardware authority. |
 | `hqa_v2/reports/HQA_FIELD_MAP_REPLAY_GATE.md` | Field-map replay gate report. |
+| `hqa_v2/integrations/ibm_live_validation_abstention_replay_v0.py` | Replays reported IBM live-validation outcomes into condition-aware intervention/abstention policy. |
+| `hqa_v2/reports/HQA_IBM_LIVE_VALIDATION_ABSTENTION_REPLAY_V0.md` | IBM live-validation abstention replay report. |
+| `hqa_v2/quality/ibm_live_validation_abstention_replay_gate.py` | Verifies degraded hardware maps to shadow intervention while healthier hardware maps to abstention/monitoring. |
+| `hqa_v2/reports/HQA_IBM_LIVE_VALIDATION_ABSTENTION_REPLAY_GATE.md` | IBM live-validation abstention replay gate report. |
 | `hqa_v2/integrations/provider_replay_harness_v0.py` | Replays normalized provider packets through one deterministic HQA response grammar. |
 | `hqa_v2/reports/HQA_PROVIDER_REPLAY_HARNESS_V0.md` | Provider replay harness report. |
 | `hqa_v2/quality/provider_replay_harness_gate.py` | Verifies IBM, Braket, Azure, CUDA-Q, Cirq/qsim, and cat-solver lanes replay with bounded decisions and no live authority. |
