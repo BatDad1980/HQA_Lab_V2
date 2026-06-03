@@ -17,6 +17,7 @@ It does not claim physical quantum hardware validation, production QEC performan
 | `hqa_v2/reports/HQA_V2_REGRESSION_SUMMARY.md` | Latest regression summary. |
 | `hqa_v2/quality/claim_boundary_smoke_test.py` | Scans text artifacts for forbidden overclaim language. |
 | `hqa_v2/reports/HQA_ADJACENT_LANE_VALIDATION_INTAKE_2026_06_03.md` | Records adjacent-lane validation results as directional signal, not clean-lane proof, and defines safe harvest boundaries. |
+| `hqa_v2/reports/HQA_QUANTUM_JEDI_STORM_LANE_AUDIT_INTAKE_2026_06_03.md` | Records read-only audit findings from the separate Quantum Jedi storm lane and identifies safe harvest candidates. |
 
 ## Simulator And Cascade Evidence
 
