@@ -76,6 +76,8 @@ SAFE_COMMANDS = [
     ("Backend health translator gate", ["python", "hqa_v2/quality/backend_health_translator_gate.py"]),
     ("IBM backend field map", ["python", "hqa_v2/integrations/ibm_backend_field_map_v0.py"]),
     ("IBM backend field map gate", ["python", "hqa_v2/quality/ibm_backend_field_map_gate.py"]),
+    ("Field map replay", ["python", "hqa_v2/integrations/field_map_replay_v0.py"]),
+    ("Field map replay gate", ["python", "hqa_v2/quality/field_map_replay_gate.py"]),
     ("Provider replay harness", ["python", "hqa_v2/integrations/provider_replay_harness_v0.py"]),
     ("Provider replay harness gate", ["python", "hqa_v2/quality/provider_replay_harness_gate.py"]),
     ("Evidence dashboard", ["python", "hqa_v2/demos/build_evidence_dashboard_v0.py"]),

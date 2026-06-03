@@ -1,0 +1,9 @@
+{
+  "schema_version": "hqa.field_map_intervention_hint.v0",
+  "execution_mode": "shadow_replay_only",
+  "source_backend": "ibm_fixture_heavy_hex_patch",
+  "intervention_mode": "QUARANTINE_REMAP_SHADOW",
+  "operator_review_required": true,
+  "hardware_authority": false,
+  "jobs_submitted": 0
+}

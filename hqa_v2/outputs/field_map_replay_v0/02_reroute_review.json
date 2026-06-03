@@ -1,0 +1,34 @@
+{
+  "schema_version": "hqa.field_map_reroute_review.v0",
+  "execution_mode": "shadow_review",
+  "source_backend": "ibm_fixture_heavy_hex_patch",
+  "avoid_targets": [
+    "Q_3",
+    "Q_1",
+    "Q_2"
+  ],
+  "avoid_edge_neighborhoods": [
+    {
+      "source": "Q_0",
+      "target": "Q_1",
+      "coupling_risk": 0.5
+    },
+    {
+      "source": "Q_1",
+      "target": "Q_2",
+      "coupling_risk": 1.0
+    },
+    {
+      "source": "Q_2",
+      "target": "Q_3",
+      "coupling_risk": 1.0
+    },
+    {
+      "source": "Q_3",
+      "target": "Q_4",
+      "coupling_risk": 0.5
+    }
+  ],
+  "requires_operator_review": true,
+  "hardware_authority": false
+}

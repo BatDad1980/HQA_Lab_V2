@@ -1,0 +1,102 @@
+{
+  "schema_version": "hqa.field_map_replay.v0",
+  "execution_mode": "shadow_replay_only",
+  "source_backend": "ibm_fixture_heavy_hex_patch",
+  "source_collection_mode": "offline_fixture",
+  "hardware_authority": false,
+  "jobs_submitted": 0,
+  "field_map_summary": {
+    "qubit_count": 6,
+    "edge_count": 5,
+    "degraded_qubits": 3,
+    "degraded_fraction": 0.5,
+    "degraded_neighborhood_edges": 4,
+    "degraded_neighborhood_edge_fraction": 0.8,
+    "degraded_clusters_visible": true,
+    "largest_degraded_component": 3,
+    "degraded_edge_count": 2
+  },
+  "ranked_quarantine_candidates": [
+    {
+      "qubit_id": "Q_3",
+      "index": 3,
+      "status": "degraded",
+      "reasons": [
+        "high_readout_error"
+      ],
+      "degraded_neighborhood_edges": 2,
+      "risk_score": 0.51
+    },
+    {
+      "qubit_id": "Q_1",
+      "index": 1,
+      "status": "degraded",
+      "reasons": [
+        "weak_t1"
+      ],
+      "degraded_neighborhood_edges": 2,
+      "risk_score": 0.48
+    },
+    {
+      "qubit_id": "Q_2",
+      "index": 2,
+      "status": "degraded",
+      "reasons": [
+        "weak_t2"
+      ],
+      "degraded_neighborhood_edges": 2,
+      "risk_score": 0.48
+    },
+    {
+      "qubit_id": "Q_0",
+      "index": 0,
+      "status": "healthy",
+      "reasons": [],
+      "degraded_neighborhood_edges": 1,
+      "risk_score": 0.08
+    },
+    {
+      "qubit_id": "Q_4",
+      "index": 4,
+      "status": "healthy",
+      "reasons": [],
+      "degraded_neighborhood_edges": 1,
+      "risk_score": 0.08
+    }
+  ],
+  "recommended_targets": [
+    "Q_3",
+    "Q_1",
+    "Q_2"
+  ],
+  "avoided_edge_neighborhoods": [
+    {
+      "source": "Q_0",
+      "target": "Q_1",
+      "coupling_risk": 0.5
+    },
+    {
+      "source": "Q_1",
+      "target": "Q_2",
+      "coupling_risk": 1.0
+    },
+    {
+      "source": "Q_2",
+      "target": "Q_3",
+      "coupling_risk": 1.0
+    },
+    {
+      "source": "Q_3",
+      "target": "Q_4",
+      "coupling_risk": 0.5
+    }
+  ],
+  "intervention_mode": "QUARANTINE_REMAP_SHADOW",
+  "review_packet": {
+    "quarantine_review_required": true,
+    "reroute_review_required": true,
+    "operator_review_required": true,
+    "reason": "Field-map replay converts damaged neighborhoods into shadow review only."
+  },
+  "boundary": "Field Map Replay V0 produces review artifacts only. It submits zero jobs, runs zero circuits, changes no routing table or pulses, and grants no HAL authority."
+}

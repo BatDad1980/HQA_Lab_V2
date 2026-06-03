@@ -115,6 +115,10 @@ Current status: QuTiP and Dynamiqs/JAX are available in the local environment. T
 | `hqa_v2/reports/HQA_IBM_BACKEND_FIELD_MAP_V0.md` | IBM field-map report. Default mode is offline fixture; live metadata capture is explicit opt-in and submits zero jobs. |
 | `hqa_v2/quality/ibm_backend_field_map_gate.py` | Verifies field-map evidence shape, degraded reasons, edge-neighborhood risk, cluster proxy, and no hardware authority. |
 | `hqa_v2/reports/HQA_IBM_BACKEND_FIELD_MAP_GATE.md` | IBM field-map gate report. |
+| `hqa_v2/integrations/field_map_replay_v0.py` | Replays a backend field map into shadow quarantine candidates, reroute review, intervention hint, and hashed review artifacts. |
+| `hqa_v2/reports/HQA_FIELD_MAP_REPLAY_V0.md` | Field-map replay report. |
+| `hqa_v2/quality/field_map_replay_gate.py` | Verifies replay artifacts, bounded intervention mode, manifest integrity, and no hardware authority. |
+| `hqa_v2/reports/HQA_FIELD_MAP_REPLAY_GATE.md` | Field-map replay gate report. |
 | `hqa_v2/integrations/provider_replay_harness_v0.py` | Replays normalized provider packets through one deterministic HQA response grammar. |
 | `hqa_v2/reports/HQA_PROVIDER_REPLAY_HARNESS_V0.md` | Provider replay harness report. |
 | `hqa_v2/quality/provider_replay_harness_gate.py` | Verifies IBM, Braket, Azure, CUDA-Q, Cirq/qsim, and cat-solver lanes replay with bounded decisions and no live authority. |
