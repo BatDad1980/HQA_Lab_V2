@@ -91,6 +91,10 @@ Current status: QuTiP and Dynamiqs/JAX are available in the local environment. T
 | `hqa_v2/reports/HQA_COGNITIVE_ADVISORY_CONTRACT_V0.md` | Cognitive advisory containment report. |
 | `hqa_v2/quality/cognitive_advisory_contract_gate.py` | Verifies model advice cannot override gates, release secrets, or authorize hardware. |
 | `hqa_v2/reports/HQA_COGNITIVE_ADVISORY_CONTRACT_GATE.md` | Cognitive advisory contract gate report. |
+| `hqa_v2/integrations/bacl_entropy_policy_v0.py` | Replays the BACL entropy red-team finding: public telemetry alone must never regenerate manifest-signing authority. |
+| `hqa_v2/reports/HQA_BACL_ENTROPY_POLICY_V0.md` | BACL entropy policy report. |
+| `hqa_v2/quality/bacl_entropy_policy_gate.py` | Verifies the legacy deterministic-seed exploit and hardened private-salt mitigation. |
+| `hqa_v2/reports/HQA_BACL_ENTROPY_POLICY_GATE.md` | BACL entropy policy gate report. |
 | `hqa_v2/integrations/hqa_intervention_gate_v0.py` | Converts stress-run breakpoints into stand-down, monitor, remap, key-rotation, compression, and safe-hold policy. |
 | `hqa_v2/reports/HQA_INTERVENTION_GATE_V0.md` | Intervention policy report. |
 | `hqa_v2/quality/hqa_intervention_gate_quality.py` | Verifies stress-run breakpoints map to bounded shadow-policy decisions. |

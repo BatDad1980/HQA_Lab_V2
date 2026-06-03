@@ -64,6 +64,8 @@ SAFE_COMMANDS = [
     ("HQA mud run gate", ["python", "hqa_v2/quality/hqa_mud_run_gate.py"]),
     ("Cognitive advisory contract", ["python", "hqa_v2/integrations/cognitive_advisory_contract_v0.py"]),
     ("Cognitive advisory contract gate", ["python", "hqa_v2/quality/cognitive_advisory_contract_gate.py"]),
+    ("BACL entropy policy", ["python", "hqa_v2/integrations/bacl_entropy_policy_v0.py"]),
+    ("BACL entropy policy gate", ["python", "hqa_v2/quality/bacl_entropy_policy_gate.py"]),
     ("HQA intervention gate", ["python", "hqa_v2/integrations/hqa_intervention_gate_v0.py"]),
     ("HQA intervention gate quality", ["python", "hqa_v2/quality/hqa_intervention_gate_quality.py"]),
     ("Telemetry compression gate", ["python", "hqa_v2/integrations/telemetry_compression_gate_v0.py"]),
