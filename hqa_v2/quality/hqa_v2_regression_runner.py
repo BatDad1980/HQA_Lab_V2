@@ -72,6 +72,8 @@ SAFE_COMMANDS = [
     ("Patch routing prototype quality", ["python", "hqa_v2/quality/patch_routing_prototype_quality.py"]),
     ("Provider normalization matrix", ["python", "hqa_v2/integrations/provider_normalization_matrix_v0.py"]),
     ("Provider normalization matrix gate", ["python", "hqa_v2/quality/provider_normalization_matrix_gate.py"]),
+    ("Backend health translator", ["python", "hqa_v2/integrations/backend_health_translator_v0.py"]),
+    ("Backend health translator gate", ["python", "hqa_v2/quality/backend_health_translator_gate.py"]),
     ("Provider replay harness", ["python", "hqa_v2/integrations/provider_replay_harness_v0.py"]),
     ("Provider replay harness gate", ["python", "hqa_v2/quality/provider_replay_harness_gate.py"]),
     ("Evidence dashboard", ["python", "hqa_v2/demos/build_evidence_dashboard_v0.py"]),

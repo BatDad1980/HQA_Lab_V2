@@ -57,7 +57,7 @@ It does not claim physical quantum hardware validation, production QEC performan
 | `hqa_v2/quality/cat_solver_contract_gate.py` | Verifies solver contract completeness and no live authority. |
 | `hqa_v2/reports/HQA_CAT_SOLVER_CONTRACT_GATE.md` | Cat solver contract gate report. |
 
-Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
+Current status: QuTiP and Dynamiqs/JAX are available in the local environment. The current contract remains bounded and does not grant live hardware authority.
 
 ## Vendor Interface Lane
 
@@ -107,6 +107,10 @@ Current status: spec-only until QuTiP or Dynamiqs/JAX is installed.
 | `hqa_v2/reports/HQA_PROVIDER_NORMALIZATION_MATRIX_V0.md` | Provider normalization matrix report. |
 | `hqa_v2/quality/provider_normalization_matrix_gate.py` | Verifies provider coverage, topology-family coverage, source hashing, and no live authority. |
 | `hqa_v2/reports/HQA_PROVIDER_NORMALIZATION_MATRIX_GATE.md` | Provider normalization matrix gate report. |
+| `hqa_v2/integrations/backend_health_translator_v0.py` | Translates provider/backend calibration snapshots into one HQA health profile grammar. |
+| `hqa_v2/reports/HQA_BACKEND_HEALTH_TRANSLATOR_V0.md` | Backend health translation report comparing Kingston and Fez through normalized health, not backend name. |
+| `hqa_v2/quality/backend_health_translator_gate.py` | Verifies bounded health scores, backend-neutral policy, and honest spatial-clustering limitations. |
+| `hqa_v2/reports/HQA_BACKEND_HEALTH_TRANSLATOR_GATE.md` | Backend health translator gate report. |
 | `hqa_v2/integrations/provider_replay_harness_v0.py` | Replays normalized provider packets through one deterministic HQA response grammar. |
 | `hqa_v2/reports/HQA_PROVIDER_REPLAY_HARNESS_V0.md` | Provider replay harness report. |
 | `hqa_v2/quality/provider_replay_harness_gate.py` | Verifies IBM, Braket, Azure, CUDA-Q, Cirq/qsim, and cat-solver lanes replay with bounded decisions and no live authority. |
