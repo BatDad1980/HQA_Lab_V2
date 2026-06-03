@@ -32,19 +32,19 @@
   {
     "lane": "Open systems",
     "import_name": "qutip",
-    "installed": false,
+    "installed": true,
     "purpose": "QuTiP open-system experiments"
   },
   {
     "lane": "Bosonic / cat-qubit",
     "import_name": "dynamiqs",
-    "installed": false,
+    "installed": true,
     "purpose": "Dynamiqs/JAX solver experiments"
   },
   {
     "lane": "JAX backend",
     "import_name": "jax",
-    "installed": false,
+    "installed": true,
     "purpose": "JAX runtime used by Dynamiqs"
   }
 ]
