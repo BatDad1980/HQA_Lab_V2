@@ -101,6 +101,10 @@ Current status: QuTiP and Dynamiqs/JAX are available in the local environment. T
 | `hqa_v2/reports/HQA_BACL_ENTROPY_POLICY_V0.md` | BACL entropy policy report. |
 | `hqa_v2/quality/bacl_entropy_policy_gate.py` | Verifies the legacy deterministic-seed exploit and hardened private-salt mitigation. |
 | `hqa_v2/reports/HQA_BACL_ENTROPY_POLICY_GATE.md` | BACL entropy policy gate report. |
+| `hqa_v2/integrations/bacl_fail_closed_authority_contract_v0.py` | Formalizes the rule that missing or failed BACL authority must lock/hold rather than fall back to raw command activation. |
+| `hqa_v2/reports/HQA_BACL_FAIL_CLOSED_AUTHORITY_CONTRACT_V0.md` | BACL fail-closed authority contract report. |
+| `hqa_v2/quality/bacl_fail_closed_authority_contract_gate.py` | Verifies missing keys, invalid signatures, key reuse, revoked keys, and unregistered keys all fail closed. |
+| `hqa_v2/reports/HQA_BACL_FAIL_CLOSED_AUTHORITY_CONTRACT_GATE.md` | BACL fail-closed authority gate report. |
 | `hqa_v2/integrations/hqa_intervention_gate_v0.py` | Converts stress-run breakpoints into stand-down, monitor, remap, key-rotation, compression, and safe-hold policy. |
 | `hqa_v2/reports/HQA_INTERVENTION_GATE_V0.md` | Intervention policy report. |
 | `hqa_v2/quality/hqa_intervention_gate_quality.py` | Verifies stress-run breakpoints map to bounded shadow-policy decisions. |
@@ -168,6 +172,10 @@ Current status: QuTiP and Dynamiqs/JAX are available in the local environment. T
 | `hqa_v2/reports/HQA_HAL_LOOPBACK_BOUNDARY_CONTRACT_V0.md` | HAL loopback boundary contract report. |
 | `hqa_v2/quality/hal_loopback_boundary_contract_gate.py` | Verifies loopback ACKs do not grant real actuator or HAL authority. |
 | `hqa_v2/reports/HQA_HAL_LOOPBACK_BOUNDARY_CONTRACT_GATE.md` | HAL loopback boundary contract gate report. |
+| `hqa_v2/integrations/hal_pump_hysteresis_contract_v0.py` | Formalizes a hold-window rule so stress activation cannot be undone in the same control tick. |
+| `hqa_v2/reports/HQA_HAL_PUMP_HYSTERESIS_CONTRACT_V0.md` | HAL pump hysteresis contract report. |
+| `hqa_v2/quality/hal_pump_hysteresis_contract_gate.py` | Verifies pump activation/deactivation hysteresis and no actuator authority. |
+| `hqa_v2/reports/HQA_HAL_PUMP_HYSTERESIS_CONTRACT_GATE.md` | HAL pump hysteresis contract gate report. |
 
 ## Roadmap
 

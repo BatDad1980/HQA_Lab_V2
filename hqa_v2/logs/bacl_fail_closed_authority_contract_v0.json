@@ -1,0 +1,99 @@
+{
+  "schema_version": "hqa.bacl_fail_closed_authority_contract.v0",
+  "execution_mode": "local_policy_replay",
+  "cases": [
+    {
+      "name": "valid_one_time_manifest",
+      "signer_present": true,
+      "public_key_registered": true,
+      "signature_valid": true,
+      "key_state": "fresh",
+      "requested_action": "SET:CRYO:PUMP:Q10 ON",
+      "decision": "AUTHORIZED_DRY_RUN_ONLY",
+      "reason": "FRESH_SIGNED_MANIFEST",
+      "raw_fallback_allowed": false,
+      "hardware_authority": false,
+      "real_actuator_authority": false
+    },
+    {
+      "name": "missing_private_key",
+      "signer_present": false,
+      "public_key_registered": true,
+      "signature_valid": false,
+      "key_state": "missing",
+      "requested_action": "SET:CRYO:PUMP:Q10 ON",
+      "decision": "SAFE_HOLD",
+      "reason": "MISSING_SIGNER_FAIL_CLOSED",
+      "raw_fallback_allowed": false,
+      "hardware_authority": false,
+      "real_actuator_authority": false
+    },
+    {
+      "name": "unregistered_public_key",
+      "signer_present": true,
+      "public_key_registered": false,
+      "signature_valid": true,
+      "key_state": "unregistered",
+      "requested_action": "SET:CRYO:PUMP:Q10 ON",
+      "decision": "SKULL_LOCK",
+      "reason": "UNREGISTERED_PUBLIC_KEY",
+      "raw_fallback_allowed": false,
+      "hardware_authority": false,
+      "real_actuator_authority": false
+    },
+    {
+      "name": "malformed_signature",
+      "signer_present": true,
+      "public_key_registered": true,
+      "signature_valid": false,
+      "key_state": "fresh",
+      "requested_action": "SET:CRYO:PUMP:Q10 ON",
+      "decision": "SKULL_LOCK",
+      "reason": "SIGNATURE_INVALID",
+      "raw_fallback_allowed": false,
+      "hardware_authority": false,
+      "real_actuator_authority": false
+    },
+    {
+      "name": "lamport_key_reuse",
+      "signer_present": true,
+      "public_key_registered": true,
+      "signature_valid": true,
+      "key_state": "already_used",
+      "requested_action": "SET:CRYO:PUMP:Q10 ON",
+      "decision": "SKULL_LOCK",
+      "reason": "LAMPORT_ONE_TIME_KEY_REUSE",
+      "raw_fallback_allowed": false,
+      "hardware_authority": false,
+      "real_actuator_authority": false
+    },
+    {
+      "name": "revoked_key",
+      "signer_present": true,
+      "public_key_registered": true,
+      "signature_valid": true,
+      "key_state": "revoked",
+      "requested_action": "SET:CRYO:PUMP:Q10 ON",
+      "decision": "SKULL_LOCK",
+      "reason": "KEY_REVOKED",
+      "raw_fallback_allowed": false,
+      "hardware_authority": false,
+      "real_actuator_authority": false
+    }
+  ],
+  "authorized_cases": [
+    "valid_one_time_manifest"
+  ],
+  "blocked_cases": [
+    "missing_private_key",
+    "unregistered_public_key",
+    "malformed_signature",
+    "lamport_key_reuse",
+    "revoked_key"
+  ],
+  "raw_fallback_allowed": false,
+  "hardware_authority": false,
+  "real_actuator_authority": false,
+  "policy_rule": "BACL absence or failure must fail closed. Missing credentials, invalid signatures, unregistered keys, revoked keys, and one-time-key reuse cannot fall back to raw pump activation.",
+  "boundary": "This contract is a local authority-policy proof. It signs no live commands, opens no sockets, reads no external secrets, and grants no HAL or actuator authority."
+}
