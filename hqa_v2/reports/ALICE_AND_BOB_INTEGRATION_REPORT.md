@@ -12,7 +12,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
 ```json
 [
   {
-    "timestamp": "2026-06-01T02:37:34.710957",
+    "timestamp": "2026-06-14T22:44:40.672709",
     "module": "SYSTEM",
     "event_type": "ALICE_BOB_INTEGRATION_START",
     "data": {
@@ -20,7 +20,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.710957",
+    "timestamp": "2026-06-14T22:44:40.672709",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -30,7 +30,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.710957",
+    "timestamp": "2026-06-14T22:44:40.679923",
     "module": "FABRIC_SIMULATOR",
     "event_type": "CAT_QUBIT_MODE_ENGAGED",
     "data": {
@@ -39,7 +39,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.711956",
+    "timestamp": "2026-06-14T22:44:40.679923",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -49,7 +49,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.711956",
+    "timestamp": "2026-06-14T22:44:40.679923",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -59,7 +59,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.711956",
+    "timestamp": "2026-06-14T22:44:40.679923",
     "module": "FABRIC_SIMULATOR",
     "event_type": "ASYMMETRIC_STRESS_INJECTED",
     "data": {
@@ -80,7 +80,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.711956",
+    "timestamp": "2026-06-14T22:44:40.679923",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -90,7 +90,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.712955",
+    "timestamp": "2026-06-14T22:44:40.679923",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -100,7 +100,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.712955",
+    "timestamp": "2026-06-14T22:44:40.679923",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -108,7 +108,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.712955",
+    "timestamp": "2026-06-14T22:44:40.679923",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -116,7 +116,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.712955",
+    "timestamp": "2026-06-14T22:44:40.682749",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -125,7 +125,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.712955",
+    "timestamp": "2026-06-14T22:44:40.682749",
     "module": "HIPPOCAMPUS",
     "event_type": "SYSTEMIC_QUENCH",
     "data": {
@@ -133,7 +133,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-01T02:37:34.713955",
+    "timestamp": "2026-06-14T22:44:40.682749",
     "module": "SYSTEM",
     "event_type": "ALICE_BOB_INTEGRATION_COMPLETE",
     "data": {

@@ -17,7 +17,7 @@ This gate verifies the read-only evidence dashboard is backed by local proof art
 | no_authority | PASS | Manifest grants no authority or access. |
 | card_count | PASS | Cards: `5`. |
 | provider_rows | PASS | Provider rows: `6`. |
-| regression_visible | PASS | Full regression count is visible: `58/58`. |
+| regression_visible | PASS | Full regression count is visible: `78/78`. |
 | provider_replay_visible | PASS | Provider replay decisions are visible. |
 | boundary_visible | PASS | Boundary banner is visible. |
 | no_interactive_live_controls | PASS | No buttons, onclick handlers, fetch calls, or sockets. |

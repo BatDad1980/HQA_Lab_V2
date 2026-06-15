@@ -8,15 +8,15 @@ Gate-level simulators are useful for control-plane plumbing, but cat-qubit casca
 
 ## Solver Readiness
 
-- QuTiP available: `False`
-- Dynamiqs available: `False`
-- JAX available: `False`
-- Selected lane: `spec_only`
+- QuTiP available: `True`
+- Dynamiqs available: `True`
+- JAX available: `True`
+- Selected lane: `dynamiqs`
 
 | Solver | Status | Intended Use | Missing Reason |
 |---|---:|---|---|
-| Dynamiqs/JAX | unavailable | GPU/JAX Monte Carlo trajectories and Lindblad dynamics for photon-loss cascade studies. | dynamiqs and jax must both be installed. |
-| QuTiP | unavailable | Academic-reference open-system master equation and trajectory checks. | qutip is not installed. |
+| Dynamiqs/JAX | available | GPU/JAX Monte Carlo trajectories and Lindblad dynamics for photon-loss cascade studies. | - |
+| QuTiP | available | Academic-reference open-system master equation and trajectory checks. | - |
 
 ## Cascade Model
 

@@ -17,3 +17,6 @@ apikey.json
 *token*.json
 venv/
 env/
+
+# Generated HQA run logs
+hqa_v2/logs/

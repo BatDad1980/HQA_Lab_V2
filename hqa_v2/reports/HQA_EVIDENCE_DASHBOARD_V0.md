@@ -10,7 +10,7 @@ The dashboard is backed by local HQA reports and JSON logs. It does not simulate
 
 | Card | Status | Metric | Artifact |
 |---|---:|---:|---|
-| Regression Spine | PASS | `58/58` | `hqa_v2/reports/HQA_V2_REGRESSION_SUMMARY.md` |
+| Regression Spine | PASS | `78/78` | `hqa_v2/reports/HQA_V2_REGRESSION_SUMMARY.md` |
 | Provider Normalization | PASS | `12/12` | `hqa_v2/reports/HQA_PROVIDER_NORMALIZATION_MATRIX_GATE.md` |
 | Provider Replay | PASS | `14/14` | `hqa_v2/reports/HQA_PROVIDER_REPLAY_HARNESS_GATE.md` |
 | Patch Routing | PASS | `11/11` | `hqa_v2/reports/HQA_PATCH_ROUTING_PROTOTYPE_QUALITY.md` |

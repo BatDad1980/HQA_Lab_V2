@@ -9,7 +9,7 @@
     {
       "title": "Regression Spine",
       "status": "PASS",
-      "metric": "58/58",
+      "metric": "78/78",
       "detail": "Full safe HQA V2 regression suite passes from repository root.",
       "artifact": "hqa_v2/reports/HQA_V2_REGRESSION_SUMMARY.md"
     },

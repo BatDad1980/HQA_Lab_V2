@@ -7,15 +7,15 @@ This smoke test verifies that optional simulator adapters can be inspected witho
 ## Results
 
 - Adapters checked: `4`
-- Available: `2`
-- Unavailable: `2`
+- Available: `4`
+- Unavailable: `0`
 
 | Adapter | Status | Boundary |
 |---|---:|---|
 | `qiskit` | AVAILABLE | Optional simulator adapter; no physical hardware control. |
 | `cirq` | AVAILABLE | Optional simulator adapter; no physical hardware control. |
-| `qutip` | UNAVAILABLE | Optional simulator adapter; no physical hardware control. |
-| `dynamiqs` | UNAVAILABLE | Optional simulator adapter; no physical hardware control. |
+| `qutip` | AVAILABLE | Optional simulator adapter; no physical hardware control. |
+| `dynamiqs` | AVAILABLE | Optional simulator adapter; no physical hardware control. |
 
 ## Boundary
 
