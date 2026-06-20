@@ -1,0 +1,24 @@
+{
+  "fixture_schema": "hqa.ibm_calibration_replay_fixture.v0",
+  "source": "captured_ibm_backend_calibration_metadata",
+  "captured_at_utc": "2026-06-03T19:31:33.897756+00:00",
+  "snapshot_performed": true,
+  "snapshot": {
+    "backend_name": "ibm_fez",
+    "timestamp_utc": "2026-06-03T19:31:33.897756+00:00",
+    "qubits": 156,
+    "coupling_edges": 352,
+    "mean_t1_us": 152.633249,
+    "mean_t2_us": 106.16227,
+    "mean_readout_error": 0.028097,
+    "degraded_qubits": 61,
+    "degraded_fraction": 0.391026,
+    "thresholds": {
+      "t1_min_us": 100.0,
+      "t2_min_us": 40.0,
+      "readout_max": 0.03
+    }
+  },
+  "hardware_authority": false,
+  "jobs_submitted": 0
+}

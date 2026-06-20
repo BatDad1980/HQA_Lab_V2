@@ -1,0 +1,24 @@
+{
+  "fixture_schema": "hqa.ibm_calibration_replay_fixture.v0",
+  "source": "captured_ibm_backend_calibration_metadata",
+  "captured_at_utc": "2026-06-03T19:25:20.552225+00:00",
+  "snapshot_performed": true,
+  "snapshot": {
+    "backend_name": "ibm_kingston",
+    "timestamp_utc": "2026-06-03T19:25:20.552225+00:00",
+    "qubits": 156,
+    "coupling_edges": 352,
+    "mean_t1_us": 168.925353,
+    "mean_t2_us": 119.210934,
+    "mean_readout_error": 0.021074,
+    "degraded_qubits": 33,
+    "degraded_fraction": 0.211538,
+    "thresholds": {
+      "t1_min_us": 100.0,
+      "t2_min_us": 40.0,
+      "readout_max": 0.03
+    }
+  },
+  "hardware_authority": false,
+  "jobs_submitted": 0
+}

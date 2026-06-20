@@ -14,7 +14,10 @@ from typing import Any
 
 
 HQA_V2_ROOT = Path(__file__).resolve().parents[1]
-SNAPSHOT_DIR = HQA_V2_ROOT / "logs" / "ibm_backend_snapshots"
+# The translator is a deterministic replay gate. Its accepted calibration
+# evidence must therefore travel with the repository instead of depending on
+# ignored, machine-local run logs.
+SNAPSHOT_DIR = HQA_V2_ROOT / "fixtures" / "ibm_backend_snapshots"
 OUTPUT_PATH = HQA_V2_ROOT / "logs" / "backend_health_translator_v0.json"
 REPORT_PATH = HQA_V2_ROOT / "reports" / "HQA_BACKEND_HEALTH_TRANSLATOR_V0.md"
 
