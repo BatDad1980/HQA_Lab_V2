@@ -1,4 +1,7 @@
+import copy
+
 from hippocampus_router import HippocampusRouter
+
 
 class CrossResonanceScheduler:
     """
@@ -49,14 +52,26 @@ class CrossResonanceScheduler:
         target_a, target_b = target_pair
         self.logger.log("CR_SCHEDULER", "TARGET_EDGE_SELECTED", {"target_edge": [target_a, target_b]})
         
-        # Command Hippocampus to route A
+        # Command Hippocampus to route A.
         path_a = self.router.find_safest_path(logical_a_current, target_a)
-        
-        # Command Hippocampus to route B (Ensure it doesn't cross A's target)
-        # For simplicity in this demo, we assume parallel non-intersecting capability,
-        # but a true scheduler would lock A's path and run B over the residual graph.
-        path_b = self.router.find_safest_path(logical_b_current, target_b)
-        
+        if not path_a:
+            self.logger.log("CR_SCHEDULER", "MULTI_ROUTE_FAILED", {"reason": "no_path_for_a"})
+            return None, None
+
+        # Route B over the residual graph: reserve every node on A's path so the two
+        # entangling routes cannot claim the same physical qubit. B's own endpoints
+        # stay routable so it can still leave its start and reach its target.
+        #
+        # This is a greedy spatial reservation (A is routed first). It removes mid-path
+        # contention but does not resolve endpoint contention (when the chosen pair
+        # forces one route through the other's target) and does not guarantee an
+        # optimal joint schedule. A full spatiotemporal scheduler remains future work.
+        residual = copy.deepcopy(self.topology_map)
+        for node_id in path_a:
+            if node_id not in (logical_b_current, target_b):
+                residual["nodes"][node_id]["status"] = "QUARANTINED"
+        path_b = HippocampusRouter(residual).find_safest_path(logical_b_current, target_b)
+
         if path_a and path_b:
             self.logger.log("CR_SCHEDULER", "MULTI_ROUTE_SUCCESS", {"path_a": path_a, "path_b": path_b})
             return path_a, path_b

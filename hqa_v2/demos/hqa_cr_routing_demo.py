@@ -12,11 +12,12 @@ def run_cr_routing_demo():
     
     fabric = FabricSimulator(logger, width=5, height=5)
     
-    # Intentionally degrade several pairs so the scheduler has to hunt for a pristine edge
-    fabric.inject_targeted_fault(2, 2, error_type="DEGRADED")
-    fabric.nodes["Q_2_2"]["status"] = "DEGRADED"
-    fabric.inject_targeted_fault(1, 1, error_type="QUARANTINED")
-    fabric.nodes["Q_1_1"]["status"] = "QUARANTINED"
+    # Fault the fabric so the scheduler must hunt for a pristine edge, without
+    # stranding either logical qubit: kill the central coupler and degrade one hub.
+    fabric.inject_targeted_fault(2, 2, error_type="QUARANTINED")
+    fabric.nodes["Q_2_2"]["status"] = "QUARANTINED"
+    fabric.inject_targeted_fault(3, 1, error_type="DEGRADED")
+    fabric.nodes["Q_3_1"]["status"] = "DEGRADED"
     
     topology_map = fabric.get_topology_map()
     
