@@ -54,8 +54,8 @@ if __name__ == "__main__":
 
     scales = [
         (3162, 3162, 50000, "10 MILLION Qubits"),
-        (10000, 10000, 500000, "100 MILLION Qubits (The Compute Horizon)"),
-        (31622, 31622, 5000000, "1 BILLION Qubits (The God Protocol)")
+        (10000, 10000, 500000, "100 MILLION Qubits"),
+        (31622, 31622, 5000000, "1 BILLION Qubits (max-scale stress)")
     ]
     
     for w, h, f, name in scales:

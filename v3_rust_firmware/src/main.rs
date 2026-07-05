@@ -219,7 +219,7 @@ fn run_benchmark(ticks: usize, width: usize, height: usize, faults: usize, patch
 
 fn main() {
     let scales = vec![
-        (31622, 31622, 5000000, "1 BILLION Qubits (The God Protocol)")
+        (31622, 31622, 5000000, "1 BILLION Qubits (max-scale stress)")
     ];
 
     for (w, h, f, name) in scales {
