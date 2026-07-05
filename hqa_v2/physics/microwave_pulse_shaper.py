@@ -1,7 +1,12 @@
 class MicrowavePulseShaper:
-    """
-    Translates abstract logical gates (from the routing path) into explicit
-    analog microwave pulse schedules required for physical cryostat execution.
+    """PROXY pulse-schedule generator — illustrative envelope shapes, NOT calibrated pulse physics.
+
+    Produces plausibly-shaped analog pulse schedules (amplitude, duration, envelope
+    label, detuning) from hand-tuned constants, for control-plane/demo use. It does
+    NOT derive amplitudes from Rabi frequencies or qubit calibration data, and the
+    "DRAG" label below marks intent only — no DRAG correction (a derivative term
+    scaled by anharmonicity) is actually computed. Real pulse-level calibration is
+    out of scope for this proxy.
     """
     def __init__(self, logger, fabric):
         self.logger = logger

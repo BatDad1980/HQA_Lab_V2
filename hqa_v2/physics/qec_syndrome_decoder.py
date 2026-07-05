@@ -1,9 +1,12 @@
-import random
-
 class QECSyndromeDecoder:
-    """
-    Simulates a classical hardware decoder that runs a repetition code 
-    check to identify phase-flip (Z) syndromes dynamically.
+    """PROXY control-plane health monitor — NOT a quantum error-correction decoder.
+
+    This does not extract stabilizer syndromes, build a matching graph, apply a
+    code distance, or perform any error correction (no MWPM / union-find / belief
+    propagation). It flags any fabric node whose scalar ``coherence`` health metric
+    falls below a fixed threshold and labels it a phase-flip, as a degraded-node
+    signal for the control plane. "Syndrome/decoder" here is loose control-plane
+    language; a real QEC decoder is out of scope for this proxy.
     """
     def __init__(self, logger, fabric):
         self.logger = logger

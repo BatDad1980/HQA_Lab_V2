@@ -1,5 +1,3 @@
-import random
-
 from hippocampus_router import HippocampusRouter
 
 class TopologyRouter:
