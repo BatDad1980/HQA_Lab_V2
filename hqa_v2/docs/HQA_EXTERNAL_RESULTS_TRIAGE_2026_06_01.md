@@ -78,10 +78,16 @@ The cat-qubit result contains:
 - A grid/optimizer search over alpha.
 - Static baseline at alpha `1.20`.
 - HQA closed-loop adapted alpha `1.35`.
-- Combined fidelity improvement:
-  - baseline: `93.82%`
-  - adapted: `96.50%`
-  - delta: `+2.68%`
+
+> **Correction (2026-07-05):** an earlier draft of this section reported a `+2.68%`
+> combined-fidelity gain (baseline `93.82%` -> adapted `96.50%`). That number is
+> **not reproduced by any run and is retired.** The only actual cat run on record
+> (same alpha 1.20 -> 1.35) is a **null**: combined fidelity 95.15% -> 94.97%
+> (delta -0.18%), because at that noise level the default alpha is already
+> near-optimal and forcing alpha=1.35 slightly overshoots it. The reproducible,
+> dynamiqs-validated result is in `reports/HQA_CAT_SETPOINT_HOMEOSTASIS_V0.md`:
+> setpoint tracking helps only when the noise *asymmetry* drifts, and correctly
+> does nothing when it does not. Do not cite `+2.68%`.
 
 ### Correct Evidence Label
 
