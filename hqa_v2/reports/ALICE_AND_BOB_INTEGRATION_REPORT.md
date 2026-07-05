@@ -1,18 +1,22 @@
-# Alice & Bob: Cat-Qubit HQA Integration Report
+# Alice & Bob: Cat-Qubit HQA Integration Report (Fail-Closed Demonstration)
 
-This report demonstrates a proxy adaptation path for a cat-qubit-style error model, focusing routing behavior on phase-flip fault gradients while treating bit-flip suppression as a modeled hardware assumption.
+A cat-qubit-style fabric demonstration. Bit-flip (X) suppression is treated as a modeled hardware assumption; phase-flip (Z) exposure is the live threat. Two phase-flip faults are injected, detected, and quarantined, then a corner-to-corner route is requested. This report records whatever actually happened.
 
-## The Hardware Profile
-Cat Qubits exponentially suppress bit-flip (X) errors autonomously at the physical level, leaving only phase-flip (Z) errors. A static control stack routes blindly. HQA, however, engages an **Asymmetric Error Emulation** mode.
+## Setup
+- Injected phase-flip faults: Q_1_1, Q_3_3.
+- Route requested: `Q_0_0` -> `Q_4_4`.
 
-## The Routing Demonstration
-The Hippocampus A* router recognizes the Z-error phase flips injected into the sparse-lattice and applies an extreme proximity penalty specifically to phase-flip gradients, steering the computational path completely clear of Z-error decoherence zones.
+## Outcome
+No safe path remained after quarantine, so HQA raised a systemic quench (`path_found: false`) rather than proposing a route through degraded qubits. Refusing to route is the correct fail-closed outcome here, and it is what HQA did.
+
+## Constructive cat-qubit work
+The affirmative cat-qubit results -- biased-noise routing on a routable fabric and the honest setpoint analysis -- live in `reports/HQA_CAT_BIASED_NOISE_ROUTER_V0.md` and `docs/HQA_CAT_QUBIT_COMPATIBILITY_NOTE_V0.md`.
 
 ## JSON Audit Log
 ```json
 [
   {
-    "timestamp": "2026-06-14T22:44:40.672709",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "SYSTEM",
     "event_type": "ALICE_BOB_INTEGRATION_START",
     "data": {
@@ -20,7 +24,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.672709",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "FABRIC_SIMULATOR",
     "event_type": "INITIALIZE",
     "data": {
@@ -30,7 +34,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.679923",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "FABRIC_SIMULATOR",
     "event_type": "CAT_QUBIT_MODE_ENGAGED",
     "data": {
@@ -39,7 +43,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.679923",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -49,7 +53,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.679923",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "FABRIC_SIMULATOR",
     "event_type": "FAULT_INJECTED",
     "data": {
@@ -59,7 +63,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.679923",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "FABRIC_SIMULATOR",
     "event_type": "ASYMMETRIC_STRESS_INJECTED",
     "data": {
@@ -80,7 +84,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.679923",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -90,7 +94,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.679923",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "SENTINEL",
     "event_type": "QUENCH_DECISION",
     "data": {
@@ -100,7 +104,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.679923",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -108,7 +112,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.679923",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "QUARANTINE_MANAGER",
     "event_type": "NODE_ISOLATED",
     "data": {
@@ -116,7 +120,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.682749",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "HIPPOCAMPUS",
     "event_type": "ROUTING_REQUESTED",
     "data": {
@@ -125,7 +129,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.682749",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "HIPPOCAMPUS",
     "event_type": "SYSTEMIC_QUENCH",
     "data": {
@@ -133,7 +137,7 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
     }
   },
   {
-    "timestamp": "2026-06-14T22:44:40.682749",
+    "timestamp": "2026-07-05T16:04:04.936426",
     "module": "SYSTEM",
     "event_type": "ALICE_BOB_INTEGRATION_COMPLETE",
     "data": {
@@ -142,3 +146,6 @@ The Hippocampus A* router recognizes the Z-error phase flips injected into the s
   }
 ]
 ```
+
+## Boundary
+Advisory simulation only. No hardware authority, no live Alice & Bob calibration data, no pulse or cryostat control. Node parameters are representative demo values. Demonstrates fail-closed abstention, not a physical routing or fidelity result.

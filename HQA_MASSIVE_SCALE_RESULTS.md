@@ -1,84 +1,55 @@
-# HQA Massive Scale Benchmark Results (1M & 4M Qubits)
+# HQA Sentinel Reflex — Compute-Scalability Demonstration (Classical Simulation)
 
-We pushed the single-threaded pure Python simulation of the Homeostatic Quantum Architecture (HQA) to absolute breaking points to demonstrate the infinite scalability of the Sentinel Reflex.
+**What this is:** a *classical* simulation that measures the compute cost of the
+edge-parallel Sentinel monitoring scheme on very large grids. It is **not**
+quantum error correction, is **not** run on qubits, and makes **no** fidelity,
+cascade-prevention, or quantum-advantage claim. The "errors" below are flagged
+cells in a classical cellular grid model, not physical qubit errors.
 
-## 1 MILLION Qubits
-**Grid:** 1000x1000
-**Permanent Hardware Faults:** 5,000
-**Ticks:** 50
+**Why it can scale:** each grid cell is watched by a local fixed-size patch.
+Because the patches are independent, the scheme is embarrassingly parallel and
+its per-patch work is constant regardless of total grid size. The point of the
+runs below is to show that the *monitoring layer's compute* stays tractable as
+the grid grows — nothing more.
 
-| Metric | Traditional Matrix Decoder | HQA Sentinel Reflex |
-|--------|----------------------------|---------------------|
-| **Active Unquenched Errors** | 772,799 | 0 |
+## Baseline caveat (read first)
 
-## 4 MILLION Qubits (Absolute Madness)
-**Grid:** 2000x2000
-**Permanent Hardware Faults:** 20,000
-**Ticks:** 50
+The "Traditional Matrix Decoder" column is a **non-quarantining null baseline**:
+it flags nothing and isolates nothing, so it accumulates one flagged cell per
+injected fault by construction. It is **not** a real MWPM / union-find / belief-
+propagation decoder. The large error-count contrast is therefore *not* a decoder
+comparison, and no claim of superiority over real decoders is made or implied.
+The only defensible reading of these tables is the wall-clock column: how long
+the edge-parallel scheme takes to sweep a grid of a given size.
 
-| Metric | Traditional Matrix Decoder | HQA Sentinel Reflex |
-|--------|----------------------------|---------------------|
-| **Active Unquenched Errors** | 3,089,510 | 0 |
+## Wall-clock scaling (the defensible result)
 
-## The Mathematical Conclusion
-At 4 million qubits, the O(N^2) memory and latency bottleneck of traditional decoding causes a complete systemic failure, allowing over 3 million localized phase-flips to cascade into full system decoherence. 
+| Backend | Grid | Cells | Injected faults | Engine | Wall-clock (50 ticks) |
+|---|---|---:|---:|---|---:|
+| CPU (pure Python) | 1000×1000 | 1,000,000 | 5,000 | single-thread | — |
+| CPU (pure Python) | 2000×2000 | 4,000,000 | 20,000 | single-thread | — |
+| GPU (CUDA/PyTorch) | 3162×3162 | 10,000,000 | 50,000 | CUDA cores | 0.632 s |
+| GPU (CUDA/PyTorch) | 10000×10000 | 100,000,000 | — | CUDA cores | 6.816 s |
+| Rust (bare-metal CPU) | 3162×3162 | 10,000,000 | 50,000 | system RAM | 8.25 s |
+| Rust (bare-metal CPU) | 31622×31622 | 1,000,000,000 | 5,000,000 | system RAM | 817.37 s |
 
-Conversely, because the HQA Sentinel Reflex is **Embarrassingly Parallel** and operates natively at the edge on localized 5x5 patches, its latency remains at 0 regardless of how massive the grid becomes. HQA achieved **100% cascade prevention** (0 errors) even at a scale 400x larger than the current industry roadblock.
+The 1-billion-cell GPU run did **not** complete: the local 6 GB VRAM was
+exhausted allocating the required tensors, so that scale was only reached on the
+CPU/RAM path. That is a hardware limit of one workstation, not evidence of a
+mathematical scaling limit — and equally, completing a classical grid sweep is
+not evidence of quantum-scale error correction.
 
-## Phase 2: GPU Acceleration (CUDA / PyTorch)
-To simulate true physical scale, we mapped the Sentinel Reflex directly onto the massive concurrency of a modern GPU. Since each Sentinel patch is independent, we assigned them to individual CUDA cores.
+## What this does and does not support
 
-**Grid:** 3162x3162 (10,000,000 qubits)
-**Permanent Hardware Faults:** 50,000
-**Execution Time:** 0.632 seconds
+- **Supports:** the edge-parallel patch scheme has constant per-patch cost, so a
+  classical fault-flagging sweep of very large grids is computationally feasible
+  on commodity hardware.
+- **Does not support:** any quantum error-correction result, any cascade
+  prevention on physical qubits, any comparison against a real decoder, or any
+  fidelity / quantum-advantage claim.
 
-| Metric | Traditional Matrix Decoder | HQA Sentinel Reflex |
-|--------|----------------------------|---------------------|
-| **Active Unquenched Errors** | 7,721,108 | 0 |
+## Boundary
 
-The CUDA architecture ripped through 50 full physics ticks across 10 million qubits in literally **half a second**, successfully tracking and down-regulating 81,779 permanent hardware faults on the fly without a single error escaping.
-
-### Pushing to the Hardware Horizon (100M & 1B Qubits)
-To find the absolute breaking point of the local physical hardware, we pushed the simulation to 100 Million and 1 Billion qubits.
-
-**Grid:** 10000x10000 (100,000,000 qubits)
-**Execution Time:** 6.816 seconds
-
-| Metric | Traditional Matrix Decoder | HQA Sentinel Reflex |
-|--------|----------------------------|---------------------|
-| **Active Unquenched Errors** | 77,270,541 | 0 |
-| **Plastically Down-Regulated Faults** | 0 | 819,403 |
-
-**Grid:** 31622x31622 (1,000,000,000 qubits - The God Protocol)
-**Result:** `CUDA out of memory`
-
-At 1 Billion qubits, the local GPU's 6GB of VRAM was physically exhausted attempting to allocate the 7.45 GiB contiguous tensors required to simulate the raw physical cascades. 
-
-**Conclusion:** The Sentinel Reflex mathematical architecture never failed. It maintained 0 errors at 100 Million qubits in under 7 seconds. The only "roof" encountered was the physical RAM limitation of the local workstation simulating the fabric. The math scales infinitely.
-
-## Phase 4: The System RAM Bypass (1 BILLION Qubits)
-To circumvent the GPU VRAM bottleneck and establish a localized 1-Billion-Qubit proof, the simulation was fed directly into the Phase 3 bare-metal Rust executable, utilizing the workstation's main CPU and System RAM.
-
-**Grid:** 31622x31622 (1,000,000,000 qubits - The God Protocol)
-**Permanent Hardware Faults:** 5,000,000
-**Execution Time:** 817.37 seconds (~13.6 minutes)
-
-| Metric | Traditional Matrix Decoder | HQA Sentinel Reflex |
-|--------|----------------------------|---------------------|
-| **Active Unquenched Errors** | 772,656,695 | 0 |
-| **Plastically Down-Regulated Faults** | 0 | 8,194,054 |
-
-**Ultimate Conclusion:** The bare-metal executable successfully swallowed a 1-billion-cell physics matrix. While the high-latency Traditional Decoder allowed over 772 million errors to permanently destroy the fabric, the HQA Sentinel Reflex maintained exactly 0 errors across 50 physics ticks, isolating over 8.1 million permanent hardware faults on the fly. Homeostatic Quantum Architecture scales perfectly to 1 Billion qubits.
-
-We compiled the simulation down into a pure, memory-safe executable to simulate running directly on edge firmware inside the quantum cryostat. 
-
-**Grid:** 3162x3162 (10,000,000 qubits)
-**Permanent Hardware Faults:** 50,000
-**Execution Time:** 8.25 seconds
-
-| Metric | Traditional Matrix Decoder | HQA Sentinel Reflex |
-|--------|----------------------------|---------------------|
-| **Active Unquenched Errors** | 7,723,430 | 0 |
-| **Plastically Down-Regulated Faults** | 0 | 82,115 |
-
-The Rust executable completely stabilized a 10-million qubit fabric, processing 50 physical ticks in just **8.25 seconds**, proving conclusively that edge-native Sentinel computation is viable on bare metal.
+Classical simulation only. No quantum hardware, no qubits, no QEC, no live
+backend, no hardware authority. Timing figures are commodity-hardware
+measurements of a classical grid model and are advisory context only.

@@ -38,19 +38,44 @@ def run_alice_bob_demo():
     
     print("Alice & Bob Integration complete. Output written to alice_bob_audit.json.")
 
-    # Generate markdown report
+    # Extract injected fault node names defensively for the report.
+    try:
+        fault_nodes = sorted(x["node"] for x in faults)
+    except Exception:
+        fault_nodes = []
+
+    # Generate markdown report (honest, outcome-aware: it records what actually
+    # happened, including fail-closed abstention when no safe path remains).
     with open(report_path, "w") as f:
-        f.write("# Alice & Bob: Cat-Qubit HQA Integration Report\n\n")
-        f.write("This report demonstrates a proxy adaptation path for a cat-qubit-style error model, focusing routing behavior on phase-flip fault gradients while treating bit-flip suppression as a modeled hardware assumption.\n\n")
-        f.write("## The Hardware Profile\n")
-        f.write("Cat Qubits exponentially suppress bit-flip (X) errors autonomously at the physical level, leaving only phase-flip (Z) errors. ")
-        f.write("A static control stack routes blindly. HQA, however, engages an **Asymmetric Error Emulation** mode.\n\n")
-        f.write("## The Routing Demonstration\n")
-        f.write("The Hippocampus A* router recognizes the Z-error phase flips injected into the sparse-lattice and applies an extreme proximity penalty specifically to phase-flip gradients, steering the computational path completely clear of Z-error decoherence zones.\n\n")
+        f.write("# Alice & Bob: Cat-Qubit HQA Integration Report (Fail-Closed Demonstration)\n\n")
+        f.write("A cat-qubit-style fabric demonstration. Bit-flip (X) suppression is treated as "
+                "a modeled hardware assumption; phase-flip (Z) exposure is the live threat. Two "
+                "phase-flip faults are injected, detected, and quarantined, then a corner-to-corner "
+                "route is requested. This report records whatever actually happened.\n\n")
+        f.write("## Setup\n")
+        f.write(f"- Injected phase-flip faults: {', '.join(fault_nodes) if fault_nodes else 'see log'}.\n")
+        f.write(f"- Route requested: `{start_node}` -> `{end_node}`.\n\n")
+        f.write("## Outcome\n")
+        if new_path:
+            f.write("HQA found a phase-flip-aware path that avoids the quarantined Z-error nodes:\n\n")
+            f.write(f"`{' -> '.join(new_path)}`\n\n")
+            f.write("The route is an advisory proposal only and carries no hardware authority.\n\n")
+        else:
+            f.write("No safe path remained after quarantine, so HQA raised a systemic quench "
+                    "(`path_found: false`) rather than proposing a route through degraded qubits. "
+                    "Refusing to route is the correct fail-closed outcome here, and it is what HQA did.\n\n")
+        f.write("## Constructive cat-qubit work\n")
+        f.write("The affirmative cat-qubit results -- biased-noise routing on a routable fabric and "
+                "the honest setpoint analysis -- live in `reports/HQA_CAT_BIASED_NOISE_ROUTER_V0.md` "
+                "and `docs/HQA_CAT_QUBIT_COMPATIBILITY_NOTE_V0.md`.\n\n")
         f.write("## JSON Audit Log\n```json\n")
         with open(audit_path, "r") as audit:
             f.write(audit.read())
-        f.write("\n```\n")
+        f.write("\n```\n\n")
+        f.write("## Boundary\n")
+        f.write("Advisory simulation only. No hardware authority, no live Alice & Bob calibration "
+                "data, no pulse or cryostat control. Node parameters are representative demo values. "
+                "Demonstrates fail-closed abstention, not a physical routing or fidelity result.\n")
     print("Evidence written to ALICE_AND_BOB_INTEGRATION_REPORT.md")
 
 if __name__ == "__main__":

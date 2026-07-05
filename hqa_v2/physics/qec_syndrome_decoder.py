@@ -1,12 +1,18 @@
 class QECSyndromeDecoder:
-    """PROXY control-plane health monitor — NOT a quantum error-correction decoder.
+    """Detection stage of HQA's immune-system fault response — not a matching decoder.
 
-    This does not extract stabilizer syndromes, build a matching graph, apply a
-    code distance, or perform any error correction (no MWPM / union-find / belief
-    propagation). It flags any fabric node whose scalar ``coherence`` health metric
-    falls below a fixed threshold and labels it a phase-flip, as a degraded-node
-    signal for the control plane. "Syndrome/decoder" here is loose control-plane
-    language; a real QEC decoder is out of scope for this proxy.
+    By design, HQA treats faults the way a body treats infection: detect a degraded
+    region, reroute around it, quarantine ("scar") it, and anticipate the next
+    failure. That is a different paradigm from surface-code error correction, not a
+    failed attempt at one. This module is the *detection* stage of that response: it
+    flags any fabric node whose scalar ``coherence`` health metric falls below a
+    fixed threshold and labels it a phase-flip signal for the control plane to act
+    on (reroute / quarantine).
+
+    It deliberately does NOT extract stabilizer syndromes, build a matching graph,
+    apply a code distance, or run MWPM / union-find / belief propagation — those
+    belong to the decoder paradigm HQA is not competing in. "Syndrome/decoder" here
+    is the biological detection sense, not the QEC-matching sense.
     """
     def __init__(self, logger, fabric):
         self.logger = logger
